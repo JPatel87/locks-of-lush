@@ -96,6 +96,22 @@ Below is a comprehensive list of user stories. For this project these were revie
 
 ### Wireframes
 
+Below are links to the initial wireframes created for this project. These wireframes were created using [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjw9-KTBhBcEiwAr19igzgSMCAHTuTIsTpGrtk-KZPATPmc7R0M9oo0VUs2jhgbGpmXmCnKSxoCstwQAvD_BwE)
+
+* [Home page](documentation/wireframes/home-wireframe.png)
+
+* [Services page](documentation/wireframes/services-wireframe.png)
+
+* [Stylists page](documentation/wireframes/stylists-wireframe.png)
+
+* [Login page](documentation/wireframes/login-wireframe.png)
+
+* [Sign-up page](documentation/wireframes/signup-wireframe.png)
+
+* [Bookings page](documentation/wireframes/bookings-wireframe.png)
+
+* [Manage bookings page](documentation/wireframes/manage-bookings-wireframe.png)
+
 ## Surface
 
 ### Colour scheme
