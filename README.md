@@ -64,6 +64,13 @@ The storage hosts used for this project are:
 - [Heroku](https://www.heroku.com/)
 - [Cloudinary](https://cloudinary.com/?utm_source=google&utm_medium=cpc&utm_campaign=Rbrand&utm_content=492438439811&utm_term=%2Bcloudinary&gclid=Cj0KCQjwma6TBhDIARIsAOKuANwhiuq0ZxvF_2j7ANjz39RqGHZUM1DEgNRzc_zb4Yymv18YBGbHrMYaAgMREALw_wcB)
 
+Other:
+
+Other packages used in this project are:
+
+- [Lucidchart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=9045963&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQjwyYKUBhDJARIsAMj9lkGuAWT49rmauAUKPE1dZc32REnshWbCY-h0UoYogZ4mtAhFjn8IypsaAoYNEALw_wcB) - used to create the Entity Relationship Diagram (ERD)
+- [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjw9-KTBhBcEiwAr19igzgSMCAHTuTIsTpGrtk-KZPATPmc7R0M9oo0VUs2jhgbGpmXmCnKSxoCstwQAvD_BwE) - used to create the wireframes
+
 ### User stories
 
 Below is a comprehensive list of user stories. For this project these were reviewed and some broken down further in this project repository Kanban board. 
@@ -92,25 +99,29 @@ Below is a comprehensive list of user stories. For this project these were revie
 
 ### Database model
 
+Below is a link to the ERD created for this project.
+
+* [Locks of Lush - Entity Relationship Diagram](media/ERD/entity-relationship-diagram.png)
+
 ## Skeleton
 
 ### Wireframes
 
-Below are links to the initial wireframes created for this project. These wireframes were created using [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjw9-KTBhBcEiwAr19igzgSMCAHTuTIsTpGrtk-KZPATPmc7R0M9oo0VUs2jhgbGpmXmCnKSxoCstwQAvD_BwE)
+Below are links to the initial wireframes created for this project.
 
-* [Home page](documentation/wireframes/home-wireframe.png)
+* [Home page](media/wireframes/home-wireframe.png)
 
-* [Services page](documentation/wireframes/services-wireframe.png)
+* [Services page](media/wireframes/services-wireframe.png)
 
-* [Stylists page](documentation/wireframes/stylists-wireframe.png)
+* [Stylists page](media/wireframes/stylists-wireframe.png)
 
-* [Login page](documentation/wireframes/login-wireframe.png)
+* [Login page](media/wireframes/login-wireframe.png)
 
-* [Sign-up page](documentation/wireframes/signup-wireframe.png)
+* [Sign-up page](media/wireframes/signup-wireframe.png)
 
-* [Bookings page](documentation/wireframes/bookings-wireframe.png)
+* [Bookings page](media/wireframes/bookings-wireframe.png)
 
-* [Manage bookings page](documentation/wireframes/manage-bookings-wireframe.png)
+* [Manage bookings page](media/wireframes/manage-bookings-wireframe.png)
 
 ## Surface
 
