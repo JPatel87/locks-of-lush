@@ -101,7 +101,7 @@ Below is a comprehensive list of user stories. For this project these were revie
 
 Below is a link to the ERD created for this project.
 
-* [Locks of Lush - Entity Relationship Diagram](media/ERD/entity-relationship-diagram.png)
+* [Locks of Lush - Entity Relationship Diagram](readme_documents/ERD/entity-relationship-diagram.png)
 
 ## Skeleton
 
@@ -109,19 +109,19 @@ Below is a link to the ERD created for this project.
 
 Below are links to the initial wireframes created for this project.
 
-* [Home page](media/wireframes/home-wireframe.png)
+* [Home page](readme_documents/wireframes/home-wireframe.png)
 
-* [Services page](media/wireframes/services-wireframe.png)
+* [Services page](readme_documents/wireframes/services-wireframe.png)
 
-* [Stylists page](media/wireframes/stylists-wireframe.png)
+* [Stylists page](readme_documents/wireframes/stylists-wireframe.png)
 
-* [Login page](media/wireframes/login-wireframe.png)
+* [Login page](readme_documents/wireframes/login-wireframe.png)
 
-* [Sign-up page](media/wireframes/signup-wireframe.png)
+* [Sign-up page](readme_documents/wireframes/signup-wireframe.png)
 
-* [Bookings page](media/wireframes/bookings-wireframe.png)
+* [Bookings page](readme_documents/wireframes/bookings-wireframe.png)
 
-* [Manage bookings page](media/wireframes/manage-bookings-wireframe.png)
+* [Manage bookings page](readme_documents/wireframes/manage-bookings-wireframe.png)
 
 ## Surface
 
