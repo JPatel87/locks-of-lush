@@ -36,7 +36,7 @@ This project is a ficticious hair salon site whereby users can view salon servic
 
 ### Project goals
 
-Below is a list of Epics for this project which have been broken down into user stories. The implementation of these user stories have been planned and managed through the Github Kanban board tool. 
+Below is a list of Epics for this project which have been broken down into user stories. The implementation of these user stories have been planned and managed through the Github Kanban board tool. See the following link to the [Locks of Lush Kanban board](https://github.com/jpatel87/locks-of-lush/projects/1)
 
 ### Epic A: Website content
 
