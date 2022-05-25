@@ -93,7 +93,7 @@ Below is a list of Epics for this project which have been broken down into user 
 
 Below is a link to the ERD created for this project.
 
-* [Locks of Lush - Entity Relationship Diagram](readme_documents/ERD/entity-relationship-diagram.png)
+* [Locks of Lush - Entity Relationship Diagram](readme_documents/erd/entity-relationship-diagram.png)
 
 ## Skeleton
 
@@ -118,6 +118,10 @@ Below are links to the initial wireframes created for this project.
 ## Surface
 
 ### Colour scheme
+
+The colour scheme used in this project consist of colours; #faeee9 (light pink), #735366 (purple) and #4e5865 (dark grey). These colours give the website a feminine yet stylish look.
+
+![colour-palette](readme_documents/colour_scheme/colour-palette.png)
 
 ### Typography 
 
