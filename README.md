@@ -119,11 +119,16 @@ Below are links to the initial wireframes created for this project.
 
 ### Colour scheme
 
-The colour scheme used in this project consist of colours; #faeee9 (light pink), #735366 (purple) and #4e5865 (dark grey). These colours give the website a feminine yet stylish look.
+The colour scheme used in this site consist of colours; #faeee9 (light pink), #735366 (purple) and #4e5865 (dark grey). These colours give the site a feminine yet stylish look.
 
 ![colour-palette](readme_documents/colour_scheme/colour-palette.png)
 
 ### Typography 
+
+There are two fonts used in this site. Playfair Display (serif) has been used for the site logo and main page headings and Montserrat (sans-serif) for the site body text. The combination of these two fonts give the site a minimalistic and clean look.
+
+![logo and heading font](readme_documents/typography/logo-heading-font.png)
+![body font](readme_documents/typography/body-font.png)
 
 ### Imagery
 
