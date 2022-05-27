@@ -1,0 +1,154 @@
+/* base.html styles */
+
+body {
+    background-color: white;
+    font-family:'Montserrat', sans-serif;
+}
+
+h1 {
+    display: inline;
+}
+
+.navbar, .dropdown-menu, footer {
+    background-color: #faeee9
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand, .nav-link, .dropdown-item {
+    color: #735366;
+}
+
+.navbar-brand {
+    font-size: lg;
+}
+
+.navbar-brand:hover {
+    color: #4e5865;
+}
+
+.social:hover {
+    color: #4e5865;
+    background-color: none;
+}
+
+.navbar a {
+    border-bottom: 1px solid transparent;
+}
+
+.active, .nav-link:hover, .dropdown-item:hover {
+    border-bottom: 1px solid #4e5865;
+}
+
+.social {
+    color: #735366;
+}
+
+.bi-envelope, .bi-facebook, .bi-instagram, .bi-twitter {
+    font-size: 1.5rem;
+}
+
+
+/* index.html styles */
+
+.hero-image {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.services-card, .services-link {
+    background-color: #faeee9;
+    color: #735366;
+}
+
+.caption {
+    font-family: 'Playfair Display', serif;
+    background-color: #4e5865;
+    color: #faeee9;
+    text-transform: capitalize;
+}
+
+.services-btn {
+    background-color: #735366;
+    color: #faeee9;
+}
+
+.services-btn:hover {
+    background-color: #4e5865;
+    color: #faeee9;
+}
+
+.contact {
+    background-color: #4e5865;
+    color: #faeee9;
+}
+
+.book-btn {
+    background-color: #faeee9;
+    color: #735366;
+    text-transform: uppercase;
+}
+
+.book-btn:hover {
+    color: #faeee9;
+    background-color: #735366;
+    text-decoration: none;
+}
+
+/* services page styles */
+
+.services-header {
+    font-family: 'Playfair Display', serif;
+    background-color: #4e5865;
+    color: #faeee9;
+    text-transform: capitalize;
+}
+
+.services-body {
+    background-color: #faeee9;
+    color: #4e5865;
+}
+
+.service-details-container {
+    background-color: #735366;
+}
+
+.accordion-button {
+    background-color: #faeee9;
+    color: #4e5865;
+}
+
+.accordion-body {
+    background-color: #faeee9;
+    color: #4e5865;
+}
+
+/* stylist page styles */
+
+.stylist-name {
+    color: #735366;
+}
+
+.stylist-image {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.stylist-background {
+    color: #4e5865;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        font-size: 7rem;
+    }
+
+    .caption {
+        font-size: 2.8rem;
+    }
+
+}
