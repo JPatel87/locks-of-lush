@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<section class="py-3 pt-0">
+  <div class="container-fluid my-3 border-0">
+      <div class="card text-center border-0">
+          <div class="card-header services-header h2 rounded-0">Log in</div>
+          <div class="card-body services-body fs-6 p-0 mb-0 pt-4">
+            <p>{% blocktrans %}Not signed up yet? please
+              <a href="{{ signup_url }}" class="sign-up-prompt">sign up</a> first.{% endblocktrans %}</p>
+            <form class="login" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <button class="primaryAction btn card-text services-btn text-decoration-none mb-3 px-4" type="submit">{% trans "Sign In" %}</button>
+            </form>
+          </div>
+      </div>
+  </div>
+</section>
+
+{% endblock %}

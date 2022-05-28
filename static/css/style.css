@@ -140,6 +140,16 @@ h1 {
     color: #4e5865;
 }
 
+/* log in page styles */
+
+.sign-up-prompt {
+    color: #735366;
+}
+
+.sign-up-prompt:hover {
+    color: #4e5865;
+}
+
 /* media queries */
 
 @media (min-width: 768px) {
