@@ -1,4 +1,8 @@
 {% load static %}
+{% url 'home' as home_url %}
+{% url 'services' as services_url %}
+{% url 'stylists' as stylists_url %}
+{% url 'bookings' as bookings_url %}
 
 <!doctype html>
 <html lang="en">
@@ -21,23 +25,23 @@
     <div class="container-fluid mt-2">
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
-          <a class="navbar-brand fs-1" href="{% url 'home' %}">Locks of Lush</a>
+          <a class="navbar-brand fs-1" href="{{ home_url }}">Locks of Lush</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
-                <a class="nav-link px-4" aria-current="page" href="{% url 'home' %}">Home</a>
+              <li class="nav-item {% if request.path == home_url %} active {% endif %}">
+                <a class="nav-link px-4" aria-current="page" href="{{ 'home_url' }}">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link px-4" href="{% url 'services' %}">Services</a>
+              <li class="nav-item {% if request.path == services_url %} active {% endif %}">
+                <a class="nav-link px-4" href="{{ services_url }}" active>Services</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link px-4" href="{% url 'stylists' %}">Stylists</a>
+              <li class="nav-item {% if request.path == stylists_url %} active {% endif %}">
+                <a class="nav-link px-4" href="{{ stylists_url }}">Stylists</a>
               </li>
-              <li class="nav-item dropdown px-4">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item dropdown px-4 {% if request.path == bookings_url %} active {% endif %}">
+                <a class="nav-link dropdown-toggle" href="{{ bookings_url }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Bookings
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
