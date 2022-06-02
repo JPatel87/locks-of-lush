@@ -37,6 +37,11 @@
               <li class="nav-item {% if request.path == services_url %} active {% endif %}">
                 <a class="nav-link px-4" href="{{ services_url }}" active>Services</a>
               </li>
+              {% if user.is_superuser %}
+              <li class="nav-item {% if request.path == services_url %} active {% endif %}">
+                <a class="nav-link px-4" href="{% url 'add_services' %}" active>Add services</a>
+              </li>
+              {% endif %} 
               <li class="nav-item {% if request.path == stylists_url %} active {% endif %}">
                 <a class="nav-link px-4" href="{{ stylists_url }}">Stylists</a>
               </li>
