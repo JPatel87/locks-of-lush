@@ -58,6 +58,9 @@
                                 {% for service in colour_services %}
                                     <p><strong>{{ service.name }}</strong></p>
                                     <p>£{{ service.price }}</p>
+                                    {% if user.is_superuser %}
+                                    <a href="edit/{{ service.id }}" class="text-decoration-none"><strong>Edit | </strong></a>
+                                    {% endif %}
                                 {% endfor %}
                             </div>
                         </div>
@@ -77,6 +80,9 @@
                                 {% for service in style_services %}
                                     <p><strong>{{ service.name }}</strong></p>
                                     <p>£{{ service.price }}</p>
+                                    {% if user.is_superuser %}
+                                    <a href="edit/{{ service.id }}" class="text-decoration-none"><strong>Edit | </strong></a>
+                                    {% endif %}
                                 {% endfor %}
                             </div>
                         </div>
