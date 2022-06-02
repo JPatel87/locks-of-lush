@@ -42,3 +42,14 @@ def edit_services_page(request, service_id):
         'form': form
     }
     return render(request, 'services/edit_services.html', context)
+
+
+def delete_services_page(request, service_id):
+    service = get_object_or_404(Service, id=service_id)
+    if request.method == "POST":
+        service.delete()
+        return redirect('services')
+    context = {
+        'service': service
+    }
+    return render(request, 'services/delete_services.html', context)
