@@ -1,10 +1,8 @@
 from django.shortcuts import render
-
-# Create your views here.
 from .models import Service
+from .forms import ServiceForm
 
 # Create your views here.
-
 
 def get_services_page(request):
     cut_services = Service.objects.filter(
