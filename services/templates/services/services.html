@@ -37,7 +37,8 @@
                                     <p><strong>{{ service.name }}</strong></p>
                                     <p>£{{ service.price }}</p>
                                     {% if user.is_superuser %}
-                                    <a href="edit/{{ service.id }}" class="text-decoration-none"><strong>Edit | </strong></a>
+                                    <a href="edit/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong>Edit | </strong></a>
+                                    <a href="delete/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong> Delete</strong></a><hr>
                                     {% endif %}
                                 {% endfor %}
                             </div>
@@ -59,7 +60,8 @@
                                     <p><strong>{{ service.name }}</strong></p>
                                     <p>£{{ service.price }}</p>
                                     {% if user.is_superuser %}
-                                    <a href="edit/{{ service.id }}" class="text-decoration-none"><strong>Edit | </strong></a>
+                                    <a href="edit/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong>Edit | </strong></a>
+                                    <a href="delete/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong> Delete</strong></a><hr>
                                     {% endif %}
                                 {% endfor %}
                             </div>
@@ -81,7 +83,8 @@
                                     <p><strong>{{ service.name }}</strong></p>
                                     <p>£{{ service.price }}</p>
                                     {% if user.is_superuser %}
-                                    <a href="edit/{{ service.id }}" class="text-decoration-none"><strong>Edit | </strong></a>
+                                    <a href="edit/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong>Edit | </strong></a>
+                                    <a href="delete/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong> Delete</strong></a><hr>
                                     {% endif %}
                                 {% endfor %}
                             </div>
