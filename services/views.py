@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Service
 from .forms import ServiceForm
 
@@ -28,3 +28,17 @@ def add_services_page(request):
         'form': form
     }
     return render(request, 'services/add_services.html', context)
+
+
+def edit_services_page(request, service_id):
+    service = get_object_or_404(Service, id=service_id)
+    if request.method == "POST":
+        form = ServiceForm(request.POST, instance=service)
+        if form.is_valid():
+            form.save()
+            return redirect('services')
+    form = ServiceForm(instance=service)
+    context = {
+        'form': form
+    }
+    return render(request, 'services/edit_services.html', context)
