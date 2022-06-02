@@ -17,3 +17,16 @@ def get_services_page(request):
         'cut_services': cut_services,
         'colour_services': colour_services,
         'style_services': style_services})
+
+
+def add_services_page(request):
+    if request.method == "POST":
+        form = ServiceForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('services')
+    form = ServiceForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'services/add_services.html', context)
