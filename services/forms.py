@@ -8,3 +8,6 @@ class ServiceForm(forms.ModelForm):
 
     def clean_name(self):
         return self.cleaned_data['name'].capitalize()
+    
+
+
