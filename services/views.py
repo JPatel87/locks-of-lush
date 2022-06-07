@@ -63,6 +63,7 @@ def delete_services_page(request, service_id):
     service = get_object_or_404(Service, id=service_id)
     if request.method == "POST":
         service.delete()
+        messages.success(request, 'Request granted', extra_tags='success_services')
         return redirect('services')
     context = {
         'service': service
