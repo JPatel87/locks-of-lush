@@ -5,9 +5,9 @@ from django.db import models
 
 class Service(models.Model):
     class ServiceType(models.TextChoices):
-        CUT = 'CUT', 'cut'
-        COLOUR = 'COLOUR', 'colour'
-        STYLE = 'STYLE', 'style'
+        CUT = 'CUT', 'Cut'
+        COLOUR = 'COLOUR', 'Colour'
+        STYLE = 'STYLE', 'Style'
     name = models.CharField(max_length=100, unique=True)
     service_type = models.CharField(
         max_length=10,
