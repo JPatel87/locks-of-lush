@@ -34,7 +34,7 @@
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body cut-services fs-5">
                                 {% for service in cut_services %}
-                                    <p><strong>{{ service.name|title }}</strong></p>
+                                    <p><strong>{{ service.name }}</strong></p>
                                     <p>£{{ service.price }}</p>
                                     {% if user.is_superuser %}
                                     <a href="edit/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong>Edit | </strong></a>
@@ -57,7 +57,7 @@
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body colour-services fs-5">
                                 {% for service in colour_services %}
-                                    <p><strong>{{ service.name|title }}</strong></p>
+                                    <p><strong>{{ service.name }}</strong></p>
                                     <p>£{{ service.price }}</p>
                                     {% if user.is_superuser %}
                                     <a href="edit/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong>Edit | </strong></a>
@@ -80,7 +80,7 @@
                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body style-services fs-5">
                                 {% for service in style_services %}
-                                    <p><strong>{{ service.name|title }}</strong></p>
+                                    <p><strong>{{ service.name }}</strong></p>
                                     <p>£{{ service.price }}</p>
                                     {% if user.is_superuser %}
                                     <a href="edit/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong>Edit | </strong></a>

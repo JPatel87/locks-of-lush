@@ -20,9 +20,14 @@ def get_services_page(request):
 def add_services_page(request):
     if request.method == "POST":
         form = ServiceForm(request.POST)
+        context = {
+            'form': form
+        }
         if form.is_valid():
             form.save()
             return redirect('services')
+        else:
+            return render(request, 'services/add_services.html', context)
     form = ServiceForm()
     context = {
         'form': form
