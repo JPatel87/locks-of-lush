@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Service
 from .forms import ServiceForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -25,8 +26,10 @@ def add_services_page(request):
         }
         if form.is_valid():
             form.save()
+            messages.success(request, 'Request granted', extra_tags='success_services')
             return redirect('services')
         else:
+            messages.error(request, 'Service not added - please address errors', extra_tags='invalid_add_services')
             return render(request, 'services/add_services.html', context)
     form = ServiceForm()
     context = {
