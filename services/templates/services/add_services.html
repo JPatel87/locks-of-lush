@@ -14,7 +14,8 @@
                         <form action="{% url 'add_services' %}" method="POST">
                             {% csrf_token %}
                             {{ form.as_p }}
-                            <button class="btn card-text action-btn text-decoration-none mb-3 px-4" type="submit">Add</button>
+                            <button class="btn card-text action-btn text-decoration-none mb-3 px-4" type="submit">Confirm</button>
+                            <a href="{{ services_url }}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Cancel</a>
                         </form>
                 </div>
             </div>
