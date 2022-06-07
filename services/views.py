@@ -34,7 +34,6 @@ def add_services_page(request):
     }
     return render(request, 'services/add_services.html', context)
 
-
 def edit_services_page(request, service_id):
     service = get_object_or_404(Service, id=service_id)
     if request.method == "POST":
