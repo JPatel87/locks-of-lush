@@ -9,6 +9,9 @@ class ServiceForm(forms.ModelForm):
             'name': 'Service name',
             'price': 'Price (£)'
         }
+        widgets = {
+            'price': forms.TextInput(attrs={'placeholder': 'e.g £99.99 enter as 99.99'}),
+        }
 
     def clean_name(self):
         return self.cleaned_data['name'].capitalize()
