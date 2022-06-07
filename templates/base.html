@@ -50,9 +50,15 @@
               <li class="nav-item {% if request.path == bookings_url %} active {% endif %}">
                 <a class="nav-link px-4" href="{{ bookings_url }}">Bookings</a>
               </li>
-              <li class="nav-item {% if request.path == logout_url %} active {% endif %}">
-                <a class="nav-link px-4" href="{{ logout_url }}">Log out</a>
-              </li>
+              <li class="nav-item dropdown px-4">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <strong>Logged in as {{ user.username }}</strong>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li class="nav-item {% if request.path == logout_url %} active {% endif %}">
+                    <a class="nav-link px-4" href="{{ logout_url }}">Log out</a>
+                  </li>
+                </ul>
               {% else %}
                 <li class="nav-item {% if request.path == login_url %} active {% endif %}">
                   <a class="nav-link px-4" href="{{ login_url }}">Log in</a>
