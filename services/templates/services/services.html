@@ -24,6 +24,9 @@
                 <p>Whether you are looking for a simple wash and cut or a complete restyle with colour,
                 we can help get your hair feeling revitalised and looking lock-urious!</p>
                 <p>Check out our range of services below...</p>
+                {% if user.is_superuser %}
+                <a href="{% url 'add_services' %}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Add service</a>
+                {% endif %}
             </div>
         </div>
     </div>    
