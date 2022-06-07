@@ -37,13 +37,21 @@ def add_services_page(request):
     }
     return render(request, 'services/add_services.html', context)
 
+
 def edit_services_page(request, service_id):
     service = get_object_or_404(Service, id=service_id)
     if request.method == "POST":
         form = ServiceForm(request.POST, instance=service)
+        context = {
+            'form': form
+        }
         if form.is_valid():
             form.save()
+            messages.success(request, 'Request granted', extra_tags='success_services')
             return redirect('services')
+        else:
+            messages.error(request, 'Service not edited - please address errors', extra_tags='invalid_edit_services')
+            return render(request, 'services/edit_services.html', context)
     form = ServiceForm(instance=service)
     context = {
         'form': form
