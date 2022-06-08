@@ -3,14 +3,17 @@ from decimal import Decimal
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
+
 class Service(models.Model):
-
     """
-    
-
+    Service model for services page.
     """
 
     class ServiceType(models.TextChoices):
+        """
+        Service type field options
+        """
+
         CUT = 'CUT', 'Cut'
         COLOUR = 'COLOUR', 'Colour'
         STYLE = 'STYLE', 'Style'
@@ -27,4 +30,7 @@ class Service(models.Model):
         )
 
     def __str__(self):
+        """
+        Method to display service by its name.
+        """
         return str(self.name)

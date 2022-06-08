@@ -6,7 +6,7 @@ from .forms import ServiceForm
 
 
 def services(request):
-    """View services page."""
+    """Function to view services page."""
     cut_services = Service.objects.filter(
         service_type__contains='CUT').order_by('name')
     colour_services = Service.objects.filter(
@@ -21,7 +21,7 @@ def services(request):
 
 def add_services(request):
     """
-    View add services page.
+    Function to view add services page.
 
     The get request returns the add services page.
     The post request checks the form is valid,
@@ -55,13 +55,13 @@ def add_services(request):
 
 def edit_services(request, service_id):
     """
-    View edit services page.
+    Function to view edit services page.
 
     The get request returns the edit services page.
     The post request checks the form is valid,
     displays validity message, returns services page if valid.
     """
-    
+
     service = get_object_or_404(Service, id=service_id)
     if request.method == "POST":
         form = ServiceForm(request.POST, instance=service)
@@ -90,7 +90,7 @@ def edit_services(request, service_id):
 
 def delete_services(request, service_id):
     """
-    View delete services page.
+    Function to view delete services page.
 
     The get request returns the delete services page.
     The post request deletes the service,
