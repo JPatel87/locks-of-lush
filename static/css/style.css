@@ -95,6 +95,20 @@ h1 {
 
 /* services page styles */
 
+.accordion-item {
+    background-color: #735366;
+}
+
+.accordion-button {
+    background-color: #faeee9;
+    color: #4e5865;
+}
+
+.accordion-body {
+    background-color: #faeee9;
+    color: #4e5865;
+}
+
 .page-header {
     font-family: 'Playfair Display', serif;
     background-color: #4e5865;
@@ -109,16 +123,6 @@ h1 {
 
 .service-details-container {
     background-color: #735366;
-}
-
-.accordion-button {
-    background-color: #faeee9;
-    color: #4e5865;
-}
-
-.accordion-body {
-    background-color: #faeee9;
-    color: #4e5865;
 }
 
 /* stylist page styles */
