@@ -4,39 +4,35 @@
 
 {% block content %}
 
-<!--stylists summary-->
-<section class="py-3 pt-0">
-    <div class="container-fluid my-3 border-0">
-        <div class="card text-center border-0">
-            <div class="card-header page-header h2 rounded-0">our stylists</div>
-            <div class="card-body services-body fs-6 p-0 mb-0 pt-4">
-                <p class="card-text">At Locks of Lush we have over 20 years experience in hairdressing.</p>
-                <p>We aim to deliver honest, friendly and professional customer service to take care of all your hair care needs.</p>
-                <p>Check out our team of stylists below...</p>
-            </div>
+<!--stylists summary container-->
+<div class="container-fluid my-3 border-0 py-3 pt-0">
+    <div class="card text-center border-0">
+        <div class="card-header page-header h2 rounded-0">our stylists</div>
+        <div class="card-body services-body fs-6 p-0 mb-0 pt-4">
+            <p class="card-text">At Locks of Lush we have over 20 years experience in hairdressing.</p>
+            <p>We aim to deliver honest, friendly and professional customer service to take care of all your hair care needs.</p>
+            <p>Check out our team of stylists below...</p>
         </div>
-    </div>    
-</section>
+    </div>
+</div>    
 
-<!--stylists details-->
-<section class="py-3">
-    <div class="container">
-        <div class="row text-center g-4">
-            {% for stylist in stylists %}
-            <div class="col-md">
-                <div class="card border-0 mx-auto" style="width: 20rem;">
-                    <img src="{{ stylist.image.url }}" class="card-img-top stylist-image mx-auto" alt="stylist image">
-                    <div class="card-body">
-                        <h5 class="card-title stylist-name">
-                        <strong>{{ stylist.first_name }}</strong>
-                        </h5>
-                        <p class="card-text stylist-background">{{ stylist.background_details }}</p>
-                    </div>
+<!--stylists details container - prepared using Bootstrap 5, images card template-->
+<div class="container py-3">
+    <div class="row text-center g-4">
+        {% for stylist in stylists %}
+        <div class="col-md">
+            <div class="card border-0 mx-auto" style="width: 20rem;">
+                <img src="{{ stylist.image.url }}" class="card-img-top stylist-image mx-auto" alt="stylist image">
+                <div class="card-body">
+                    <h5 class="card-title stylist-name">
+                    <strong>{{ stylist.first_name }}</strong>
+                    </h5>
+                    <p class="card-text stylist-background">{{ stylist.background_details }}</p>
                 </div>
             </div>
-            {% endfor %}
-        </div> 
-    </div>
-</section>
+        </div>
+        {% endfor %}
+    </div> 
+</div>
 
 {% endblock %}
