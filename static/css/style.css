@@ -65,13 +65,13 @@ h1 {
     text-transform: capitalize;
 }
 
-.action-btn {
+.action-btn, .login-signout-btn {
     background-color: #735366;
     color: #faeee9;
     text-transform: uppercase;
 }
 
-.action-btn:hover {
+.action-btn:hover, .login-signout-btn:hover {
     background-color: #4e5865;
     color: #faeee9;
 }
@@ -151,6 +151,10 @@ h1 {
 }
 
 /* login/signin/logout page styles */
+
+.login-signout-btn {
+    width: 40%;
+}
 
 .sign-up-container {
     width: 95%;
