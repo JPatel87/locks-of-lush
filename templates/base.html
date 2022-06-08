@@ -32,10 +32,10 @@
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
           <a class="navbar-brand fs-1" href="{{ home_url }}">Locks of Lush</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarMenu">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item {% if request.path == home_url %} active {% endif %}">
                 <a class="nav-link px-4" aria-current="page" href="{{ home_url }}">Home</a>
@@ -50,19 +50,18 @@
               <li class="nav-item {% if request.path == bookings_url %} active {% endif %}">
                 <a class="nav-link px-4" href="{{ bookings_url }}">Bookings</a>
               </li>
-              <li class="nav-item dropdown px-4">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item dropdown {% if request.path == logout_url %} active {% endif %}">
+                <a class="nav-link dropdown-toggle px-4" href="{{ home_url }}" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <strong>Logged in as {{ user.username }}</strong>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li class="nav-item {% if request.path == logout_url %} active {% endif %}">
-                    <a class="nav-link px-4" href="{{ logout_url }}">Log out</a>
-                  </li>
-                </ul>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{{ logout_url }}">Log out</a>
+                </div>
+              </li>
               {% else %}
-                <li class="nav-item {% if request.path == login_url %} active {% endif %}">
-                  <a class="nav-link px-4" href="{{ login_url }}">Log in</a>
-                </li>
+              <li class="nav-item {% if request.path == login_url %} active {% endif %}">
+                <a class="nav-link px-4" href="{{ login_url }}">Log in</a>
+              </li>
               {% endif %}
             </ul>
           </div>
