@@ -21,17 +21,12 @@ h1 {
     color: #735366;
 }
 
-.navbar-brand {
-    font-size: lg;
-}
-
 .navbar-brand:hover {
     color: #4e5865;
 }
 
 .social:hover {
     color: #4e5865;
-    background-color: none;
 }
 
 .navbar a {
