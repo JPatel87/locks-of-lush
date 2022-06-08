@@ -1,3 +1,4 @@
+"""Imports from django and views"""
 from django.urls import path
 from services.views import get_services_page, add_services_page, edit_services_page, delete_services_page
 
