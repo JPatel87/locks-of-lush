@@ -1,4 +1,4 @@
-"""Imports from django, models and forms"""
+"""Imports from django, models and forms."""
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Service
@@ -6,7 +6,7 @@ from .forms import ServiceForm
 
 
 def services(request):
-    """Function to call the services page"""
+    """View services page."""
     cut_services = Service.objects.filter(
         service_type__contains='CUT').order_by('name')
     colour_services = Service.objects.filter(
@@ -20,7 +20,14 @@ def services(request):
 
 
 def add_services(request):
-    """Function to call the add services page"""
+    """
+    View add services page.
+
+    The get request returns the add services page.
+    The post request checks the form is valid,
+    displays validity message, returns services page if valid.
+    """
+
     if request.method == "POST":
         form = ServiceForm(request.POST)
         context = {
@@ -47,7 +54,14 @@ def add_services(request):
 
 
 def edit_services(request, service_id):
-    """Function to call the edit services page"""
+    """
+    View edit services page.
+
+    The get request returns the edit services page.
+    The post request checks the form is valid,
+    displays validity message, returns services page if valid.
+    """
+    
     service = get_object_or_404(Service, id=service_id)
     if request.method == "POST":
         form = ServiceForm(request.POST, instance=service)
@@ -75,7 +89,14 @@ def edit_services(request, service_id):
 
 
 def delete_services(request, service_id):
-    """Function to call the delete services page"""
+    """
+    View delete services page.
+
+    The get request returns the delete services page.
+    The post request deletes the service,
+    displays the success message, returns service page.
+    """
+
     service = get_object_or_404(Service, id=service_id)
     if request.method == "POST":
         service.delete()

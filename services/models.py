@@ -1,12 +1,15 @@
-from django.db import models
+"""Imports from django"""
 from decimal import Decimal
+from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
-
-# Create your models here.
-
-
 class Service(models.Model):
+
+    """
+    
+
+    """
+
     class ServiceType(models.TextChoices):
         CUT = 'CUT', 'Cut'
         COLOUR = 'COLOUR', 'Colour'
