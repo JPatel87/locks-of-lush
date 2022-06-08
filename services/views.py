@@ -5,7 +5,7 @@ from .models import Service
 from .forms import ServiceForm
 
 
-def get_services_page(request):
+def services(request):
     """Function to call the services page"""
     cut_services = Service.objects.filter(
         service_type__contains='CUT').order_by('name')
@@ -19,7 +19,7 @@ def get_services_page(request):
         'style_services': style_services})
 
 
-def add_services_page(request):
+def add_services(request):
     """Function to call the add services page"""
     if request.method == "POST":
         form = ServiceForm(request.POST)
@@ -46,7 +46,7 @@ def add_services_page(request):
     return render(request, 'services/add_services.html', context)
 
 
-def edit_services_page(request, service_id):
+def edit_services(request, service_id):
     """Function to call the edit services page"""
     service = get_object_or_404(Service, id=service_id)
     if request.method == "POST":
@@ -74,7 +74,7 @@ def edit_services_page(request, service_id):
     return render(request, 'services/edit_services.html', context)
 
 
-def delete_services_page(request, service_id):
+def delete_services(request, service_id):
     """Function to call the delete services page"""
     service = get_object_or_404(Service, id=service_id)
     if request.method == "POST":

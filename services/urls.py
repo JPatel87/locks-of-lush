@@ -1,11 +1,11 @@
 """Imports from django and views"""
 from django.urls import path
-from services.views import get_services_page, add_services_page, edit_services_page, delete_services_page
+from services.views import services, add_services, edit_services, delete_services
 
 
 urlpatterns = [
-    path('', get_services_page, name='services'),
-    path('add/', add_services_page, name='add_services'),
-    path('edit/<service_id>', edit_services_page, name='edit_services'),
-    path('delete/<service_id>', delete_services_page, name='delete_services')
+    path('', services, name='services'),
+    path('add/', add_services, name='add_services'),
+    path('edit/<service_id>', edit_services, name='edit_services'),
+    path('delete/<service_id>', delete_services, name='delete_services')
 ]
