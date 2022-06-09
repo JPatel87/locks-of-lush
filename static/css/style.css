@@ -162,6 +162,12 @@ footer,
     }
 }
 
+.upcoming-bookings {
+    background-color: #735366;
+    color: #faeee9;
+    text-align: center;
+}
+
 @media (min-width: 992px) {
     .navbar-brand {
         font-size: 7rem;
