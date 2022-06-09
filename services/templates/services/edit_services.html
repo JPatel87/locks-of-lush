@@ -14,23 +14,22 @@
       {% endif %}
   {% endfor %}
 </div>
-<!--services summary-->
-<section class="py-3 pt-0">
-    <div class="container-fluid border-0">
-        <div class="card text-center border-0">
-            <div class="form-container fs-6 p-0 mb-0 pt-4">
-              <div class="sign-up-container">
-                <div class="card-header page-card-header h2 rounded-0 header-text mb-3">Edit services</div>
-                    <form method="POST">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <button class="btn card-text action-btn text-decoration-none mb-3 px-4" type="submit">Confirm</button>
-                        <a href="{{ services_url }}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Cancel</a>
-                    </form>
-              </div>
-            </div>
+
+<!--edit services form-->
+<div class="container-fluid border-0 py-3 pt-0">
+    <div class="card text-center border-0">
+        <div class="form-container fs-6 p-0 mb-0 pt-4">
+          <div class="sign-up-container">
+            <div class="card-header page-card-header h2 rounded-0 header-text mb-3">Edit services</div>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn card-text action-btn text-decoration-none mb-3 px-4" type="submit">Confirm</button>
+                    <a href="{{ services_url }}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Cancel</a>
+                </form>
+          </div>
         </div>
     </div>
-  </section>
+</div>
 
 {% endblock %}
