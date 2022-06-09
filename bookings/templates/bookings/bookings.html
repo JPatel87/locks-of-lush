@@ -4,6 +4,22 @@
 
 {% block content %}
 
+<!--bookings summary container-->
+<div class="container-fluid my-3 border-0">
+    <div class="card text-center border-0">
+        <div class="card-header page-card-header h2 rounded-0">Bookings</div>
+        <div class="card-body page-card-body fs-6 p-0 mb-0 pt-4">
+            {% if user.is_authenticated %}
+            <p class="card-text lead">Welcome {{ user.username|title }}</p>
+            <p>This is your bookings portal.
+            <p>From this portal you will be able to make bookings and view exisiting bookings.
+            <p>You will also be able change and delete any upcoming bookings.</p>
+            <a href="{% url 'add_bookings' %}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Book now!</a>
+            {% endif %}
+        </div>
+    </div>
+</div>  
+
 <!--bookings overview container-->
 <div class="container-fluid my-3 border-0 py-3 pt-0">
     <div class="card text-center border-0">

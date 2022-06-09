@@ -18,6 +18,6 @@ class Stylist(models.Model):
 
     def __str__(self):
         """
-        Method to display stylist instance by first and last name.
+        Method to display stylist instance by first name.
         """
-        return str(self.first_name + " " + self.last_name)
+        return str(self.first_name)
