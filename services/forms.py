@@ -1,4 +1,4 @@
-"""Imports from django and models."""
+"""Imports from django and service model."""
 from django import forms
 from .models import Service
 
