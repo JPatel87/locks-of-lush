@@ -6,7 +6,7 @@ from cloudinary.models import CloudinaryField
 
 class Stylist(models.Model):
     """
-    Stylist model for stylist page.
+    Stylist model for stylist database.
     """
     first_name = models.CharField(max_length=50, unique=True)
     last_name = models.CharField(max_length=50)

@@ -6,7 +6,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Service(models.Model):
     """
-    Service model for services page.
+    Service model for services database.
     """
 
     class ServiceType(models.TextChoices):
@@ -17,6 +17,7 @@ class Service(models.Model):
         CUT = 'CUT', 'Cut'
         COLOUR = 'COLOUR', 'Colour'
         STYLE = 'STYLE', 'Style'
+
     name = models.CharField(max_length=100, unique=True)
     service_type = models.CharField(
         max_length=10,
