@@ -1,50 +1,102 @@
-/* base.html styles */
+/* Generic website styles */
 
 body {
     background-color: white;
     font-family:'Montserrat', sans-serif;
 }
 
-h1 {
-    display: inline;
-}
+/* Styles used across multiple pages */
 
-.navbar, .dropdown-menu, footer {
+.navbar,
+.dropdown-menu,
+footer,
+.book-btn,
+.page-card-body,
+.accordion-button,
+.accordion-body,
+.sign-up-container {
     background-color: #faeee9
 }
 
-.navbar-brand {
+.navbar-brand, .page-card-header, .caption {
     font-family: 'Playfair Display', serif;
 }
 
-.navbar-brand, .nav-link, .dropdown-item {
+.navbar-brand,
+.nav-link,
+.dropdown-item,
+.book-btn,
+.social,
+.stylist-name,
+.sign-up-prompt,
+.log-in-prompt,
+.edit-delete-link {
     color: #735366;
 }
 
-.navbar-brand:hover {
+.page-card-header,
+.action-btn,
+.login-signout-btn,
+.action-btn:hover,
+.login-signout-btn:hover,
+.contact,
+.book-btn:hover,
+.caption  {
+    color: #faeee9;
+}
+
+.page-card-header {
+    text-transform: capitalize;
+}
+
+.action-btn, .login-signout-btn, .book-btn {
+    text-transform: uppercase;
+}
+
+.accordion-item,
+.action-btn,
+.login-signout-btn,
+.book-btn:hover {
+    background-color: #735366;
+}
+
+.social:hover,
+.sign-up-prompt:hover,
+.log-in-prompt:hover,
+.navbar-brand:hover,
+.edit-delete-link:hover,
+.stylist-background,
+.page-card-body,
+.accordion-button,
+.accordion-body {
     color: #4e5865;
 }
 
-.social:hover {
-    color: #4e5865;
+.contact,
+.page-card-header,
+.action-btn:hover,
+.login-signout-btn:hover,
+.caption {
+    background-color: #4e5865;
 }
+
+/* Base.html styles */
 
 .navbar a {
     border-bottom: 1px solid transparent;
 }
 
-.active, .nav-link:hover, .dropdown-item:hover {
-    border-bottom: 1px solid #4e5865;
-}
-
-.social {
-    color: #735366;
+.book-btn:hover {
+    text-decoration: none;
 }
 
 .bi-envelope, .bi-facebook, .bi-instagram, .bi-twitter {
     font-size: 1.5rem;
 }
 
+.active, .nav-link:hover, .dropdown-item:hover {
+    border-bottom: 1px solid #4e5865;
+}
 
 /* index.html styles */
 
@@ -53,101 +105,15 @@ h1 {
     border-top-right-radius: 0;
 }
 
-.services-card, .services-link {
-    background-color: #faeee9;
-    color: #735366;
-}
-
 .caption {
-    font-family: 'Playfair Display', serif;
-    background-color: #4e5865;
-    color: #faeee9;
     text-transform: capitalize;
-}
-
-.action-btn, .login-signout-btn {
-    background-color: #735366;
-    color: #faeee9;
-    text-transform: uppercase;
-}
-
-.action-btn:hover, .login-signout-btn:hover {
-    background-color: #4e5865;
-    color: #faeee9;
-}
-
-.contact {
-    background-color: #4e5865;
-    color: #faeee9;
-}
-
-.book-btn {
-    background-color: #faeee9;
-    color: #735366;
-    text-transform: uppercase;
-}
-
-.book-btn:hover {
-    color: #faeee9;
-    background-color: #735366;
-    text-decoration: none;
-}
-
-/* services page styles */
-
-.accordion-item {
-    background-color: #735366;
-}
-
-.accordion-button {
-    background-color: #faeee9;
-    color: #4e5865;
-}
-
-.accordion-body {
-    background-color: #faeee9;
-    color: #4e5865;
-}
-
-.page-header {
-    font-family: 'Playfair Display', serif;
-    background-color: #4e5865;
-    color: #faeee9;
-    text-transform: capitalize;
-}
-
-.services-body {
-    background-color: #faeee9;
-    color: #4e5865;
-}
-
-.service-details-container {
-    background-color: #735366;
 }
 
 /* stylist page styles */
 
-.stylist-name {
-    color: #735366;
-}
-
 .stylist-image {
     width: 80%;
     border-radius: 50%;
-}
-
-.stylist-background {
-    color: #4e5865;
-}
-
-/* log in page styles */
-
-.sign-up-prompt {
-    color: #735366;
-}
-
-.sign-up-prompt:hover {
-    color: #4e5865;
 }
 
 /* login/signin/logout page styles */
@@ -157,9 +123,7 @@ h1 {
 }
 
 .sign-up-container {
-    width: 95%;
-    clear: both;
-    background-color: #faeee9;
+    width: 95%;;
 }
 
 .header-text {
@@ -174,29 +138,17 @@ h1 {
 
 .sign-up-container input {
     width: 90%;
-    clear: both;
-}
-
-.log-in-prompt {
-    color: #735366;
-}
-
-.log-in-prompt:hover {
-    color: #4e5865;
 }
 
 /* edit/delete page styles */
 
 .edit-delete-link {
-    color: #735366;
     text-transform: capitalize;
 }
 
 .edit-delete-link:hover {
-    color: #4e5865;
     font-size: 120%;
 }
-
 
 /* media queries */
 
