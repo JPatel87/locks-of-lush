@@ -20,13 +20,13 @@
     <div class="card text-center border-0">
         <div class="form-container fs-6 p-0 mb-0 pt-4">
           <div class="sign-up-container">
-            <div class="card-header page-card-header h2 rounded-0 header-text mb-3">Delete services</div>
+            <div class="card-header page-card-header h2 rounded-0 header-text mb-3">Delete bookings</div>
               <form method="POST">
                 {% csrf_token %}
                 <p class="lead">Are you sure you want to delete</p>
-                <p class="h5">{{ service.name }}?</p><br>
+                <p class="h5">{{ booking.date }} at {{ booking.get_time_display }} with {{ booking.stylist }}?</p><br>
                 <button class="btn card-text action-btn text-decoration-none mb-3 px-4" type="submit">Confirm</button>
-                <a href="{{ services_url }}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Cancel</a>
+                <a href="{{ bookings_url }}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Cancel</a>
               </form>
           </div>
         </div>
