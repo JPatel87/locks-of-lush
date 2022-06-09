@@ -1,4 +1,4 @@
-"""Imports from django, models and forms."""
+"""Imports from django, service model and service form."""
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Service
@@ -6,7 +6,12 @@ from .forms import ServiceForm
 
 
 def services(request):
-    """Function to view services page."""
+    """
+    Function to view services page.
+
+    Services filtered to service type.
+    """
+
     cut_services = Service.objects.filter(
         service_type__contains='CUT').order_by('name')
     colour_services = Service.objects.filter(
