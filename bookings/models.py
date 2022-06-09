@@ -61,3 +61,12 @@ class Booking(models.Model):
         Unique by date, time and stylist.
         """
         unique_together = ('date', 'time', 'stylist')
+
+    @property
+    def past_date(self):
+        """
+        Decorator to check an appointments status
+        """
+        today = date.today()
+        if self.date < today:
+            return True

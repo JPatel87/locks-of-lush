@@ -43,6 +43,7 @@ footer,
 .book-btn:hover,
 .caption  {
     color: #faeee9;
+    text-align: center;
 }
 
 .page-card-header {
@@ -51,8 +52,10 @@ footer,
 
 .action-btn, .login-signout-btn, .book-btn {
     text-transform: uppercase;
+    text-decoration: none
 }
 
+.bookings-toggle-btn
 .accordion-item,
 .action-btn,
 .login-signout-btn,
@@ -70,6 +73,7 @@ footer,
 .accordion-button,
 .accordion-body {
     color: #4e5865;
+    text-align: center;
 }
 
 .contact,
@@ -144,6 +148,10 @@ footer,
 
 .edit-delete-link:hover {
     font-size: 120%;
+}
+
+.bookings-toggle-btn {
+    background-color: #faeee9;
 }
 
 /* media queries */

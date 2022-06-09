@@ -20,44 +20,72 @@
     </div>
 </div>  
 
-<!--bookings overview container-->
-<div class="container-fluid my-3 border-0 py-3 pt-0">
-    <div class="row">
-        <div class="table-responsive">
-            <div class="page-card-header h3 rounded-0 upcoming-bookings py-2 my-0">Upcoming bookings</div>
-            <table class="table table-hover page-card-body text-center">
-                <thead>
-                    <tr>
-                        {% if user.is_superuser %}
-                        <th scope="col" class="table-text">User</th>
-                        {% endif %}
-                        <th scope="col" class="table-text">Client</th>
-                        <th scope="col" class="table-text">Service</th>
-                        <th scope="col" class="table-text">Appointment</th>
-                        <th scope="col" class="table-text">Edit/Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for booking in bookings %}
-                    <tr>
-                        {% if timeslot.Is_Past != True%} 
-                            {% if user.is_superuser %}
-                            <td class="table-text">{{ booking.user }}</td>
-                            {% endif %}
-                            <td class="table-text">{{ booking.first_name }} {{ booking.last_name }}</td>
-                            <td class="table-text">{{ booking.service }}</td>
-                            <td class="table-text">{{ booking.date }}, {{ booking.get_time_display }}, {{booking.stylist}}</td>
-                            <td> 
-                                <a href="edit/{{ timeslot.id }}" class="btn card-text action-btn text-decoration-none m-2">Edit</a>
-                                <a href="delete/{{ timeslot.id }}" class="btn card-text action-btn text-decoration-none">Delete</a>{% if timeslot.Is_Past %}
-                            </td>
-                        {% endif %}
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+<div class="container my-3 border-0">
+        <div class="row">
+            <button class="col-sm-12 btn action-btn mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-future-bookings" aria-expanded="false" aria-controls="collapseExample">
+                Upcoming bookings
+            </button>
+            <button class="col-sm-12 btn action-btn mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-past-bookings" aria-expanded="false" aria-controls="collapseExample">
+                Previous bookings
+            </button>
         </div>
     </div>
+</div>  
+
+<div class="table-responsive container-fluid my-3 border-0 collapse" id="collapse-future-bookings">
+    <table class="table table-hover page-card-body">
+        <thead class>
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Client</th>
+                <th scope="col">Service</th>
+                <th scope="col">Appointment</th>
+                <th scope="col">Change/Cancel</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in bookings %}
+            <tr>
+                {% if booking.past_date != True %}
+                    <th scope="row">{{ booking.user }}</th>
+                    <td>{{ booking.first_name }} {{ booking.last_name }}</td>
+                    <td>{{ booking.service }}</td>
+                    <td>{{ booking.date }}, {{ booking.get_time_display }}</td>
+                    <td>
+                        <a href="edit/{{ timeslot.id }}" class="btn card-text action-btn text-decoration-none mb-1">Change</a>
+                        <a href="delete/{{ timeslot.id }}" class="btn card-text action-btn text-decoration-none mb-1">Cancel</a>
+                    </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
-                    
+
+<div class="table-responsive container-fluid my-3 border-0 collapse" id="collapse-past-bookings">
+    <table class="table table-hover page-card-body">
+        <thead class>
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Client</th>
+                <th scope="col">Service</th>
+                <th scope="col">Appointment</th>
+                <th scope="col">Change/Cancel</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in bookings %}
+            <tr>
+                {% if booking.past_date %}
+                    <th scope="row">{{ booking.user }}</th>
+                    <td>{{ booking.first_name }} {{ booking.last_name }}</td>
+                    <td>{{ booking.service }}</td>
+                    <td>{{ booking.date }}, {{ booking.get_time_display }}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
 {% endblock %}
