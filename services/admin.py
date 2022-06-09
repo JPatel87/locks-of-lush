@@ -1,9 +1,7 @@
-"""Imports from django and models."""
+"""Imports from django and service model."""
 from django.contrib.admin import ModelAdmin
 from django.contrib import admin
 from .models import Service
-
-# Register your models here.
 
 
 @admin.register(Service)
