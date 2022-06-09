@@ -28,7 +28,7 @@ def add_services(request):
     """
     Function to view add services page.
 
-    The get request returns the add services page.
+    The get request returns the add services form.
     The post request checks the form is valid,
     displays validity message, returns services page if valid.
     """
