@@ -20,7 +20,82 @@
     </div>
 </div>  
 
-<!--bookings overview container-->
+<!--services type accordion - prepared using Bootstrap 5, accordion flush template-->
+<div class="accordion accordion-flush mb-3 py-2 px-3" id="accordionFlushExample">
+    <div class="container-fluid">
+        <div class="row accordion-row">
+            <div class="accordion-item py-3 col-sm-12 border-0">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed fs-5 rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Upcoming bookings
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body text-center fs-6">
+                        <table class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                    {% if user.is_superuser %}
+                                    <th scope="col" class="table-text">User</th>
+                                    {% endif %}
+                                    <th scope="col" class="table-text">Client</th>
+                                    <th scope="col" class="table-text">Service</th>
+                                    <th scope="col" class="table-text">Appointment</th>
+                                    <th scope="col" class="table-text">Edit/Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for booking in bookings %}
+                                    {% if booking.Is_Past != True %}
+                                        <tr>
+                                        {% if user.is_superuser %}
+                                        <td class="table-text">{{ booking.user }}</td>
+                                        {% endif %}
+                                        <td class="table-text">{{ booking.first_name }} {{ booking.last_name }}</td>
+                                        <td class="table-text">{{ booking.service }}</td>
+                                        <td class="table-text">{{ booking.date }}, {{ booking.get_time_display }}, {{booking.stylist}}</td>
+                                        <td>
+                                            <a href="edit/{{ timeslot.id }}" class="btn card-text action-btn text-decoration-none m-2">Change</a>
+                                            <a href="delete/{{ timeslot.id }}" class="btn card-text action-btn text-decoration-none">Delete</a>
+                                        </td>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item py-3 col-sm-12 border-0">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed fs-5 rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Past bookings
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body text-center fs-5">
+                        {% for booking in bookings %}
+                            {% if booking.Is_Past %}
+                                <tr>
+                                {% if user.is_superuser %}
+                                <td class="table-text">{{ booking.user }}</td>
+                                {% endif %}
+                                <td class="table-text">{{ booking.first_name }} {{ booking.last_name }}</td>
+                                <td class="table-text">{{ booking.service }}</td>
+                                <td class="table-text">{{ booking.date }}, {{ booking.get_time_display }}, {{booking.stylist}}</td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- bookings overview container
 <div class="container-fluid my-3 border-0 py-3 pt-0">
     <div class="card text-center border-0">
         <div class="card-header page-header h2 rounded-0">Bookings</div>
@@ -56,14 +131,14 @@
                             <p>Booking cannot be ammended</p>
                             {% endif %}
                         </td> -->
-                        </tr>
+                        <!-- </tr>
                     </tbody>
                     {% endfor %}
                 </table>
             </table>
         </div>
     </div>
-</div>    
+</div> -->
 
 
 {% endblock %}

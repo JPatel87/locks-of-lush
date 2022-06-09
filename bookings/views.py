@@ -17,13 +17,13 @@ def bookings(request):
     if request.user.is_superuser:
         booking = Booking.objects.all().order_by('date')
         context = {
-            'booking': booking
+            'bookings': booking
         }
     else:
         user_filter = Booking.objects.filter(user__in=[request.user])
         booking = user_filter.order_by('date')
         context = {
-            'booking': booking
+            'bookings': booking
         }
     return render(request, 'bookings/bookings.html', context)
 
