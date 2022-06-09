@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .models import Stylist
 
 
-def get_stylists_page(request):
+def stylists(request):
     """
     Function to view stylist page.
 

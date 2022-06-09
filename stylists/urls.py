@@ -1,7 +1,8 @@
+"""Imports from django and stylist views"""
 from django.urls import path
-from stylists.views import get_stylists_page
+from stylists import views
 
 
 urlpatterns = [
-    path('', get_stylists_page, name='stylists')
+    path('', views.stylists, name='stylists')
 ]

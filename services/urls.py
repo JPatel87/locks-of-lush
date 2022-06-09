@@ -1,4 +1,4 @@
-"""Imports from django and views"""
+"""Imports from django and service views"""
 from django.urls import path
 from services import views
 
