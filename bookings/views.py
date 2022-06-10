@@ -1,5 +1,6 @@
 """Imports from django, booking model and booking forms."""
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from .models import Booking
 from .forms import BookingFormAdmin, BookingForm
 
@@ -48,6 +49,11 @@ def add_bookings(request):
                 form.save()
                 return redirect('bookings')
             else:
+                messages.error(
+                    request,
+                    'Booking not made - please address errors',
+                    extra_tags='invalid_add_bookings'
+                    )
                 return render(request, 'bookings/add_bookings.html', context)
         else:
             form = BookingForm(request.POST)
