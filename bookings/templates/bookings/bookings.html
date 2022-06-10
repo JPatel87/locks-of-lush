@@ -24,7 +24,7 @@
             <p class="card-text lead">Welcome {{ user.username|title }}</p>
             <p>This is your bookings portal.
             <p>From this portal you will be able to make bookings and view exisiting bookings.
-            <p>You will also be able change and delete any upcoming bookings.</p>
+            <p>You will also be able to change and cancel any upcoming bookings.</p>
             <a href="{% url 'add_bookings' %}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Book now</a>
             <button class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-bookings" aria-expanded="false" aria-controls="collapse-bookings">
                 My bookings
@@ -62,7 +62,7 @@
                         <a href="edit/{{ booking.id }}" class="btn card-text action-btn text-decoration-none m-2">Change</a>
                         <a href="delete/{{ booking.id }}" class="btn card-text action-btn text-decoration-none">Cancel</a>
                         {% else%}
-                        <p>Booking cannot be ammended</p>
+                        <p>Booking cannot be amended</p>
                         {% endif %}
                     </td>
                 </tr>

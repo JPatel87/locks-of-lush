@@ -106,8 +106,18 @@ def edit_bookings(request, booking_id):
 
         if form.is_valid():
             form.save()
+            messages.success(
+                request,
+                'Request successful',
+                extra_tags='success_services'
+            )
             return redirect('bookings')
         else:
+            messages.error(
+                request,
+                'Booking not changed - please address errors',
+                extra_tags='invalid_edit_bookings'
+            )
             return render(request, 'bookings/edit_bookings.html', context)
 
     if request.user.is_superuser: 
@@ -136,6 +146,11 @@ def delete_bookings(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     if request.method == "POST":
         booking.delete()
+        messages.success(
+            request,
+            'Request successful',
+            extra_tags='success_services'
+        )
         return redirect('bookings')
     context = {
         'bookings': booking
