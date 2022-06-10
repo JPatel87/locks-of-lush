@@ -117,7 +117,7 @@ def edit_bookings(request, booking_id):
             form = BookingForm(request.POST, instance=booking)
             context = {
                 'form': form
-            } 
+            }
 
         if form.is_valid():
             form.save()
@@ -135,7 +135,7 @@ def edit_bookings(request, booking_id):
             )
             return render(request, 'bookings/edit_bookings.html', context)
 
-    if request.user.is_superuser: 
+    if request.user.is_superuser:
         form = BookingFormAdmin(instance=booking)
         context = {
             'form': form

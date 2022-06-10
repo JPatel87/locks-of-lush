@@ -36,14 +36,12 @@ class Booking(models.Model):
     stylist = models.ForeignKey(
         'stylists.Stylist',
         on_delete=models.CASCADE,
-        default=2
         )
     first_name = models.CharField(max_length=50, default='')
     last_name = models.CharField(max_length=50, default='')
     service = models.ForeignKey(
         'services.Service',
         on_delete=models.CASCADE,
-        default=50
         )
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="timeslot", default=''
