@@ -62,11 +62,26 @@ def add_bookings(request):
                 return render(request, 'bookings/add_bookings.html', context)
         else:
             form = BookingForm(request.POST)
+            context = {
+                'form': form
+            }
             if form.is_valid():
                 booking = form.save(commit=False)
                 booking.user = request.user
                 booking.save()
+                messages.success(
+                    request,
+                    'Request successful',
+                    extra_tags='success_services'
+                )
                 return redirect('bookings')
+            else:
+                messages.error(
+                    request,
+                    'Booking not made - please address errors',
+                    extra_tags='invalid_add_bookings'
+                    )
+                return render(request, 'bookings/add_bookings.html', context)
     else:
         if request.user.is_superuser:
             form = BookingFormAdmin
