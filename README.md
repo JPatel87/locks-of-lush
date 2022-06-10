@@ -32,53 +32,58 @@
 
 ### Project overview
 
-This project is a ficticious hair salon site whereby users can view salon service details. By doing so, the user is be able to make an informed booking with the salon through the website by creating a user account. From the user account the user is also able to view their bookings and edit/delete any of their upcoming bookings.
+This project is a ficticious hair salon site whereby users can view salon service details. By doing so, the user is be able to make an informed booking with the salon through the website by creating a user account. From the user account the user is also able to view their bookings and change or cancel any of their upcoming bookings.
 
 ### Project goals
 
-Below is a list of Epics for this project which have been broken down into user stories. The implementation of these user stories have been planned and managed through the Github Kanban board tool. See the following link to the [Locks of Lush Kanban board](https://github.com/jpatel87/locks-of-lush/projects/1)
+Below is a list of Epics for this project which have been broken down into user stories. The implementation of these user stories have been planned and managed through the Github Kanban board tool. See the following link to the [Locks of Lush Kanban board](https://github.com/jpatel87/locks-of-lush/projects/1).
+
+All user stories besides the "could have" user stories have been achieved. An effort was made to start the stylists CRUD, however, only the stylist model and admin view was initiated. 
 
 ### Epic A: Website content
 
-#### User story A1: Attractive site
+#### User story A1: Attractive site (Should have)
 * As a site user I want to be able to view a site which is attractive yet informative so that I can gain an understanding of the sites purpose and feel inspired to view its related content.
 
-#### User story A2: Service details
+#### User story A2: Service details (Must have)
 * As a site user I want to be able to view salon service and price details so that I am aware of what the salon can offer and the cost.
 
-#### User story A3: Stylist details
+#### User story A3: Stylist details (Should have)
 * As a site user I want to be able to view salon stylist background details so that I am able to select the most appropriate stylist for the service I require.
 
 ### Epic B: User profile
 
-#### User story B1: User account
+#### User story B1: User account (Must have)
 * As a site user I want to be able to create a user account so that I can login to make a booking.
 
-#### User story B2: Make bookings
+#### User story B2: Make bookings (Must have)
 * As a site user I want to be able to make a booking from my account so that I have better control over my requirements.
 
-#### User story B3: View bookings
+#### User story B3: View bookings (Must have)
 * As a site user I want to be able to view my bookings from my account so that I have proof that the booking was made.
 
-#### User story B4: Edit bookings
+#### User story B4: Edit bookings (Must have)
 * As a site user I want to be able to edit my booking from my account so that I can make changes at a time that is convenient for me.
 
-#### User story B5: Cancel bookings
+#### User story B5: Cancel bookings (Must have)
 * As a site user I want to be able to cancel my booking from my account so that I can free up my appointment slot for somebody else
 
-#### User story B6: Add reviews
+#### User story B6: Add reviews (Could have)
 * As a user I want to be able to add a review after my appointment so that the salon can improve/maintain its services
 
 ### Epic C: Admin profile
 
-#### User story C1: Manage user bookings
+#### User story C1: Manage user bookings (Must have)
 * As a site admin I want to be able to create, read, update and delete user bookings so that I am aware of the bookings that are being made and can edit/delete them if required.
 
-#### User story C2: Manage services and stylists
-* As a site admin I want to be able to create, read, update and delete service and stylist details so that I have control over the information displayed on the site to make sure it is current.
+#### User story C2: Manage services (Should have)
+* As a site admin I want to be able to create, read, update and delete service details through the site login so that I have control over the information displayed on the site to make sure it is current.
 
-#### User story C3: Approve reviews:
+#### User story C3: Approve reviews (Could have)
 * As a admin I want to be able to approve reviews so that they can be displayed on the website
+
+#### User story C4: Manage stylists (Could have)
+* As a site admin I want to be able to create, read, update and delete service and stylist details so that I have control over the information displayed on the site to make sure it is current.
 
 
 ## Scope
@@ -93,7 +98,7 @@ Below is a list of Epics for this project which have been broken down into user 
 
 Below is a link to the ERD created for this project.
 
-* [Locks of Lush - Entity Relationship Diagram](readme_documents/erd/entity-relationship-diagram.png)
+* [Locks of Lush - Entity Relationship Diagram](readme_documents/erd/erd-model.png)
 
 ## Skeleton
 
