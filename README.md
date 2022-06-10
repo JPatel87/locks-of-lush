@@ -148,6 +148,8 @@ The hero image used for the home page has been sourced from [Unsplash](https://u
 
 The hero image was selected as it effectively portrays to the user the intent of the site in a striking manner. The stylists images that have been selected add further vibrancy and freshness to the site which help to draw the users attention. All images were chosen as they also coordinated well with the colour theme of this site. 
 
+Images were compressed using [Tiny png](https://tinypng.com/) in order to improve site load times for better user experience. 
+
 ## Testing 
 
 ### Tests performed
@@ -160,13 +162,13 @@ The hero image was selected as it effectively portrays to the user the intent of
 
 ## Credits
 
+
 ### Technologies 
 
 The languages used for this project are: 
 
 - HTML 
 - CSS
-- Javascript
 - Python 
 
 The frameworks used for this project are:
@@ -193,11 +195,17 @@ Other packages used in this project are:
 
 - [Lucidchart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=9045963&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQjwyYKUBhDJARIsAMj9lkGuAWT49rmauAUKPE1dZc32REnshWbCY-h0UoYogZ4mtAhFjn8IypsaAoYNEALw_wcB) - used to create the Entity Relationship Diagram (ERD)
 - [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjw9-KTBhBcEiwAr19igzgSMCAHTuTIsTpGrtk-KZPATPmc7R0M9oo0VUs2jhgbGpmXmCnKSxoCstwQAvD_BwE) - used to create the wireframes
+- [Tiny png](https://tinypng.com/) - used to compress images.
 
 ### Resources
 
 ### Content 
 
 ### Media 
+
+- [Home page - Hero image](https://unsplash.com/photos/qJKT2rMU0VU)
+- [Home page - Cut stylist](https://www.pexels.com/photo/a-woman-in-white-long-sleeve-shirt-7755207/)
+- [Home page - Colour stylist](https://www.pexels.com/photo/a-hairdresser-attending-a-client-7755499/)
+- [Home page - Style stylist](https://www.pexels.com/photo/a-woman-getting-her-hair-done-in-the-salon-7755651/)
 
 ### Acknowledgements
