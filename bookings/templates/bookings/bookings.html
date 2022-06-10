@@ -54,7 +54,7 @@
                     {% if user.is_superuser %}
                     <td class="table-text">{{ booking.user }}</td>
                     {% endif %}
-                    <td class="table-text">{{ booking.first_name }} {{ booking.last_name|title }}</td>
+                    <td class="table-text">{{ booking.first_name }} {{ booking.last_name }}</td>
                     <td class="table-text">{{ booking.service }}</td>
                     <td class="table-text">{{ booking.date }}, {{ booking.get_time_display }}, {{booking.stylist}}</td>
                     <td> 

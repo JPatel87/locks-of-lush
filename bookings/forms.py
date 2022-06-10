@@ -41,6 +41,17 @@ class BookingFormAdmin(forms.ModelForm):
             'date': DateInput(),
         }
 
+    def clean_first_name(self):
+        """
+        Method to capitalize first names from bookings form.
+        """
+        return self.cleaned_data['first_name'].capitalize()
+
+    def clean_last_name(self):
+        """
+        Method to capitalize first names from bookings form.
+        """
+        return self.cleaned_data['last_name'].capitalize()
 
 class BookingForm(forms.ModelForm):
     """
@@ -71,3 +82,15 @@ class BookingForm(forms.ModelForm):
         widgets = {
             'date': DateInput(),
         }
+
+    def clean_first_name(self):
+        """
+        Method to capitalize first names from bookings form.
+        """
+        return self.cleaned_data['first_name'].capitalize()
+
+    def clean_last_name(self):
+        """
+        Method to capitalize first names from bookings form.
+        """
+        return self.cleaned_data['last_name'].capitalize()
