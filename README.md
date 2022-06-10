@@ -111,7 +111,7 @@ The stylist, service and user entities act as foreign keys (FK) in the bookings 
 
 ### Wireframes
 
-Below are links to the initial wireframes created for this project.
+Below are links to the initial wireframes created for this project. During development, plans were slightly modified in order to improve the user experience. 
 
 * [Home page](readme_documents/wireframes/home-wireframe.png)
 
@@ -137,12 +137,16 @@ The colour scheme used in this site consist of colours; #faeee9 (light pink), #7
 
 ### Typography 
 
-There are two fonts used in this site. Playfair Display (serif) has been used for the site logo and main page headings and Montserrat (sans-serif) for the site body text. The combination of these two fonts give the site a minimalistic and clean look.
+There are two fonts used in this site which were sourced from [Google fonts](https://fonts.google.com/). Playfair Display (serif) has been used for the site logo and main page headings and Montserrat (sans-serif) for the site body text. The combination of these two fonts give the site a minimalistic and clean look.
 
 ![logo and heading font](readme_documents/typography/logo-heading-font.png)
 ![body font](readme_documents/typography/body-font.png)
 
 ### Imagery
+
+The hero image used for the home page has been sourced from [Unsplash](https://unsplash.com/). The stylists images on the home page and the stylists page have been sourced from [Pexels](https://www.pexels.com/). 
+
+The hero image was selected as it effectively portrays to the user the intent of the site in a striking manner. The stylists images that have been selected add further vibrancy and freshness to the site which help to draw the users attention. All images were chosen as they also coordinated well with the colour theme of this site. 
 
 ## Testing 
 
