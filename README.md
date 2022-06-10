@@ -69,12 +69,12 @@ All user stories besides the "could have" user stories have been achieved. An ef
 * As a site user I want to be able to cancel my booking from my account so that I can free up my appointment slot for somebody else
 
 #### User story B6: Add reviews (Could have)
-* As a user I want to be able to add a review after my appointment so that the salon can improve/maintain its services
+* As a user I want to be able to add a review after my appointment so that the salon can improve or maintain its services
 
 ### Epic C: Admin profile
 
 #### User story C1: Manage user bookings (Must have)
-* As a site admin I want to be able to create, read, update and delete user bookings so that I am aware of the bookings that are being made and can edit/delete them if required.
+* As a site admin I want to be able to create, read, update and delete user bookings so that I am aware of the bookings that are being made and can edit or delete them if required.
 
 #### User story C2: Manage services (Should have)
 * As a site admin I want to be able to create, read, update and delete service details through the site login so that I have control over the information displayed on the site to make sure it is current.
@@ -83,7 +83,7 @@ All user stories besides the "could have" user stories have been achieved. An ef
 * As a admin I want to be able to approve reviews so that they can be displayed on the website
 
 #### User story C4: Manage stylists (Could have)
-* As a site admin I want to be able to create, read, update and delete service and stylist details so that I have control over the information displayed on the site to make sure it is current.
+* As a site admin I want to be able to create, read, update and delete stylist details through the site login so that I have control over the information displayed on the site to make sure it is current.
 
 
 ## Scope
@@ -97,6 +97,13 @@ All user stories besides the "could have" user stories have been achieved. An ef
 ### Database model
 
 Below is a link to the ERD created for this project.
+
+This Entity Relationship Diagram (ERD) has been generated using [Lucidchart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=9045963&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQjwyYKUBhDJARIsAMj9lkGuAWT49rmauAUKPE1dZc32REnshWbCY-h0UoYogZ4mtAhFjn8IypsaAoYNEALw_wcB)
+
+This ERD model contains four entities, which are the booking, stylist, service and user models (note: the user model was created by django allauth). Each entity has various attributes (ie. properties), e.g the service entity has name, service type and price as its attributes. These attributes are further characterised through the django field data type, which specifies how instances of the attributes are to be stored e.g the service entity, name attribute is to be stored as a character field (Charfield).
+
+The stylist, service and user entities act as foreign keys (FK) in the bookings entity, through their the unique ids primary keys (PK). They all have a zero to many relationship with the booking entity ie. a stylist/service/user can either have zero or many bookings. Whereas, the booking entity has a one to one relationship with stylist/service/user entities; ie one booking can only have one stylist, service and user. 
+
 
 * [Locks of Lush - Entity Relationship Diagram](readme_documents/erd/erd-model.png)
 
