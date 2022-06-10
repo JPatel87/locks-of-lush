@@ -4,35 +4,36 @@
 
 {% block content %}
 
-<!--success message container-->
+<!-- Alert success message container -->
 <div class="py-0 mx-3">
     {% for message in messages %}
         {% if "success_services" in message.tags %}
-            <div class="alert alert-success container-fluid my-3 mb-0 border-0 text-center" role="alert">
+            <div class="container-fluid alert alert-success my-3 mb-0" role="alert">
                 {{ message }}
             </div>
         {% endif %}
     {% endfor %}
 </div>
 
-<!--services summary container-->
+<!-- Services summary container, prepared using Bootstrap 5 card template -->
 <div class="container-fluid my-3 border-0">
     <div class="card text-center border-0">
         <div class="card-header page-card-header h2 rounded-0">our services</div>
         <div class="card-body page-card-body fs-6 p-0 mb-0 pt-4">
             <p class="card-text">At Locks of Lush we provide an array of services to suit female clients of all hair types.</p>
             <p>Whether you are looking for a simple wash and cut or a complete restyle with colour,
-            we can help get your hair feeling revitalised and looking lock-urious!</p>
+              we can help get your hair feeling revitalised and looking lock-urious!
+            </p>
             <p>Check out our range of services below...</p>
             {% if user.is_superuser %}
-            <a href="{% url 'add_services' %}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Add service</a>
+            <a href="{% url 'add_services' %}" class="btn action-btn mb-3 px-4 mx-2">Add service</a>
             {% endif %}
         </div>
     </div>
 </div>    
 
-<!--services type accordion - prepared using Bootstrap 5, accordion flush template-->
-<div class="accordion accordion-flush mb-3 py-2 px-3" id="accordionFlushExample">
+<!-- Services type accordion - prepared using Bootstrap 5, accordion flush template -->
+<div class="accordion accordion-flush mb-3 py-2 px-3" id="service-accordion">
     <div class="container-fluid">
         <div class="row accordion-row">
             <div class="accordion-item py-3 col-sm-12 col-md-4 border-0">
@@ -41,7 +42,7 @@
                     Cut
                   </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#service-accordion">
                   <div class="accordion-body text-center fs-5">
                   {% for service in cut_services %}
                       <p><strong>{{ service.name }}</strong></p>
@@ -60,7 +61,7 @@
                     Colour
                   </button>
                 </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#service-accordion">
                   <div class="accordion-body text-center fs-5">
                   {% for service in colour_services %}
                       <p><strong>{{ service.name }}</strong></p>
@@ -79,7 +80,7 @@
                     Style
                   </button>
                 </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#service-accordion">
                   <div class="accordion-body text-center fs-5">
                   {% for service in style_services %}
                       <p><strong>{{ service.name }}</strong></p>

@@ -46,8 +46,12 @@ footer,
     text-align: center;
 }
 
+.action-btn {
+    text-decoration: none;
+}
+
 .page-card-header {
-    text-transform: capitalize;
+    text-transform: capitalize;  
 }
 
 .action-btn, .login-signout-btn, .book-btn {
@@ -113,7 +117,12 @@ footer,
     text-transform: capitalize;
 }
 
-/* stylist page styles */
+.services-card, .services-link {
+    background-color: #faeee9;
+    color: #735366;
+}
+
+/* Stylist page styles */
 
 .stylist-image {
     width: 80%;
@@ -152,6 +161,13 @@ footer,
 
 .bookings-toggle-btn {
     background-color: #faeee9;
+}
+
+/* Alert button styles */
+
+.alert-success, .alert-danger {
+    border: none;
+    text-align: center;
 }
 
 /* media queries */

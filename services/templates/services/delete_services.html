@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<!--success message container-->
+<!-- Alert success message container -->
 <div class="py-0 mx-3">
   {% for message in messages %}
       {% if "success_services" in message.tags %}
@@ -15,7 +15,7 @@
   {% endfor %}
 </div>
 
-<!--delete services form-->
+<!-- Delete services form, prepared using Bootstrap 5 card template -->
 <div class="container-fluid border-0 py-3 pt-0">
     <div class="card text-center border-0">
         <div class="form-container fs-6 p-0 mb-0 pt-4">
@@ -25,8 +25,8 @@
                 {% csrf_token %}
                 <p class="lead">Are you sure you want to delete</p>
                 <p class="h5">{{ service.name }}?</p><br>
-                <button class="btn card-text action-btn text-decoration-none mb-3 px-4" type="submit">Confirm</button>
-                <a href="{{ services_url }}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Cancel</a>
+                <button class="btn action-btn mb-3 px-4" type="submit">Confirm</button>
+                <a href="{{ services_url }}" class="btn action-btn mb-3 px-4 mx-2">Cancel</a>
               </form>
           </div>
         </div>

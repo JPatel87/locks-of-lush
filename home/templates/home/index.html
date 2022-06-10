@@ -4,49 +4,45 @@
 
 {% block content %}
 
-<!--hero-image-->
-<section>
-    <div class="container-fluid card my-3 border-0">
-        <img src="{% static 'images/home-hero.jpg' %}" class="card-img-top hero-image" alt="...">
-        <div class="card-body p-0 mb-0">
-          <h2 class="card-title text-center caption py-3 mb-0">Unlock beautiful hair...</h2>
-        </div>
-    </div>  
-</section>
+<!-- Hero-image, prepared using bootstrap 5 images card template -->
+<div class="container-fluid card my-3 border-0">
+    <img src="{% static 'images/home-hero.jpg' %}" class="hero-image" alt="hero image">
+    <div class="p-0 mb-0">
+        <h2 class="caption py-3 mb-0">Unlock beautiful hair...</h2>
+    </div>
+</div>  
 
-<!--services overview-->
-<section class="py-3">
-    <div class="container">
-        <div class="row text-center g-4">
-            <div class="col-md">
-                <div class="card mx-auto border-0" style="width: 18rem;">
-                    <h5 class="card-title mb-0 p-2 services-card">Cut</h5>
-                    <img src="{% static 'images/home-cut.jpg' %}" alt="stylist cutting a womans hair">
-                    <div class="card-body services-link">
-                        <a href="{% url 'services' %}#cut" class="btn card-text action-btn text-decoration-none">Find out more</a>
-                    </div>
+<!-- Services overview, prepared using bootstrap 5 images card template -->
+<div class="container py-3">
+    <div class="row text-center g-4">
+        <div class="col-md">
+            <div class="card mx-auto border-0" style="width: 18rem;">
+                <h5 class="services-card mb-0 p-2"><strong>Cut</strong></h5>
+                <img src="{% static 'images/home-cut.jpg' %}" alt="stylist cutting a womans hair">
+                <div class="card-body services-link">
+                    <a href="{% url 'services' %}#cut" class="btn action-btn">Find out more</a>
                 </div>
             </div>
-            <div class="col-md">
-                <div class="card mx-auto border-0" style="width: 18rem;">
-                    <h5 class="card-title mb-0 p-2 services-card">Colour</h5>
-                    <img src="{% static 'images/home-colour.jpg' %}" alt="stylist colouring another womans hair">
-                    <div class="card-body services-link">
-                        <a href="{% url 'services' %}#colour" class="btn card-text action-btn text-decoration-none">Find out more</a>
-                    </div>
+        </div>
+        <div class="col-md">
+            <div class="card mx-auto border-0" style="width: 18rem;">
+                <h5 class="services-card mb-0 p-2"><strong>Colour</strong></h5>
+                <img src="{% static 'images/home-colour.jpg' %}" alt="stylist colouring another womans hair">
+                <div class="card-body services-link">
+                    <a href="{% url 'services' %}#colour" class="btn action-btn">Find out more</a>
                 </div>
             </div>
-            <div class="col-md">
-                <div class="card mx-auto border-0" style="width: 18rem;">
-                    <h5 class="card-title mb-0 p-2 services-card">Style</h5>
-                    <img src="{% static 'images/home-style.jpg' %}" alt="woman with curly hair">
-                    <div class="card-body services-link">
-                        <a href="{% url 'services' %}#style" class="btn card-text action-btn text-decoration-none">Find out more</a>
-                    </div>
+        </div>
+        <div class="col-md">
+            <div class="card mx-auto border-0" style="width: 18rem;">
+                <h5 class="services-card mb-0 p-2"><strong>Style</strong></h5>
+                <img src="{% static 'images/home-style.jpg' %}" alt="woman with curly hair">
+                <div class="card-body services-link">
+                    <a href="{% url 'services' %}#style" class="btn action-btn">Find out more</a>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 {% endblock %}

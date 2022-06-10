@@ -56,7 +56,7 @@ def add_bookings(request):
             else:
                 messages.error(
                     request,
-                    'Booking not made - please address errors',
+                    'Booking not made - address errors',
                     extra_tags='invalid_add_bookings'
                     )
                 return render(request, 'bookings/add_bookings.html', context)
@@ -78,7 +78,7 @@ def add_bookings(request):
             else:
                 messages.error(
                     request,
-                    'Booking not made - please address errors',
+                    'Booking not made - address errors',
                     extra_tags='invalid_add_bookings'
                     )
                 return render(request, 'bookings/add_bookings.html', context)
@@ -130,7 +130,7 @@ def edit_bookings(request, booking_id):
         else:
             messages.error(
                 request,
-                'Booking not changed - please address errors',
+                'Booking not changed - address errors',
                 extra_tags='invalid_edit_bookings'
             )
             return render(request, 'bookings/edit_bookings.html', context)
