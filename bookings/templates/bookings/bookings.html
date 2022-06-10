@@ -14,29 +14,23 @@
             <p>This is your bookings portal.
             <p>From this portal you will be able to make bookings and view exisiting bookings.
             <p>You will also be able change and delete any upcoming bookings.</p>
-            <a href="{% url 'add_bookings' %}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Book now!</a>
+            <a href="{% url 'add_bookings' %}" class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2">Book now</a>
+            <button class="btn card-text action-btn text-decoration-none mb-3 px-4 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-bookings" aria-expanded="false" aria-controls="collapse-bookings">
+                My bookings
+            </button>
             {% endif %}
         </div>
     </div>
 </div>  
 
-<div class="container my-3 border-0">
-        <div class="row">
-            <button class="col-sm-12 btn action-btn mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-future-bookings" aria-expanded="false" aria-controls="collapseExample">
-                Upcoming bookings
-            </button>
-            <button class="col-sm-12 btn action-btn mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-past-bookings" aria-expanded="false" aria-controls="collapseExample">
-                Previous bookings
-            </button>
-        </div>
-    </div>
-</div>  
-
-<div class="table-responsive container-fluid my-3 border-0 collapse" id="collapse-future-bookings">
+<!-- bookings table, prepared using Bootstrap 5 responsive table template with collapse toggle -->
+<div class="table-responsive container-fluid my-3 border-0 collapse" id="collapse-bookings">
     <table class="table table-hover page-card-body">
         <thead class>
             <tr>
+                {% if user.is_superuser %}
                 <th scope="col">User</th>
+                {% endif %}
                 <th scope="col">Client</th>
                 <th scope="col">Service</th>
                 <th scope="col">Appointment</th>
@@ -45,45 +39,23 @@
         </thead>
         <tbody>
             {% for booking in bookings %}
-            <tr>
-                {% if booking.past_date != True %}
-                    <th scope="row">{{ booking.user }}</th>
-                    <td>{{ booking.first_name }} {{ booking.last_name }}</td>
-                    <td>{{ booking.service }}</td>
-                    <td>{{ booking.date }}, {{ booking.get_time_display }}</td>
-                    <td>
-                        <a href="edit/{{ timeslot.id }}" class="btn card-text action-btn text-decoration-none mb-1">Change</a>
-                        <a href="delete/{{ timeslot.id }}" class="btn card-text action-btn text-decoration-none mb-1">Cancel</a>
+                <tr>
+                    {% if user.is_superuser %}
+                    <td class="table-text">{{ booking.user }}</td>
+                    {% endif %}
+                    <td class="table-text">{{ booking.first_name }} {{ booking.last_name|title }}</td>
+                    <td class="table-text">{{ booking.service }}</td>
+                    <td class="table-text">{{ booking.date }}, {{ booking.get_time_display }}, {{booking.stylist}}</td>
+                    <td> 
+                        {% if booking.past_date != True %}
+                        <a href="edit/{{ booking.id }}" class="btn card-text action-btn text-decoration-none m-2">Change</a>
+                        <a href="delete/{{ booking.id }}" class="btn card-text action-btn text-decoration-none">Cancel</a>
+                        {% else%}
+                        <p>Booking cannot be ammended</p>
+                        {% endif %}
                     </td>
-                {% endif %}
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
-
-<div class="table-responsive container-fluid my-3 border-0 collapse" id="collapse-past-bookings">
-    <table class="table table-hover page-card-body">
-        <thead class>
-            <tr>
-                <th scope="col">User</th>
-                <th scope="col">Client</th>
-                <th scope="col">Service</th>
-                <th scope="col">Appointment</th>
-                <th scope="col">Change/Cancel</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for booking in bookings %}
-            <tr>
-                {% if booking.past_date %}
-                    <th scope="row">{{ booking.user }}</th>
-                    <td>{{ booking.first_name }} {{ booking.last_name }}</td>
-                    <td>{{ booking.service }}</td>
-                    <td>{{ booking.date }}, {{ booking.get_time_display }}</td>
-                {% endif %}
-            </tr>
-            {% endfor %}
+                </tr>
+            {% endfor %}           
         </tbody>
     </table>
 </div>

@@ -105,12 +105,6 @@ def edit_bookings(request, booking_id):
             'form': form
         }
         return render(request, 'bookings/edit_bookings.html', context)
-    if request.user.is_superuser: 
-        form = BookingFormAdmin(instance=booking)
-        context = {
-            'form': form
-        }
-        return render(request, 'bookings/edit_bookings.html', context)
     else:
         form = BookingForm(instance=booking)
         context = {
@@ -133,6 +127,6 @@ def delete_bookings(request, booking_id):
         booking.delete()
         return redirect('bookings')
     context = {
-        'booking': booking
+        'bookings': booking
     }
     return render(request, 'bookings/delete_bookings.html', context)
