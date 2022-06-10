@@ -16,7 +16,8 @@ class BookingFormAdmin(forms.ModelForm):
 
     This form is for the admin user only.
     It allows the admin to view all users
-    and make bookings for them.
+    and make bookings for them. Inspired
+    from codemy.
     """
 
     class Meta:
@@ -53,6 +54,7 @@ class BookingFormAdmin(forms.ModelForm):
         """
         return self.cleaned_data['last_name'].capitalize()
 
+
 class BookingForm(forms.ModelForm):
     """
     Booking form used to book appointments.
@@ -60,7 +62,8 @@ class BookingForm(forms.ModelForm):
     This form is for a non-admin user.
     It does not allow the user to see
     the user field hence only allowing them
-    to control their own bookings.
+    to control their own bookings.Inspired
+    from codemy.
     """
 
     class Meta:
