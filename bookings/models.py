@@ -37,15 +37,14 @@ class Booking(models.Model):
         'stylists.Stylist',
         on_delete=models.CASCADE,
         )
-    first_name = models.CharField(max_length=50, default='')
-    last_name = models.CharField(max_length=50, default='')
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
     service = models.ForeignKey(
         'services.Service',
         on_delete=models.CASCADE,
         )
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="timeslot", default=''
-        )
+        User, on_delete=models.CASCADE, related_name="timeslot")
 
     def __str__(self):
         """
