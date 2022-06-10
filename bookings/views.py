@@ -47,6 +47,11 @@ def add_bookings(request):
             }
             if form.is_valid():
                 form.save()
+                messages.success(
+                    request,
+                    'Request successful',
+                    extra_tags='success_services'
+                )
                 return redirect('bookings')
             else:
                 messages.error(
