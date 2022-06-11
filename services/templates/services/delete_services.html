@@ -23,8 +23,8 @@
             <div class="card-header page-card-header h2 rounded-0 header-text mb-3">Delete service</div>
               <form method="POST">
                 {% csrf_token %}
-                <p class="lead">Are you sure you want to delete</p>
-                <p class="h5">{{ service.name }}?</p><br>
+                <p>Are you sure you want to delete</p>
+                <p>{{ service.name }}?</p>
                 <button class="btn action-btn mb-3 px-4" type="submit">Yes</button>
                 <a href="{{ services_url }}" class="btn action-btn mb-3 px-4 mx-2">No</a>
               </form>
