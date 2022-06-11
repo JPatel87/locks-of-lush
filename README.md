@@ -91,6 +91,8 @@ All user stories besides the "could have" user stories have been achieved. An ef
 
 **Features consistent across all pages**
 
+There are a few features that have been purposely designed to look the same, to allow users to gain familiarity with the site layout and enable them to find information quickly. 
+
 #### Navigation 
 * Logo 
 
@@ -109,7 +111,6 @@ Example - Navigation view when current page is the login page
 Example - Navigation view when current page is the login page but services link is hovered over
 ![Navigation-hover](readme_documents/features/navigation-hover.png)
 
-
 #### Footer
 * Social links
     * Icons for social media sites; twitter, facebook and instagram are present and can be clicked to direct users to the social media sites. These enable users to review salon news and get in touch via social media with ease.
@@ -119,7 +120,7 @@ Example - Navigation view when current page is the login page but services link 
     * Icon changes colour upon hover for added effect.
 * Contact us container
     * The contact details consisting of address, telephone number and opening times for the salon is kept in the footer as this information is most important for all users to have at hand.
-    * A book now action button is also present in the contact us container to encourage users to book. The button is a different colour to other buttons across the site to highlight its importance. When it is clicked it leads to the login page - making the user aware that to book an appointment via the website they must login/create an account first. The button also changes colour upon hover for added effect. 
+    * A book now action button is also present in the contact us container to encourage users to book. The button is a different colour to other buttons across the site and the text is uppercase to highlight its importance. When it is clicked it leads to the login page - making the user aware that to book an appointment via the website they must login/create an account first. The button also changes colour upon hover for added effect. 
 
 Example - footer contact us container 
 ![Footer-contact](readme_documents/features/footer-contact.png)
@@ -129,7 +130,6 @@ Example - footer contact us container with book now button hovered over
 
 Example - footer social media/email links with twitter link hovered over
 ![Footer-hover](readme_documents/features/footer-hover.png)
-
 
 #### Page summary container
 * Heading 
@@ -154,6 +154,27 @@ Example: Login button
 Example: Login button which is hovered over
 
 ![Login button hover](readme_documents/features/button-hover.png)
+
+**Features unique to each page**
+
+#### Home page
+
+The main goals of the home page is to attract the users attention and provide a brief summary of what the salon offers.
+
+* Hero image 
+    * The hero image selected is striking and easily conveys the purpose of the site (ie. hair services) for a first time user and inspires them to visit the site content. 
+
+* Slogan
+    * The slogan of the site is short and catchy and captures part of the salon name in order render it memorable for a user. 
+
+Hero image and slogan 
+![Hero-slogan](readme_documents/features/hero-slogan.png)
+
+* Service overview
+    * The services that the salon offers is summarised in three images with buttons that link to the services page to provide more information. The images chosen are bright and joyful to attract the user to find out more.
+
+Services overview
+![Home services](readme_documents/features/home-services.png)
 
 ### Features left to implement
 
