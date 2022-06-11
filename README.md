@@ -93,6 +93,13 @@ All user stories besides the "could have" user stories have been achieved. An ef
 
 There are a few features that have been purposely designed to look the same, to allow users to gain familiarity with the site layout and enable them to find information quickly. 
 
+#### Favicon
+* A simple favicon has been designed for the site consisting of the first letter of the salon name set in a circle using the site specific colour theme. 
+* The purpose of the use of the favicon is to make it easier for the user to identify the site if they have multiple tabs open. It also gives the site a professional appearance.
+
+Favicon
+![Favicon](readme_documents/features/favicon-icon.png)
+
 #### Navigation 
 * Logo 
 
@@ -191,6 +198,11 @@ Services accordion
 
 Services accordion with the style acordion selected
 ![Style accordion item](readme_documents/features/style-accordion-item.png)
+
+#### Stylists page
+
+
+
 
 ### Features left to implement
 
