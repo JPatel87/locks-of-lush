@@ -58,12 +58,14 @@
                     <td class="table-text">{{ booking.service }}</td>
                     <td class="table-text">{{ booking.date }}, {{ booking.get_time_display }}, {{booking.stylist}}</td>
                     <td> 
-                        {% if booking.past_date != True %}
-                        <a href="edit/{{ booking.id }}" class="btn card-text action-btn text-decoration-none m-2">Change</a>
-                        <a href="delete/{{ booking.id }}" class="btn card-text action-btn text-decoration-none">Cancel</a>
-                        {% else%}
-                        <p>Booking cannot be amended</p>
-                        {% endif %}
+                        <div class="cancel-change-btn">
+                            {% if booking.past_date != True %}
+                            <a href="edit/{{ booking.id }}" class="btn action-btn">Change</a>
+                            <a href="delete/{{ booking.id }}" class="btn action-btn">Cancel</a>
+                            {% else%}
+                            <p>Booking cannot be amended</p>
+                            {% endif %}
+                        </div>
                     </td>
                 </tr>
             {% endfor %}           

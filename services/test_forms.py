@@ -55,10 +55,10 @@ class TestServiceForm(TestCase):
 
     def test_service_min_price_value(self):
         """Function to check whether low price value generates an error."""
-        form = ServiceForm({'price': '20'})
+        form = ServiceForm({'price': '10'})
         self.assertFalse(form.is_valid())
         self.assertIn('price', form.errors.keys())
         self.assertEqual(
             form.errors['price'][0],
-            'Ensure this value is greater than or equal to 25.00.'
+            'Ensure this value is greater than or equal to 15.00.'
             )

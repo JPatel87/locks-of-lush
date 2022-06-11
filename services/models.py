@@ -26,7 +26,7 @@ class Service(models.Model):
     price = models.DecimalField(
         max_digits=5,
         decimal_places=2,
-        validators=[MinValueValidator(Decimal('25.00')),
+        validators=[MinValueValidator(Decimal('15.00')),
                     MaxValueValidator(Decimal('300.00'))]
         )
 

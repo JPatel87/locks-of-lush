@@ -160,6 +160,14 @@ footer,
     text-align: center;
 }
 
+/* Bookings page styles */
+
+.cancel-change-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
 /* media queries */
 
 @media (min-width: 768px) {
@@ -176,12 +184,6 @@ footer,
     }
 }
 
-.upcoming-bookings {
-    background-color: #735366;
-    color: #faeee9;
-    text-align: center;
-}
-
 @media (min-width: 992px) {
     .navbar-brand {
         font-size: 7rem;
@@ -193,5 +195,13 @@ footer,
 
     .sign-up-container {
     width: 35%;
+    }
+}
+
+@media (max-width: 992px) {
+    .cancel-change-btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
     }
 }
