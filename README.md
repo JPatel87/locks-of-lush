@@ -102,21 +102,24 @@ Favicon
 
 #### Navigation 
 * Logo 
-
-    * Consists of the name of the site 
-    * Changes colour upon hover
-    * Can be clicked and it will lead back  to the home page
+    * Consists of the name of the site. 
+    * Changes colour upon hover.
+    * Can be clicked and it will lead back  to the home page.
 
 * Navigation links
-
-    * Links are underlined when hovered over
-    * The current page link is permanently underlined to remind users of the page that they are viewing
+    * Consist of links to the home page, services page, stylists page and the login page.
+    * When the user is authethicated, an additional navbar item is added to the navigation menu, which is the name of the user logged on. This is displayed in bold. The purpose of this is to portray to the user that they are successfully logged in. There is a dropdown arrow next to the logged in status which when selected contains a link to the logout page - allowing users to logout.
+    * Links are underlined when hovered over.
+    * The current page link is permanently underlined to remind users of the page that they are viewing.
 
 Example - Navigation view when current page is the login page
 ![Navigation](readme_documents/features/navigation.png)
 
 Example - Navigation view when current page is the login page but services link is hovered over
 ![Navigation-hover](readme_documents/features/navigation-hover.png)
+
+Example - Navigation view when the user is authenticated and if the dropdown arrow is selected next to the logged in status
+![Navigation-log-in](readme_documents/features/navigation-log-in.png)
 
 #### Footer
 * Social links
@@ -127,7 +130,9 @@ Example - Navigation view when current page is the login page but services link 
     * Icon changes colour upon hover for added effect.
 * Contact us container
     * The contact details consisting of address, telephone number and opening times for the salon is kept in the footer as this information is most important for all users to have at hand.
-    * A book now action button is also present in the contact us container to encourage users to book. The button is a different colour to other buttons across the site and the text is uppercase to highlight its importance. When it is clicked it leads to the login page - making the user aware that to book an appointment via the website they must login/create an account first. The button also changes colour upon hover for added effect. 
+    * A "book now" action button is also present in the contact us container to encourage users to book. The button is a different colour to other buttons across the site and the text is uppercase to highlight its importance. The button also changes colour upon hover for added effect. 
+    * If the user is not authenticated, when the "book now" button is clicked it leads to the login page - making the user aware that to book an appointment via the website they must login/create an account first. 
+    * If the user is authenticated, when the "book now" button is clicked it leads to the "Make booking" page - to allow users to quickly make a booking without going through links on different pages.
 
 Example - footer contact us container 
 ![Footer-contact](readme_documents/features/footer-contact.png)
@@ -213,6 +218,19 @@ Services accordion with the style acordion selected
 
 Example - stylists
 ![Stylists](readme_documents/features/stylists.png)
+
+#### Login/Sign up/Log out pages
+
+* All pages have been designed consistently as per the "page summary container" section (see "features consistent across all pages") so that the user is able to easily develop familiarity with the site layout. 
+
+Login page
+![Login](readme_documents/features/login.png)
+
+Signup page
+![Signup](readme_documents/features/sign-up.png)
+
+Logout page
+![Logout](readme_documents/features/logout.png)
 
 ### Features left to implement
 
