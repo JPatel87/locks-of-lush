@@ -48,7 +48,7 @@ def add_services(request):
         else:
             messages.error(
                 request,
-                'Service not added - please address errors',
+                'Request unsuccessful - address errors',
                 extra_tags='invalid_add_services')
             return render(request, 'services/add_services.html', context)
     form = ServiceForm()
