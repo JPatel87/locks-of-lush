@@ -95,7 +95,7 @@ There are a few features that have been purposely designed to look the same, to 
 
 #### Favicon
 * A simple favicon has been designed for the site consisting of the first letter of the salon name set in a circle using the site specific colour theme. 
-* The purpose of the use of the favicon is to make it easier for the user to identify the site if they have multiple tabs open. It also gives the site a professional appearance.
+* The purpose of the use of the favicon is to make it easier for the user to identify the site if they have multiple tabs open and therefore helps them remember the site. It also gives the site a professional appearance.
 
 Favicon
 ![Favicon](readme_documents/features/favicon-icon.png)
@@ -190,7 +190,7 @@ Services overview
 
 * Services accordion
     * The services accordion consists of three accordion items each holding information about three separate types of services offered by the salon.
-    * The reason an accordion was selected as a means to convey service details is because it keeps the site looking minimalistic and adds elegance.
+    * The reason an accordion was selected as a means to convey service details is because it keeps the site looking minimalistic and adds elegance and a level of user interactivity.
     * Each service type accordian item contains service names and prices.
 
 Services accordion
@@ -201,8 +201,18 @@ Services accordion with the style acordion selected
 
 #### Stylists page
 
+* Stylists overview 
+    * The stylists overview is a short summary of what users can expect from the salon stylists. It aims persuade the user that the salon stylists are trustworthy.
 
+Services accordion with the style acordion selected
+![stylists-overview](readme_documents/features/stylists-overview.png)
+    
+* Stylist details
+    * Each salon stylist has their name, image and brief experience details captured on the page so that users are able to relate to the stylists so that they can make an informed decision when it comes to booking.
+    * The image of the stylist is rounded to add elegance.
 
+Example - stylists
+![Stylists](readme_documents/features/stylists.png)
 
 ### Features left to implement
 
