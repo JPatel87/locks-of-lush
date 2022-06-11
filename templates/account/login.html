@@ -13,10 +13,10 @@
         <div class="form-container fs-6 p-0 mb-0 pt-4">
           <div class="sign-up-container">
             <div class="card-header page-card-header h2 rounded-0 header-text mb-3">Log in</div>
-              <p>{% blocktrans %}Not signed up yet? please
+              <p class="page-card-body">{% blocktrans %}Not signed up yet? please
                 <a href="{{ signup_url }}" class="sign-up-prompt">sign up</a> first.{% endblocktrans %}
               </p>
-              <form class="login" method="POST" action="{% url 'account_login' %}">
+              <form class="login page-card-body" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}

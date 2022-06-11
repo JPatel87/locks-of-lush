@@ -21,7 +21,7 @@
         <div class="form-container fs-6 p-0 mb-0 pt-4">
           <div class="sign-up-container">
             <div class="card-header page-card-header h2 rounded-0 header-text mb-3">Cancel booking</div>
-              <form method="POST">
+              <form class="page-card-body" method="POST">
                 {% csrf_token %}
                 <p>Are you sure you want to cancel</p>
                 <p>{{ bookings.date }} at {{ bookings.get_time_display }} with {{ bookings.stylist }}?</p>
