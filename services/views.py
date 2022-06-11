@@ -83,7 +83,7 @@ def edit_services(request, service_id):
         else:
             messages.error(
                 request,
-                'Service not edited - please address errors',
+                'Request unsuccessful - address errors',
                 extra_tags='invalid_edit_services')
             return render(request, 'services/edit_services.html', context)
     form = ServiceForm(instance=service)
