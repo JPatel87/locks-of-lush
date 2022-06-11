@@ -36,9 +36,7 @@ footer,
 
 .page-card-header,
 .action-btn,
-.login-signout-btn,
 .action-btn:hover,
-.login-signout-btn:hover,
 .contact,
 .book-btn:hover,
 .caption  {
@@ -54,15 +52,12 @@ footer,
     text-transform: capitalize;  
 }
 
-.action-btn, .login-signout-btn, .book-btn {
+.action-btn, .book-btn {
     text-transform: uppercase;
-    text-decoration: none
+    text-decoration: none;
 }
 
-.bookings-toggle-btn
-.accordion-item,
 .action-btn,
-.login-signout-btn,
 .book-btn:hover {
     background-color: #735366;
 }
@@ -83,7 +78,6 @@ footer,
 .contact,
 .page-card-header,
 .action-btn:hover,
-.login-signout-btn:hover,
 .caption {
     background-color: #4e5865;
 }
@@ -157,10 +151,6 @@ footer,
 
 .edit-delete-link:hover {
     font-size: 120%;
-}
-
-.bookings-toggle-btn {
-    background-color: #faeee9;
 }
 
 /* Alert button styles */
