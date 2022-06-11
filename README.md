@@ -91,6 +91,51 @@ All user stories besides the "could have" user stories have been achieved. An ef
 
 **Features consistent across all pages**
 
+#### Navigation 
+* Logo 
+
+    * Consists of the name of the site 
+    * Changes colour upon hover
+    * Can be clicked and it will lead back  to the home page
+
+* Navigation links
+
+    * Links are underlined when hovered over
+    * The current page link is permanently underlined to remind users of the page that they are viewing
+
+Example - Navigation view when current page is the login page
+![Navigation](readme_documents/features/navigation.png)
+
+Example - Navigation view when current page is the login page but services link is hovered over
+![Navigation-hover](readme_documents/features/navigation-hover.png)
+
+
+#### Footer
+* Social links
+    * Icons for social media sites; twitter, facebook and instagram are present and can be clicked to direct users to the social media sites. These enable users to review salon news and get in touch via social media with ease.
+    * Icons change colour upon hover for added effect.
+* Email link
+    * Mail icon present which can be clicked to open up an email page with the salon email pre-populated - to allow users to get in touch with the salon easily.
+    * Icon changes colour upon hover for added effect.
+* Contact us container
+    * The contact details consisting of address, telephone number and opening times for the salon is kept in the footer as this information is most important for all users to have at hand.
+    * A book now action button is also present in the contact us container to encourage users to book. The button is a different colour to other buttons across the site to highlight its importance. When it is clicked it leads to the login page - making the user aware that to book an appointment via the website they must login/create an account first. The button also changes colour upon hover for added effect. 
+
+Example - footer contact us container 
+![Footer-contact](readme_documents/features/footer-contact.png)
+
+Example - footer contact us container with book now button hovered over
+![Footer-contact-hover](readme_documents/features/footer-contact-hover.png)
+
+
+
+
+Example - footer social media/email links with twitter link hovered over
+![Footer-hover](readme_documents/features/footer-hover.png)
+
+
+#### Page navigation 
+
 #### Page summary container
 * Background colour: #faeee9
 * Text color: #4e5865 
@@ -172,7 +217,7 @@ The colour scheme used in this site consist of colours; #faeee9 (light pink), #7
 
 ### Typography 
 
-There are two fonts used in this site which were sourced from [Google fonts](https://fonts.google.com/). Playfair Display (serif) has been used for the site logo and main page headings and Montserrat (sans-serif) for the site body text. The combination of these two fonts give the site a minimalistic and clean look.
+There are two fonts used in this site which were sourced from [Google fonts](https://fonts.google.com/). Playfair Display (serif) has been used for the site logo and page headings and Montserrat (sans-serif) for the site body text. The combination of these two fonts give the site a minimalistic and clean look.
 
 ![logo and heading font](readme_documents/typography/logo-heading-font.png)
 ![body font](readme_documents/typography/body-font.png)
