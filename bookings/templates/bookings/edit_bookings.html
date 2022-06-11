@@ -7,7 +7,7 @@
 <!-- Alert error message container -->
 <div class="py-0 mx-3">
   {% for message in messages %}
-      {% if "invalid_edit_bookings" in message.tags %}
+      {% if "unsuccessful_request" in message.tags %}
           <div class="container-fluid alert alert-danger my-3 mb-0" role="alert">
               {{ message }}
           </div>

@@ -7,7 +7,7 @@
 <!-- Alert success message container -->
 <div class="py-0 mx-3">
   {% for message in messages %}
-      {% if "success_services" in message.tags %}
+      {% if "successful_request" in message.tags %}
           <div class="alert alert-success container-fluid my-3 mb-0 border-0 text-center" role="alert">
               {{ message }}
           </div>

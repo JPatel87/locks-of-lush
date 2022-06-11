@@ -43,13 +43,13 @@ def add_services(request):
             messages.success(
                 request,
                 'Request successful',
-                extra_tags='success_services')
+                extra_tags='successful_request')
             return redirect('services')
         else:
             messages.error(
                 request,
                 'Request unsuccessful - address errors',
-                extra_tags='invalid_add_services')
+                extra_tags='unsuccessful_request')
             return render(request, 'services/add_services.html', context)
     form = ServiceForm()
     context = {
@@ -78,13 +78,13 @@ def edit_services(request, service_id):
             messages.success(
                 request,
                 'Request successful',
-                extra_tags='success_services')
+                extra_tags='successful_request')
             return redirect('services')
         else:
             messages.error(
                 request,
                 'Request unsuccessful - address errors',
-                extra_tags='invalid_edit_services')
+                extra_tags='unsuccessful_request')
             return render(request, 'services/edit_services.html', context)
     form = ServiceForm(instance=service)
     context = {
@@ -108,7 +108,7 @@ def delete_services(request, service_id):
         messages.success(
             request,
             'Request successful',
-            extra_tags='success_services')
+            extra_tags='successful_request')
         return redirect('services')
     context = {
         'service': service

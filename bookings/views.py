@@ -50,14 +50,14 @@ def add_bookings(request):
                 messages.success(
                     request,
                     'Request successful',
-                    extra_tags='success_services'
+                    extra_tags='successful_request'
                 )
                 return redirect('bookings')
             else:
                 messages.error(
                     request,
-                    'Booking not made - address errors',
-                    extra_tags='invalid_add_bookings'
+                    'Request unsuccessful - address errors',
+                    extra_tags='unsuccessful_request'
                     )
                 return render(request, 'bookings/add_bookings.html', context)
         else:
@@ -72,14 +72,14 @@ def add_bookings(request):
                 messages.success(
                     request,
                     'Request successful',
-                    extra_tags='success_services'
+                    extra_tags='successful_request'
                 )
                 return redirect('bookings')
             else:
                 messages.error(
                     request,
-                    'Booking not made - address errors',
-                    extra_tags='invalid_add_bookings'
+                    'Request unsuccessful - address errors',
+                    extra_tags='unsuccessful_request'
                     )
                 return render(request, 'bookings/add_bookings.html', context)
     else:
@@ -124,14 +124,14 @@ def edit_bookings(request, booking_id):
             messages.success(
                 request,
                 'Request successful',
-                extra_tags='success_services'
+                extra_tags='successful_request'
             )
             return redirect('bookings')
         else:
             messages.error(
                 request,
-                'Booking not changed - address errors',
-                extra_tags='invalid_edit_bookings'
+                'Request unsuccessful - address errors',
+                extra_tags='unsuccessful_request'
             )
             return render(request, 'bookings/edit_bookings.html', context)
 
@@ -164,7 +164,7 @@ def delete_bookings(request, booking_id):
         messages.success(
             request,
             'Request successful',
-            extra_tags='success_services'
+            extra_tags='successful_request'
         )
         return redirect('bookings')
     context = {
