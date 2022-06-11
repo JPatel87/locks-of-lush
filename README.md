@@ -30,6 +30,8 @@
 
 ## Strategy
 
+* [Test](readme_documents/deployment_steps/deployment_procedure.pdf)
+
 ### Project overview
 
 This project is a ficticious hair salon site whereby users can view salon service details. By doing so, the user is be able to make an informed booking with the salon through the website by creating a user account. From the user account the user is also able to view their bookings and change or cancel any of their upcoming bookings.
