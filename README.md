@@ -108,9 +108,9 @@ Favicon
 
 * Navigation links
     * Consist of links to the home page, services page, stylists page and the login page.
-    * When the user is authethicated, an additional navbar item is added to the navigation menu, which is the name of the user logged on. This is displayed in bold. The purpose of this is to portray to the user that they are successfully logged in. There is a dropdown arrow next to the logged in status which when selected contains a link to the logout page - allowing users to logout.
-    * Links are underlined when hovered over.
     * The current page link is permanently underlined to remind users of the page that they are viewing.
+    * When the user is logged on, an additional navbar item is added to the navigation menu, which is the name of the user logged on. This is displayed in bold. The purpose of this is to portray to and remind the user that they are successfully logged in. There is a dropdown arrow next to the logged in status which when selected contains a link to the logout page - allowing users to logout.
+    * Links are underlined when hovered over.
 
 Example - Navigation view when current page is the login page
 ![Navigation](readme_documents/features/navigation.png)
@@ -131,8 +131,8 @@ Example - Navigation view when the user is authenticated and if the dropdown arr
 * Contact us container
     * The contact details consisting of address, telephone number and opening times for the salon is kept in the footer as this information is most important for all users to have at hand.
     * A "book now" action button is also present in the contact us container to encourage users to book. The button is a different colour to other buttons across the site and the text is uppercase to highlight its importance. The button also changes colour upon hover for added effect. 
-    * If the user is not authenticated, when the "book now" button is clicked it leads to the login page - making the user aware that to book an appointment via the website they must login/create an account first. 
-    * If the user is authenticated, when the "book now" button is clicked it leads to the "Make booking" page - to allow users to quickly make a booking without going through links on different pages.
+    * If the user is not logged on, when the "book now" button is clicked it leads to the login page - making the user aware that to book an appointment via the website they must login/create an account first. 
+    * If the user is logged on, when the "book now" button is clicked it leads to the "Make booking" page - to allow users to quickly make a booking without going through links on different pages.
 
 Example - footer contact us container 
 ![Footer-contact](readme_documents/features/footer-contact.png)
@@ -192,17 +192,22 @@ Services overview
 
 * Services overview 
     * The services overview is a short summary of what the salon can offer and it has been worded in such a way to promote the salons services and make the read want to find out more.
+    * If an admin user is logged on - they are also given the option to add a service via an "Add service" button link in this overview container. Non admin users will not see this button. This is useful for hairdresser businesses who regularly update their services to keep up to date with the trends. 
 
 * Services accordion
     * The services accordion consists of three accordion items each holding information about three separate types of services offered by the salon.
     * The reason an accordion was selected as a means to convey service details is because it keeps the site looking minimalistic and adds elegance and a level of user interactivity.
     * Each service type accordian item contains service names and prices.
+    * If an admin user is logged on, the accordion items will also give options to edit or delete services. Non-admin users do not have the access to see these options from their accounts. This is useful for hairdresser businesses to change or delete service and price options as per supply and demand.
 
 Services accordion
 ![Services accordion](readme_documents/features/services-accordion.png)
 
-Services accordion with the style acordion selected
+Services accordion with the style acordion item selected
 ![Style accordion item](readme_documents/features/style-accordion-item.png)
+
+Services accordion with the style acordion item selected- view when an admin user is logged on
+![Style accordion item admin](readme_documents/features/style-accordion-item-admin.png)
 
 #### Stylists page
 
@@ -221,8 +226,10 @@ Example - stylists
 
 #### Login/Sign up/Log out pages
 
+* Login, sign up and log out requests are handled by [Django allauth](https://django-allauth.readthedocs.io/en/latest/installation.html), only the layout of the forms were designed by the project owner.
 * All pages have been designed consistently as per the "page summary container" section (see "features consistent across all pages") so that the user is able to easily develop familiarity with the site layout. 
-* The logout page has a further button to cancel - if the user had made a mistake to select logout. If the cancel button is selected the user is re-directed back to the base of the site which is the home page. 
+* The logout page has a further button to cancel the request - if the user had made a mistake to select logout. If the cancel button is selected the user is re-directed back to the bookings page. If the logout button is selected the user is logged out and redirected back to the home page.  
+* If a user login/sign up details are incorrect, Django allauth has error messages which show up on the forms to indicate the error.
 
 Login page
 ![Login](readme_documents/features/login.png)
