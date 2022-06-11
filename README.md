@@ -127,48 +127,33 @@ Example - footer contact us container
 Example - footer contact us container with book now button hovered over
 ![Footer-contact-hover](readme_documents/features/footer-contact-hover.png)
 
-
-
-
 Example - footer social media/email links with twitter link hovered over
 ![Footer-hover](readme_documents/features/footer-hover.png)
 
 
-#### Page navigation 
-
 #### Page summary container
-* Background colour: #faeee9
-* Text color: #4e5865 
-* Text align: center
-
-#### Page headings/Home page slogan
-* Background colour: #4e5865
-* Text color: #faeee9
-* Text transform: capitalise 
-* Text align: center
+* Heading 
+    * Each page has a summary container which consists of a heading which serves as a reminder to the users of the subject of the page.
+    * All titles are on a grey background and the text is of a different font to the body to emphasize the purpose of the page.
+* Body
+    * The body of the container is coloured in a light pink colour and the text is grey to make it stand out on the background. The text in each body is kept to a minimum with key information to keep the reader interested.
 
 Example: Services page container and header:
 
 ![Services page container](readme_documents/features/page-container.png)
 
 #### Buttons (besides footer button)
-* Background colour: #735366
-* Background hover colour: #4e5865
-* Text color: #faeee9
-* Text transform: uppercase 
-* Text align: center
+* Each button has a background colour of purple with light pink text to make the text stand out. 
+* The text on each button is in uppercase to highlight its importance.
+* Upon hover the button background changes colour to grey for added effect.
 
 Example: Login button
 
 ![Login button](readme_documents/features/button.png)
 
-#### Button - Footer Book Now (only)
-* Background colour: #faeee9
-* Background hover colour: #735366
-* Text color: #735366
-* Text hover color: #faeee9
-* Text transform: uppercase
-* Text align: center 
+Example: Login button which is hovered over
+
+![Login button hover](readme_documents/features/button-hover.png)
 
 ### Features left to implement
 
