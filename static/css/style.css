@@ -18,7 +18,7 @@ footer,
     background-color: #faeee9
 }
 
-.navbar-brand, .page-card-header, .caption {
+.navbar-brand, .page-card-header, .slogan {
     font-family: 'Playfair Display', serif;
 }
 
@@ -39,7 +39,7 @@ footer,
 .action-btn:hover,
 .contact,
 .book-btn:hover,
-.caption  {
+.slogan  {
     color: #faeee9;
     text-align: center;
 }
@@ -48,7 +48,7 @@ footer,
     text-decoration: none;
 }
 
-.page-card-header {
+.page-card-header, .slogan {
     text-transform: capitalize;  
 }
 
@@ -78,7 +78,7 @@ footer,
 .contact,
 .page-card-header,
 .action-btn:hover,
-.caption {
+.slogan {
     background-color: #4e5865;
 }
 
@@ -105,10 +105,6 @@ footer,
 .hero-image {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-}
-
-.caption {
-    text-transform: capitalize;
 }
 
 .services-card, .services-link {
@@ -175,7 +171,7 @@ footer,
         font-size: 7rem;
     }
 
-    .caption {
+    .slogan {
         font-size: 2.8rem;
     }
 
@@ -189,7 +185,7 @@ footer,
         font-size: 7rem;
     }
 
-    .caption {
+    .slogan {
         font-size: 2.8rem;
     }
 

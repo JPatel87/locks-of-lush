@@ -85,10 +85,45 @@ All user stories besides the "could have" user stories have been achieved. An ef
 #### User story C4: Manage stylists (Could have)
 * As a site admin I want to be able to create, read, update and delete stylist details through the site login so that I have control over the information displayed on the site to make sure it is current.
 
-
 ## Scope
 
 ### Features implemented
+
+**Features consistent across all pages**
+
+#### Page summary container
+* Background colour: #faeee9
+* Text color: #4e5865 
+* Text align: center
+
+#### Page headings/Home page slogan
+* Background colour: #4e5865
+* Text color: #faeee9
+* Text transform: capitalise 
+* Text align: center
+
+Example: Services page container and header:
+
+![Services page container](readme_documents/features/page-container.png)
+
+#### Buttons (besides footer button)
+* Background colour: #735366
+* Background hover colour: #4e5865
+* Text color: #faeee9
+* Text transform: uppercase 
+* Text align: center
+
+Example: Login button
+
+![Login button](readme_documents/features/button.png)
+
+#### Button - Footer Book Now (only)
+* Background colour: #faeee9
+* Background hover colour: #735366
+* Text color: #735366
+* Text hover color: #faeee9
+* Text transform: uppercase
+* Text align: center 
 
 ### Features left to implement
 
