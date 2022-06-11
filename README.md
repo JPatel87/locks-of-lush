@@ -176,6 +176,22 @@ Hero image and slogan
 Services overview
 ![Home services](readme_documents/features/home-services.png)
 
+#### Services page
+
+* Services overview 
+    * The services overview is a short summary of what the salon can offer and it has been worded in such a way to promote the salons services and make the read want to find out more.
+
+* Services accordion
+    * The services accordion consists of three accordion items each holding information about three separate types of services offered by the salon.
+    * The reason an accordion was selected as a means to convey service details is because it keeps the site looking minimalistic and adds elegance.
+    * Each service type accordian item contains service names and prices.
+
+Services accordion
+![Services accordion](readme_documents/features/services-accordion.png)
+
+Services accordion with the style acordion selected
+![Style accordion item](readme_documents/features/style-accordion-item.png)
+
 ### Features left to implement
 
 ## Structure 
