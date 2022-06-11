@@ -222,6 +222,7 @@ Example - stylists
 #### Login/Sign up/Log out pages
 
 * All pages have been designed consistently as per the "page summary container" section (see "features consistent across all pages") so that the user is able to easily develop familiarity with the site layout. 
+* The logout page has a further button to cancel - if the user had made a mistake to select logout. If the cancel button is selected the user is re-directed back to the base of the site which is the home page. 
 
 Login page
 ![Login](readme_documents/features/login.png)
