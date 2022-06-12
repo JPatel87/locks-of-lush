@@ -234,7 +234,7 @@ Example - stylists
 * If a user login/sign up details are incorrect, Django allauth has error messages which show up on the forms to indicate the error.
 
 Login page - with error message displaying
-![Login](readme_documents/features/login-error.png)
+![Login](readme_documents/features/login.png)
 
 Signup page
 ![Signup](readme_documents/features/sign-up.png)
