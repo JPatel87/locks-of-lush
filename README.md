@@ -188,7 +188,7 @@ The main goals of the home page is to attract the users attention and provide a 
     * If an admin user is logged on - they are also given the option to add a service via an "Add service" button link in this overview container. Non admin users will not see this button. This is useful for hairdresser businesses who regularly update their services to keep up to date with the trends. 
 
 * Services accordion
-    * The services accordion was created using the accordion flush template supplied by [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
+    * The services accordion was created using the accordion flush template supplied by [Bootstrap 5, accordion](https://getbootstrap.com/docs/5.0/components/accordion/).
     * The services accordion consists of three accordion items each holding information about three separate types of services offered by the salon.
     * The reason an accordion was selected as a means to convey service details is because it keeps the site looking minimalistic and adds elegance and a level of user interactivity.
     * Each service type accordian item contains service names and prices.
@@ -238,7 +238,7 @@ The bookings page can only be seen if the user is logged on.
     * Welcomes the user by name to the bookings portal (page).
     * It provides instructions to the user of what they are able to do from the bookings portal. 
     * There is a "Make booking" button which can be clicked to open up the "Make booking" page.
-    * There is a "View bookings" button which is a Bootstrap collapse button that has been used to toggle the visibility of the bookings table which appears below the bookings overview container.
+    * There is a "View bookings" button which is a [Bootstrap 5, collapse button](https://getbootstrap.com/docs/5.0/components/collapse/) that has been used to toggle the visibility of the bookings table which appears below the bookings summary.
 
 * Make booking
     * There are two separate "make booking" forms - one for the admin and one for the user. The only difference between them is that the admin form displays the user field to enable the admin to select a user from a dropdown list to book an appointment for. Whereas the user form does not display the user id field at all - it takes the logged in user's id automatically for the booking they make. This is to stop users from having control over any others users bookings.
@@ -249,20 +249,21 @@ The bookings page can only be seen if the user is logged on.
     * Error messages will be displayed if the user selects a date in the past or a combination of date, time and stylist that has already been booked.
 
 * View bookings
-    * The table of bookings is displayed below the bookings portal container and displays the following information; client (first name and last name), service name, appointment (date, time, stylist) and buttons to enable appointments to be changed or cancelled for upcoming appointments. For past appointments, an entry is made to say "booking cannot be amended".
+    * The table of bookings displays the following information; client (first name and last name), service name, appointment (date, time, stylist) and buttons to enable appointments to be changed or cancelled for upcoming appointments. For past appointments, an entry is made to say "booking cannot be amended".
     * If the change booking button is selected then the edit bookings form is called.
     * If the cancel bookings button is called then the delete bookings form is called.
+    * Bookings are displayed in date order - starting with the earliest appointment first.
 
-[ADD PAST APPOINTMENT IMAGE OF BOOKINGS PAGE]
+[ADD PAST APPOINTMENT IMAGE OF BOOKINGS PAGE to show dat order too]
 
 * Change booking
-    * The change booking form pre-populates with all the initial appointment details and works in the same way as the "make booking" form.
+    * The "change booking" form pre-populates with all the initial appointment details and works in the same way as the "make booking" form.
     * The user is given the option to make the change and confirm or cancel. 
     * If the user makes a valid change - they will be redirected to the bookings page and presented with a success message to say that their request was successful and the change will be reflected in the bookings table. 
     * If the user decides to cancel - they will be re-directed back to the bookings page.
  
 * Delete bookings
-    * The delete booking page displays a message to the user relaying the appointment details (date, time and stylist) they requested to delete and asks them to confirm or cancel the deletion.
+    * The delete booking page displays a message to the user relaying the appointment details (service, date, time and stylist) they requested to delete and asks them to confirm or cancel the deletion.
     * If they confirm - the user will be re-directed back to the bookings page, a success message will be displayed at the top of the bookings page to say that their request was successful and the booking will no longer appear in the bookings table.
     * If they cancel - they will be re-directed to the bookings page.
 
@@ -317,14 +318,19 @@ Below are links to the initial wireframes created for this project. During devel
 
 The colour scheme used in this site consist of colours; #faeee9 (light pink), #735366 (purple) and #4e5865 (dark grey). These colours give the site a feminine yet stylish look.
 
-![colour-palette](readme_documents/colour_scheme/colour-palette.png)
+| Image | Description |
+| --- | --- |
+| ![colour-palette](readme_documents/colour_scheme/colour-palette.png) | Site colour palette |
 
 ### Typography 
 
-There are two fonts used in this site which were sourced from [Google fonts](https://fonts.google.com/). Playfair Display (serif) has been used for the site logo and page headings and Montserrat (sans-serif) for the site body text. The combination of these two fonts give the site a minimalistic and clean look.
+There are two fonts used in this site which were sourced from [Google fonts](https://fonts.google.com/). Playfair Display (serif) has been used for the site logo, slogan and page headings and Montserrat (sans-serif) for the site body text. The combination of these two fonts give the site a minimalistic and modern appearance.
 
-![logo and heading font](readme_documents/typography/logo-heading-font.png)
-![body font](readme_documents/typography/body-font.png)
+| Image | Description |
+| --- | --- |
+| ![logo and heading font](readme_documents/typography/logo-heading-font.png) | Logo, slogan and heading font - Playfair display (serif), Regular 400 |
+| ![body font](readme_documents/typography/body-font.png) | Body font - Montserrat (sans-serif), Regular 400 |
+
 
 ### Imagery
 
