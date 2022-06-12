@@ -262,7 +262,7 @@ The main goals of the home page is to attract the users attention and provide a 
 | ![Logout](readme_documents/features/logout.png) | Logout page |
 
 
-#### Bookings page
+#### Bookings page 
 
 The bookings page can only be seen if the user is logged on.
 
@@ -426,6 +426,16 @@ As a site user I want to be able to make a booking from my account so that I hav
 |Users will be prompted to sign up or login in if they choose to make a booking | Yes | [Footer](#footer), there is a "Book now" button in the footer, when this is clicked and the user is not authenticated it leads to the login page, if the user does not have a login they can access the sign up page from the login page. | None | 
 |Once users log on they are able to view a bookings page | Yes | [Navigation](#navigation), the bookings navigation link only appears after the user has logged on | None | 
 | If users are not logged on they will not be able to view the bookings page | Yes | [Navigation](#navigation), the bookings navigation link only appears after the user has logged on | None | 
+
+#### User Story B3 - View bookings
+
+As a site user I want to be able to view my bookings from my account so that I have proof that the booking was made.
+
+| Acceptance criteria | Acheived | Evidence | Future improvements |
+| --- | --- | --- | --- |
+|The user account is set up so users can view all of their past and upcoming bookings, once they log into their account.|Yes | [Bookings](#bookings-page), there is a "View bookings button" in the bookings page which links to the bookings table | Separate out past and upcoming bookings into separate collapsible tables with separate button links, to improve user experience so that users dont have to trail through lists of past bookings before finding an upcoming booking|
+| Booking details include; date, time, service details and stylist details. | Yes | [Bookings](#bookings-page), all of the mentioned details plus the client name is present in the bookings table | Filter out certain information from mobile phone view for better user experience so that users do not have to scroll across many fields to find key appointment details, e.g perhaps remove client name and combine service details with appointments.| 
+
 
 
 ### Bugs and issues
