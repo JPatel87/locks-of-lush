@@ -24,7 +24,8 @@
               <form class="page-card-body" method="POST">
                 {% csrf_token %}
                 <p>Are you sure you want to cancel</p>
-                <p>{{ bookings.date }} at {{ bookings.get_time_display }} with {{ bookings.stylist }}?</p>
+                <p>{{ bookings.service }}</p>
+                <p>on {{ bookings.date }} at {{ bookings.get_time_display }} with {{ bookings.stylist }}?</p>
                 <button class="btn action-btn mb-3 px-4" type="submit">Yes</button>
                 <a href="{{ bookings_url }}" class="btn action-btn mb-3 px-4 mx-2">No</a>
               </form>
