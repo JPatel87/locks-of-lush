@@ -380,7 +380,7 @@ Tests were performed to determine whether the user story acceptance criteria wer
 
 As a site user I want to be able to view a site which is attractive yet informative so that I can gain an understanding of the sites purpose and feel inspired to view its related content.
 
-| Acceptance criteria | Acheived | Evidence | Future improvements |
+| Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 | Site has home page with a logo, hero image and catchy slogan | Yes | [Home page](#home-page), [Imagery](#imagery)  | 1. Reduce size of hero image for large screens to reduce scrolling. 2. To use a resized version of the favicon icon in the name logo in the navigation for consistency. |
 | Site has clear navigation links | Yes | [Navigation](#navigation) | 1. Have different effects when the navigation items are hovered over and for the active current page to avoid any confusion to user.
@@ -390,7 +390,7 @@ As a site user I want to be able to view a site which is attractive yet informat
 
 As a site user I want to be able to view salon service and price details so that I am aware of what the salon can offer and the cost.
 
-| Acceptance criteria | Acheived | Evidence | Future improvements |
+| Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 | There is a Services page | Yes | [Services](#services-page) | None |
 | Services page can be accessed from the home page | Yes| [Navigation](#navigation) - Services page appear as a navigation link, so can be accessed from any page when the user is logged on or not | None |
@@ -400,7 +400,7 @@ As a site user I want to be able to view salon service and price details so that
 
 As a site user I want to be able to view salon stylist background details so that I am able to select the most appropriate stylist for the service I require. 
 
-| Acceptance criteria | Acheived | Evidence | Future improvements |
+| Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 | There is a Stylists page | Yes | [Stylists](#stylists-page) | None |
 | Stylists page can be accessed from the home page | Yes | [Navigation](#navigation) - Stylists page appears as a navigation link, so can be accessed from any page when the user is logged on or not | None |
@@ -410,7 +410,7 @@ As a site user I want to be able to view salon stylist background details so tha
 
 As a site user I want to be able to create a user account so that I can login to make a booking and logout once I am done.
 
-| Acceptance criteria | Acheived | Evidence | Future improvements |
+| Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 | Users can click on links to sign up/log in when they choose to make a booking | Yes | [Navigation](#navigation) | None | 
 | Users are directed to the sign up page when they choose to sign up | Yes | [Navigation](#navigation), [Authentication pages](#authentication-pages). The sign up page can be accessed from a link in the login page | Have a separate link appear in the navigation to sign up e.g. Login / Sign up.|
@@ -421,7 +421,7 @@ As a site user I want to be able to create a user account so that I can login to
 
 As a site user I want to be able to make a booking from my account so that I have better control over my requirements.
 
-| Acceptance criteria | Acheived | Evidence | Future improvements |
+| Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 |Users will be prompted to sign up or login in if they choose to make a booking | Yes | [Footer](#footer), there is a "Book now" button in the footer, when this is clicked and the user is not authenticated it leads to the login page, if the user does not have a login they can access the sign up page from the login page. | None | 
 |Once users log on they are able to view a bookings page | Yes | [Navigation](#navigation), the bookings navigation link only appears after the user has logged on | None | 
@@ -431,7 +431,7 @@ As a site user I want to be able to make a booking from my account so that I hav
 
 As a site user I want to be able to view my bookings from my account so that I have proof that the booking was made.
 
-| Acceptance criteria | Acheived | Evidence | Future improvements |
+| Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 |The user account is set up so users can view all of their past and upcoming bookings, once they log into their account.|Yes | [Bookings](#bookings-page), there is a "View bookings button" in the bookings page which links to the bookings table | Separate out past and upcoming bookings into separate collapsible tables with separate button links, to improve user experience so that users dont have to trail through lists of past bookings before finding an upcoming booking|
 | Booking details include; date, time, service details and stylist details. | Yes | [Bookings](#bookings-page), all of the mentioned details plus the client name is present in the bookings table | Filter out certain information from mobile phone view for better user experience so that users do not have to scroll across many fields to find key appointment details, e.g perhaps remove client name and combine service details with appointments.| 
@@ -440,12 +440,21 @@ As a site user I want to be able to view my bookings from my account so that I h
 
 As a site user I want to be able to edit my booking from my account so that I can make changes at a time that is convenient for me.
 
-| Acceptance criteria | Acheived | Evidence | Future improvements |
+| Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 | Users can change details of an upcoming booking through the click of a "Change" button from their user account profile. | Yes | [Bookings](#bookings-page), the change button appears besides every upcoming appointment in the bookings table | None |
-| Users cannot change details of a past booking | Yes | [Bookings](#bookings-page), past bookings do not have change or cancel buttons next to them, instead they have a message that says "booking cannot be amended". | Have a more realistic time limit of when an appointment cannot be changed from ie. 24 hours from date of appointment, rather than just on past bookings. |
+| Users cannot change details of a past booking | Yes | [Bookings](#bookings-page), past bookings do not have a change button next to them, instead they have a message that says "booking cannot be amended". | Have a more realistic time limit of when an appointment cannot be changed from ie. 24 hours from date of appointment, rather than just on past bookings. |
 Users can make changes to all fields; date, time, service and stylist | Yes | [Bookings](#bookings-page), all field entries can be changed | None |
 
+#### User Story B5 - Cancel bookings
+
+As a site user I want to be able to cancel my booking from my account so that I can free up my appointment slot for somebody else
+
+| Acceptance criteria | Achieved | Evidence | Future improvements |
+| --- | --- | --- | --- |
+| Users can cancel details of an upcoming booking through the click of a "Cancel" button from their user account profile | Yes | [Bookings](#bookings-page), the cancel button appears besides every upcoming appointment in the bookings table | None | 
+| Users cannot delete a past booking | [Bookings](#bookings-page), past bookings do not have a cancel button next to them, instead they have a message that says "booking cannot be amended". | Have a more realistic time limit of when an appointment cannot be cancelled from ie. 24 hours from date of appointment, rather than just on past bookings. |
+| Users are given the option to confirm a deletion before an appointment is deleted | Yes | [Bookings](#bookings-page), if a user selects the cancel button, they are shown a cancellation message with the details of the appoinment and buttons to confirm if they want to delete (yes) or not (no).| None|
 
 
 ### Bugs and issues
