@@ -374,7 +374,7 @@ Images were compressed using [Tiny png](https://tinypng.com/) in order to improv
 
 ### User story testing
 
-Tests were performed to determine whether the user story acceptance criteria were met in the site development. 
+Tests were performed to determine whether the user story acceptance criteria were met by the site development. 
 
 #### User Story A1 - Attractive site 
 
@@ -383,7 +383,7 @@ As a site user I want to be able to view a site which is attractive yet informat
 | Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 | Site has home page with a logo, hero image and catchy slogan | Yes | [Home page](#home-page), [Imagery](#imagery)  | 1. Reduce size of hero image for large screens to reduce scrolling. 2. To use a resized version of the favicon icon in the name logo in the navigation for consistency. |
-| Site has clear navigation links | Yes | [Navigation](#navigation) | 1. Have different effects when the navigation items are hovered over and for the active current page to avoid any confusion to user.
+| Site has clear navigation links | Yes | [Navigation](#navigation) | Have different effects when the navigation items are hovered over and for the active current page to avoid any confusion to user.
 | Site has clear colour scheme and consistent typography | Yes | [Typography](#typography), [Colour Scheme](#colour-scheme) | None |
 
 #### User Story A2 - Service details 
@@ -393,7 +393,7 @@ As a site user I want to be able to view salon service and price details so that
 | Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 | There is a Services page | Yes | [Services](#services-page) | None |
-| Services page can be accessed from the home page | Yes| [Navigation](#navigation) - Services page appear as a navigation link, so can be accessed from any page when the user is logged on or not | None |
+| Services page can be accessed from the home page | Yes| [Navigation](#navigation), services page appear as a navigation link, so can be accessed from any page when the user is logged on or not | None |
 | Services page lists services and prices | Yes | [Services](#services-page) | None |
 
 #### User Story A3 - Stylist details 
@@ -403,7 +403,7 @@ As a site user I want to be able to view salon stylist background details so tha
 | Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 | There is a Stylists page | Yes | [Stylists](#stylists-page) | None |
-| Stylists page can be accessed from the home page | Yes | [Navigation](#navigation) - Stylists page appears as a navigation link, so can be accessed from any page when the user is logged on or not | None |
+| Stylists page can be accessed from the home page | Yes | [Navigation](#navigation),stylists page appears as a navigation link, so can be accessed from any page when the user is logged on or not | None |
 | Stylist page includes stylists name, image and brief background details. | Yes | [Stylists](#stylists-page) | Make the image field a non-required field and have a salon placeholder image if stylists do not have an image to provide. |
 
 #### User Story B1 - User account
@@ -413,9 +413,9 @@ As a site user I want to be able to create a user account so that I can login to
 | Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 | Users can click on links to sign up/log in when they choose to make a booking | Yes | [Navigation](#navigation) | None | 
-| Users are directed to the sign up page when they choose to sign up | Yes | [Navigation](#navigation), [Authentication pages](#authentication-pages). The sign up page can be accessed from a link in the login page | Have a separate link appear in the navigation to sign up e.g. Login / Sign up.|
-| Users are directed to the log in page when they choose to log in | Yes | [Navigation](#navigation), [Authentication pages](#authentication-pages). When the user selects 'Log in' from the navigation link they are directed to the log in page. | None |
-| Users are directed to the log out page when they choose to log out | Yes | [Navigation](#navigation), [Authentication pages](#authentication-pages). When an authenticated user clicks on the logout navigation dropdown item they are directed to the logout page | None | None |
+| Users are directed to the sign up page when they choose to sign up | Yes | [Navigation](#navigation), [Authentication pages](#authentication-pages), the sign up page can be accessed from a link in the login page | Have a separate link appear in the navigation to sign up e.g. Login / Sign up.|
+| Users are directed to the log in page when they choose to log in | Yes | [Navigation](#navigation), [Authentication pages](#authentication-pages), when the user selects 'Log in' from the navigation link they are directed to the log in page. | None |
+| Users are directed to the log out page when they choose to log out | Yes | [Navigation](#navigation), [Authentication pages](#authentication-pages), when an authenticated user clicks on the logout navigation dropdown item they are directed to the logout page | None | None |
 
 #### User Story B2 - Make bookings
 
@@ -453,8 +453,14 @@ As a site user I want to be able to cancel my booking from my account so that I 
 | Acceptance criteria | Achieved | Evidence | Future improvements |
 | --- | --- | --- | --- |
 | Users can cancel details of an upcoming booking through the click of a "Cancel" button from their user account profile | Yes | [Bookings](#bookings-page), the cancel button appears besides every upcoming appointment in the bookings table | None | 
-| Users cannot delete a past booking | [Bookings](#bookings-page), past bookings do not have a cancel button next to them, instead they have a message that says "booking cannot be amended". | Have a more realistic time limit of when an appointment cannot be cancelled from ie. 24 hours from date of appointment, rather than just on past bookings. |
-| Users are given the option to confirm a deletion before an appointment is deleted | Yes | [Bookings](#bookings-page), if a user selects the cancel button, they are shown a cancellation message with the details of the appoinment and buttons to confirm if they want to delete (yes) or not (no).| None|
+| Users cannot delete a past booking | Yes |[Bookings](#bookings-page), past bookings do not have a cancel button next to them, instead they have a message that says "booking cannot be amended". | Have a more realistic time limit of when an appointment cannot be cancelled from ie. 24 hours from date of appointment, rather than just on past bookings. |
+| Users are given the option to confirm a deletion before an appointment is deleted | Yes | [Bookings](#bookings-page), if a user selects the cancel button, they are shown a cancellation message with the details of the appoinment and buttons to confirm if they want to delete (yes) or not (no).| None |
+
+#### User Story B6 - Add reviews
+
+As a user I want to be able to add a review after my appointment so that the salon can improve/maintain its services. 
+
+* This user story was not implemented to any effect. As it was a "could have" user story, it was left to the end however there was insufficient time to progress this. 
 
 #### User Story C1 - Manage user bookings
 
@@ -475,6 +481,24 @@ As a site admin I want to be able to create, read, update and delete service det
 | There is a services database model which includes service name and price details fields | Yes | The model also includes service type, to add further classfication to the service | None | 
 | Only the admin has access to add, update, delete services from the database | Yes |[Services](#services-page), only the admin user can see the add, edit or delete options on the services page. | None |
 | Changes made to the service name and price are reflected on the site | Yes | Manual check, any changes made to the service is reflected back on the site for logged in and non-authenticated user to see | None |
+
+#### User Story C3 - Approve reviews
+
+As a admin I want to be able to approve reviews so that they can be displayed on the website
+
+* This user story was not implemented to any effect. As it was a "could have" user story, it was left to the end however there was insufficient time to progress this. 
+
+#### User Story C4 - Manage stylists
+
+As a site admin I want to be able to create, read, update and delete stylist details through the site login so that I have control over the information displayed on the site to make sure it is current.
+
+* Part completed, this was a "could have" user story and hence not a priority for this project. 
+
+| Acceptance criteria | Achieved | Evidence | Future improvements |
+| --- | --- | --- | --- |
+| There is a stylist database model which contains first name, last name, telephone number, email address, image and background fields. | Yes | Manual check, all of these attributes are contained in the stylist entity. | Make the image field a non-required field and have a salon placeholder image as there will be times when stylists are unable to provide/want to provide an image for the site. |
+| Only the admin has access to add, update, delete stylists from the website. | No | Insufficient time to progress | Carry out CRUD development as per the services app. 
+| Changes made to the stylist details through the admin site login are reflected on the site. | No | Admin site login does not have access to perform CRUD functionality on the stylists model, this can only be done through the django admin account | Carry out CRUD development as per the services app.
 
 ### Bugs and issues
 
