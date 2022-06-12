@@ -109,7 +109,7 @@ Favicon
 * Navigation links
     * Consist of links to the home page, services page, stylists page and the login page.
     * The current page link is permanently underlined to remind users of the page that they are viewing.
-    * When the user is logged on, an additional navbar item is added to the navigation menu, which is the name of the user logged on. This is displayed in bold. The purpose of this is to portray to and remind the user that they are successfully logged in. There is a dropdown arrow next to the logged in status which when selected contains a link to the logout page - allowing users to logout.
+    * When the user is logged on, two additional navbar items are added to the navigation menu. There is the name of the user logged on displayed as "logged on as [username]". This is displayed in bold. The purpose of this is to portray to and remind the user that they are successfully logged in. There is a dropdown arrow next to the logged in status which when selected contains a link to the logout page - allowing users to logout. The other extra navigation item is "Bookings" from where users can perform CRUD operations from.
     * Links are underlined when hovered over.
 
 Example - Navigation view when current page is the login page
@@ -118,7 +118,7 @@ Example - Navigation view when current page is the login page
 Example - Navigation view when current page is the login page but services link is hovered over
 ![Navigation-hover](readme_documents/features/navigation-hover.png)
 
-Example - Navigation view when the user is authenticated and if the dropdown arrow is selected next to the logged in status
+Example - Navigation view when the user is logged on
 ![Navigation-log-in](readme_documents/features/navigation-log-in.png)
 
 #### Footer
@@ -195,6 +195,7 @@ Services overview
     * If an admin user is logged on - they are also given the option to add a service via an "Add service" button link in this overview container. Non admin users will not see this button. This is useful for hairdresser businesses who regularly update their services to keep up to date with the trends. 
 
 * Services accordion
+    * The services accordion was created using the accordion flush template supplied by [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
     * The services accordion consists of three accordion items each holding information about three separate types of services offered by the salon.
     * The reason an accordion was selected as a means to convey service details is because it keeps the site looking minimalistic and adds elegance and a level of user interactivity.
     * Each service type accordian item contains service names and prices.
@@ -228,17 +229,74 @@ Example - stylists
 
 * Login, sign up and log out requests are handled by [Django allauth](https://django-allauth.readthedocs.io/en/latest/installation.html), only the layout of the forms were designed by the project owner.
 * All pages have been designed consistently as per the "page summary container" section (see "features consistent across all pages") so that the user is able to easily develop familiarity with the site layout. 
-* The logout page has a further button to cancel the request - if the user had made a mistake to select logout. If the cancel button is selected the user is re-directed back to the bookings page. If the logout button is selected the user is logged out and redirected back to the home page.  
+* When users log on they are directed to the home page.
+* The logout page has a button to cancel the request - if the user had made a mistake to select logout. If the cancel button is selected the user is re-directed back to the bookings page. If the logout button is selected the user is logged out and redirected back to the home page.  
 * If a user login/sign up details are incorrect, Django allauth has error messages which show up on the forms to indicate the error.
 
-Login page
-![Login](readme_documents/features/login.png)
+Login page - with error message displaying
+![Login](readme_documents/features/login-error.png)
 
 Signup page
 ![Signup](readme_documents/features/sign-up.png)
 
 Logout page
 ![Logout](readme_documents/features/logout.png)
+
+#### Bookings page
+
+The bookings page can only be seen if the user is logged on.
+
+* Bookings overview
+    * The bookings overview container welcomes the user by name to the bookings portal (page).
+    * It provides instructions to the user of what they are able to do from the bookings portal. 
+    * There is a "Make booking" button which can be clicked to open up the "Make booking" page.
+    * There is a "View bookings" button which is a Bootstrap collapse button that has been used to toggle the visibility of the bookings table which appears below the bookings overview container.
+
+
+Bookings overview 
+![bookings](readme_documents/features/bookings.png)
+
+
+* Make booking
+    * There are two separate "make booking" forms - one for the admin and one for the user. The only difference between them is that the admin form displays the user field to enable the admin to select a user from a dropdown list to book an appointment for. Whereas the user form does not display the user id field at all - it takes the logged in user's id automatically for the booking they make. This is to stop users from having control over any others users bookings.
+    * The "make booking" form contains the following required entries; client first name, client last name, date, time, stylist and service.
+    * All fields are required - so if any information is left out the form will not submit and the user will be notified to either fill in the field or select an item.
+    * If the user submits a valid form, they will be re-directed to the bookings page and a message will be displayed at the top of the page informing the user that the request was successful.
+    * If the form is completed in full but the information is not valid - then an error message will be displayed at the top of the page informing the user that the request was unsuccessful and requesting them to address the errors.
+    * Error messages will be displayed if the user selects a date in the past or a combination of date, time and stylist that has already been booked.
+
+Bookings form - for admin, with extra user dropdown field.
+![Bookings admin form](readme_documents/features/bookings-admin.png)
+
+Bookings form - for user, with no user field
+![Bookings user form](readme_documents/features/bookings-user.png)
+
+Bookings page with success message at the top following either a successful booking made, changed or deleted.
+![Bookings success message](readme_documents/features/bookings-success.png)
+
+Add bookings page with error message at the top due to a past date being chosen. 
+![Add booking - error message](readme_documents/features/bookings-add-error.png)
+
+* View bookings
+    * The table of bookings is displayed below the bookings portal container and displays the following information; client (first name and last name), service name, appointment (date, time, stylist) and buttons to enable appointments to be changed or cancelled for upcoming appointments. For past appointments, an entry is made to say "booking cannot be amended".
+    * If the change booking button is selected then the edit bookings form is called.
+    * If the cancel bookings button is called then the delete bookings form is called.
+
+[ADD PAST APPOINTMENT IMAGE OF BOOKINGS PAGE]
+
+* Change booking
+    * The change booking form pre-populates with all the initial appointment details and works in the same way as the "make booking" form.
+    * The user is given the option to make the change and confirm or cancel. 
+    * If the user makes a valid change - they will be redirected to the bookings page and presented with a success message to say that their request was successful and the change will be reflected in the bookings table. 
+    * If the user decides to cancel - they will be re-directed back to the bookings page.
+ 
+* Delete bookings
+    * The delete booking page displays a message to the user relaying the appointment details (date, time and stylist) they requested to delete and asks them to confirm or cancel the deletion.
+    * If they confirm - the user will be re-directed back to the bookings page, a success message will be displayed at the top of the bookings page to say that their request was successful and the booking will no longer appear in the bookings table.
+    * If they cancel - they will be re-directed to the bookings page.
+
+Example - Cancel form
+![Delete bookings](readme_documents/features/bookings-delete.png)
 
 ### Features left to implement
 
@@ -253,7 +311,6 @@ This Entity Relationship Diagram (ERD) has been generated using [Lucidchart](htt
 This ERD model contains four entities, which are the booking, stylist, service and user models (note: the user model was created by django allauth). Each entity has various attributes (ie. properties), e.g the service entity has name, service type and price as its attributes. These attributes are further characterised through the django field data type, which specifies how instances of the attributes are to be stored e.g the service entity, name attribute is to be stored as a character field (Charfield).
 
 The stylist, service and user entities act as foreign keys (FK) in the bookings entity, through their the unique ids primary keys (PK). They all have a zero to many relationship with the booking entity ie. a stylist/service/user can either have zero or many bookings. Whereas, the booking entity has a one to one relationship with stylist/service/user entities; ie one booking can only have one stylist, service and user. 
-
 
 * [Locks of Lush - Entity Relationship Diagram](readme_documents/erd/erd-model.png)
 
