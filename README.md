@@ -196,7 +196,7 @@ The main goals of the home page is to attract the users attention and provide a 
     * An error message will be displayed if the admin user inputs a price below £15, above £300 or greater than 3 digits before the decimal place (e.g £1000). This is because upon my research of hairdresser prices, it is unlikely that a service is going to be less than £15 or above £300 therefore it is likely that the admin had made a mistake. 
 
 * Services accordion
-    * The services accordion was created using the accordion flush template supplied by [Bootstrap 5, accordion](https://getbootstrap.com/docs/5.0/components/accordion/).
+    * The services accordion was created using the accordion flush template supplied by [Bootstrap, accordion](https://getbootstrap.com/docs/5.0/components/accordion/).
     * The services accordion consists of three accordion items each holding information about three separate types of services offered by the salon.
     * The services in each accordion item are ordered in alphabetical order and the first letter of each service name is automatically capitalised even if the admin failed to enter it in this way. The benefit of this is to ensure the formatting of each service is consistent to keep the site looking professional. 
     * The reason an accordion was selected as a means to convey service details is because it keeps the site looking minimalistic and adds elegance and a level of user interactivity.
@@ -270,7 +270,7 @@ The bookings page can only be seen if the user is logged on.
     * Welcomes the user by name to the bookings portal (page).
     * It provides instructions to the user of what they are able to do from the bookings portal. 
     * There is a "Make booking" button which can be clicked to open up the "Make booking" page.
-    * There is a "View bookings" button which is a [Bootstrap 5, collapse button](https://getbootstrap.com/docs/5.0/components/collapse/) that has been used to toggle the visibility of the bookings table which appears below the bookings summary.
+    * There is a "View bookings" button which is a [Bootstrap, collapse button](https://getbootstrap.com/docs/5.0/components/collapse/) that has been used to toggle the visibility of the bookings table which appears below the bookings summary.
 
 * Make booking
     * There are two separate "make booking" forms - one for the admin and one for the user. The only difference between them is that the admin form displays the user field to enable the admin to select a user from a dropdown list to book an appointment for. Whereas the user form does not display the user id field at all - it takes the logged in user's id automatically for the booking they make. This is to stop users from having control over any others users bookings.
@@ -394,31 +394,23 @@ The languages used for this project are:
 - CSS
 - Python 
 
-The frameworks used for this project are:
+The frameworks, libraries, databases and programs used for this project are:
 
-- [Django](https://www.djangoproject.com/) 
-- [Bootstrap](https://getbootstrap.com/)
-
-The libraries used for this project are:
-
-- [Google fonts](https://fonts.google.com/)
-
-The databases used for this project is:
-
-- Postgres
-
-The storage hosts used for this project are:
-- [Github](https://github.com/)
-- [Heroku](https://www.heroku.com/)
-- [Cloudinary](https://cloudinary.com/?utm_source=google&utm_medium=cpc&utm_campaign=Rbrand&utm_content=492438439811&utm_term=%2Bcloudinary&gclid=Cj0KCQjwma6TBhDIARIsAOKuANwhiuq0ZxvF_2j7ANjz39RqGHZUM1DEgNRzc_zb4Yymv18YBGbHrMYaAgMREALw_wcB)
-
-Other:
-
-Other packages used in this project are:
-
+- [Django](https://www.djangoproject.com/) - used as the python framework 
+- [Bootstrap version 5.2.0](https://getbootstrap.com/) - used for project styling and social media icons
+- [Google fonts](https://fonts.google.com/) - used to select project fonts
+- [Heroku Postgres](https://www.heroku.com/postgres) - used as the database after project was deployed and in production
+- [SQlite](https://www.sqlite.org/index.html) - used as the database before deployment to Heroku postgres and to perform unitests 
+- [Github](https://github.com/) - used for version control and project storage
+- [Gitpod](https://www.gitpod.io/blog/gitpod-launch) - used as the source code editor
+- [Heroku](https://www.heroku.com/) - used as the cloud based deployment platform
+- [Cloudinary](https://cloudinary.com/?utm_source=google&utm_medium=cpc&utm_campaign=Rbrand&utm_content=492438439811&utm_term=%2Bcloudinary&gclid=Cj0KCQjwma6TBhDIARIsAOKuANwhiuq0ZxvF_2j7ANjz39RqGHZUM1DEgNRzc_zb4Yymv18YBGbHrMYaAgMREALw_wcB) - for storage of static and media files
 - [Lucidchart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=9045963&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQjwyYKUBhDJARIsAMj9lkGuAWT49rmauAUKPE1dZc32REnshWbCY-h0UoYogZ4mtAhFjn8IypsaAoYNEALw_wcB) - used to create the Entity Relationship Diagram (ERD)
 - [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjw9-KTBhBcEiwAr19igzgSMCAHTuTIsTpGrtk-KZPATPmc7R0M9oo0VUs2jhgbGpmXmCnKSxoCstwQAvD_BwE) - used to create the wireframes
 - [Tiny png](https://tinypng.com/) - used to compress images.
+- [PEP8 online](http://pep8online.com/) - used to check the python code
+- [W3C Mark up Validation Service](https://validator.w3.org/) - used to validate html templates
+- [W3 CSS Validation Service](https://jigsaw.w3.org/css-validator/) - used to validate CSS stylesheet
 
 ### Resources
 
