@@ -466,6 +466,16 @@ As a site admin I want to be able to create, read, update and delete user bookin
 | Non admin users cannot see booked appointments from all users | Yes | [Bookings](#bookings-page), the non-admin user only sees the appointments they have booked. | None |
 | The admin account can view, edit or delete user bookings. | Yes | [Bookings](#bookings-page), the admin bookings form includes the user id which is a dropdown list of all users, this allows the admin to make/edit or delete other user's appointments. | To improve the admin user experience, as the dropdown list of users is likely to be vast it would be a good idea to implement typeahead input fields so the admin can easily sift through the user list. |
 
+#### User Story C2 - Manage services
+
+As a site admin I want to be able to create, read, update and delete service details through the site login so that I have control over the information displayed on the site to make sure it is current.
+
+| Acceptance criteria | Achieved | Evidence | Future improvements |
+| --- | --- | --- | --- |
+| There is a services database model which includes service name and price details fields | Yes | The model also includes service type, to add further classfication to the service | None | 
+| Only the admin has access to add, update, delete services from the database | Yes |[Services](#services-page), only the admin user can see the add, edit or delete options on the services page. | None |
+| Changes made to the service name and price are reflected on the site | Yes | Manual check, any changes made to the service is reflected back on the site for logged in and non-authenticated user to see | None |
+
 ### Bugs and issues
 
 ### Validator testing
