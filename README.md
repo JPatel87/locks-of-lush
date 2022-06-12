@@ -120,7 +120,7 @@ There are a few features that have been purposely designed to look the same, to 
 | ![Navigation-login](readme_documents/features/navigation-log-in.png) | Navigation view when the user is logged on |
 
 
-#### Footer
+#### Footer 
 * Social links
     * Icons for social media sites; twitter, facebook and instagram are present and can be clicked to direct users to the social media sites. These enable users to review salon news and get in touch via social media with ease.
     * Icons change colour upon hover for added effect.
@@ -163,7 +163,7 @@ There are a few features that have been purposely designed to look the same, to 
 
 **Features unique to each page**
 
-#### Home page
+#### Home page 
 
 The main goals of the home page is to attract the users attention and provide a brief summary of what the salon offers.
 
@@ -181,7 +181,7 @@ The main goals of the home page is to attract the users attention and provide a 
 | ![Hero image and slogan](readme_documents/features/hero-slogan.png) | Hero image and slogan |
 | ![Home services](readme_documents/features/home-services.png) | Services overview |
 
-#### Services page
+#### Services page 
 
 * Services summary 
     * Short summary of what the salon can offer.
@@ -247,7 +247,7 @@ The main goals of the home page is to attract the users attention and provide a 
 | ![Stylists](readme_documents/features/stylists.png) | Stylist details
 
 
-#### Login/Sign up/Log out pages
+#### Authentication pages 
 
 * Login, sign up and log out requests are handled by [Django allauth](https://django-allauth.readthedocs.io/en/latest/installation.html), only the layout of the forms were designed by the project owner.
 * All pages have been designed consistently as per the "page summary container" section (see "features consistent across all pages") so that the user is able to easily develop familiarity with the site layout. 
@@ -344,7 +344,7 @@ Below are links to the initial wireframes created for this project. During devel
 
 ## Surface
 
-### Colour scheme
+### Colour scheme 
 
 The colour scheme used in this site consist of colours; #faeee9 (light pink), #735366 (purple) and #4e5865 (dark grey). These colours give the site a feminine yet stylish look.
 
@@ -372,7 +372,61 @@ Images were compressed using [Tiny png](https://tinypng.com/) in order to improv
 
 ## Testing 
 
-### Tests performed
+### User story testing
+
+Tests were performed to determine whether the user story acceptance criteria were met in the site development. 
+
+#### User Story A1 - Attractive site 
+
+As a site user I want to be able to view a site which is attractive yet informative so that I can gain an understanding of the sites purpose and feel inspired to view its related content.
+
+| Acceptance criteria | Acheived | Evidence | Future improvements |
+| --- | --- | --- | --- |
+| Site has home page with a logo, hero image and catchy slogan | Yes | [Home page](#home-page), [Imagery](#imagery)  | 1. Reduce size of hero image for large screens to reduce scrolling. 2. To use a resized version of the favicon icon in the name logo in the navigation for consistency. |
+| Site has clear navigation links | Yes | [Navigation](#navigation) | 1. Have different effects when the navigation items are hovered over and for the active current page to avoid any confusion to user.
+| Site has clear colour scheme and consistent typography | Yes | [Typography](#typography), [Colour Scheme](#colour-scheme) | None |
+
+#### User Story A2 - Service details 
+
+As a site user I want to be able to view salon service and price details so that I am aware of what the salon can offer and the cost.
+
+| Acceptance criteria | Acheived | Evidence | Future improvements |
+| --- | --- | --- | --- |
+| There is a Services page | Yes | [Services](#services-page) | None |
+| Services page can be accessed from the home page | Yes| [Navigation](#navigation) - Services page appear as a navigation link, so can be accessed from any page when the user is logged on or not | None |
+| Services page lists services and prices | Yes | [Services](#services-page) | None |
+
+#### User Story A3 - Stylist details 
+
+As a site user I want to be able to view salon stylist background details so that I am able to select the most appropriate stylist for the service I require. 
+
+| Acceptance criteria | Acheived | Evidence | Future improvements |
+| --- | --- | --- | --- |
+| There is a Stylists page | Yes | [Stylists](#stylists-page) | None |
+| Stylists page can be accessed from the home page | Yes | [Navigation](#navigation) - Stylists page appears as a navigation link, so can be accessed from any page when the user is logged on or not | None |
+| Stylist page includes stylists name, image and brief background details. | Yes | [Stylists](#stylists-page) | Make the image field a non-required field and have a salon placeholder image if stylists do not have an image to provide. |
+
+#### User Story B1 - User account
+
+As a site user I want to be able to create a user account so that I can login to make a booking and logout once I am done.
+
+| Acceptance criteria | Acheived | Evidence | Future improvements |
+| --- | --- | --- | --- |
+| Users can click on links to sign up/log in when they choose to make a booking | Yes | [Navigation](#navigation) | None | 
+| Users are directed to the sign up page when they choose to sign up | Yes | [Navigation](#navigation), [Authentication pages](#authentication-pages). The sign up page can be accessed from a link in the login page | Have a separate link appear in the navigation to sign up e.g. Login / Sign up.|
+| Users are directed to the log in page when they choose to log in | Yes | [Navigation](#navigation), [Authentication pages](#authentication-pages). When the user selects 'Log in' from the navigation link they are directed to the log in page. | None |
+| Users are directed to the log out page when they choose to log out | Yes | [Navigation](#navigation), [Authentication pages](#authentication-pages). When an authenticated user clicks on the logout navigation dropdown item they are directed to the logout page | None | None |
+
+#### User Story B2 - Make bookings
+
+As a site user I want to be able to make a booking from my account so that I have better control over my requirements.
+
+| Acceptance criteria | Acheived | Evidence | Future improvements |
+| --- | --- | --- | --- |
+|Users will be prompted to sign up or login in if they choose to make a booking | Yes | [Footer](#footer), there is a "Book now" button in the footer, when this is clicked and the user is not authenticated it leads to the login page, if the user does not have a login they can access the sign up page from the login page. | None | 
+|Once users log on they are able to view a bookings page | Yes | [Navigation](#navigation), the bookings navigation link only appears after the user has logged on | None | 
+| If users are not logged on they will not be able to view the bookings page | Yes | [Navigation](#navigation), the bookings navigation link only appears after the user has logged on | None | 
+
 
 ### Bugs and issues
 
@@ -382,7 +436,7 @@ Images were compressed using [Tiny png](https://tinypng.com/) in order to improv
 
 A thorough walkthrough of the deployment steps taken for this project can be viewed in the below document. 
 
-* [Test](readme_documents/deployment_steps/deployment_procedure.pdf)
+* [Deployment procedure](readme_documents/deployment_steps/deployment_procedure.pdf)
 
 ## Credits
 
