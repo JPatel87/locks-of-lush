@@ -198,6 +198,7 @@ The main goals of the home page is to attract the users attention and provide a 
 * Services accordion
     * The services accordion was created using the accordion flush template supplied by [Bootstrap 5, accordion](https://getbootstrap.com/docs/5.0/components/accordion/).
     * The services accordion consists of three accordion items each holding information about three separate types of services offered by the salon.
+    * The services in each accordion item are ordered in alphabetical order and the first letter of each service name is automatically capitalised even if the admin failed to enter it in this way. The benefit of this is to ensure the formatting of each service is consistent to keep the site looking professional. 
     * The reason an accordion was selected as a means to convey service details is because it keeps the site looking minimalistic and adds elegance and a level of user interactivity.
     * Each service type accordian item contains service names and prices.
     * If an admin user is logged on, then below each service price the admin will see links to "edit" or "delete" services. Non-admin will not see these options. This is useful for hairdresser businesses to change or delete service and price options as per supply and demand.
@@ -206,7 +207,7 @@ The main goals of the home page is to attract the users attention and provide a 
     * If the admin user chooses to edit a service - they will be directed to a "Edit service" page.
     * The "Edit service" form pre-populates with all of the initial service details.
     * The same incomplete/error/success messages and redirects apply as the "Add service" page.
-    * At the end of the form the user is given the option to confirm or cancel the edit.These options are useful as they serve as an additional safety measure to prevent the admin user from making a change they do not intend to.  
+    * At the end of the form the admin user is given the option to confirm or cancel the edit.These options are useful as they serve as an additional safety measure to prevent the admin user from making a change they do not intend to.  
 
 * Delete service
     * If the admin user chooses to delete a service - they will be directed to a "Delete service" page.
@@ -219,6 +220,7 @@ The main goals of the home page is to attract the users attention and provide a 
 | --- | --- |
 | ![Services admin view](readme_documents/features/services-admin.png)| Services summary - admin view |
 | ![Add service page](readme_documents/features/add-service.png)| Add service page |
+| ![Services page success message](readme_documents/features/service-success.png)| Services page - success message if service added/edited/deleted |
 | ![Add service incomplete form](readme_documents/features/add-service-incomplete.png)| Add service page - incomplete form |
 | ![Add service incorrect form, price low](readme_documents/features/add-service-price-low.png)| Add service page - incorrect form, price too low |
 | ![Add service incorrect form, price high](readme_documents/features/add-service-price-high.png)| Add service page - incorrect form, price high |
@@ -233,7 +235,7 @@ The main goals of the home page is to attract the users attention and provide a 
 #### Stylists page
 
 * Stylists summary 
-    * Short summary of what users can expect from the salon stylists. It aims persuade the user that the salon stylists are trustworthy.
+    * Short summary of what users can expect from the salon stylists.
     
 * Stylist details
     * Each salon stylist has their name, image and brief experience details captured on the page so that users are able to relate to the stylists so that they can make an informed decision when it comes to booking.
@@ -287,10 +289,8 @@ The bookings page can only be seen if the user is logged on.
 [ADD PAST APPOINTMENT IMAGE OF BOOKINGS PAGE to show dat order too]
 
 * Change booking
-    * The "change booking" form pre-populates with all the initial appointment details and works in the same way as the "make booking" form.
-    * The user is given the option to make the change and confirm or cancel. 
-    * If the user makes a valid change - they will be redirected to the bookings page and presented with a success message to say that their request was successful and the change will be reflected in the bookings table. 
-    * If the user decides to cancel - they will be re-directed back to the bookings page.
+    * The "change booking" form pre-populates with all the initial appointment details and works in the same way as the "make booking" form in terms of error handling and redirecting.
+    * At the end of the form the user is given the option to confirm or cancel the change.These options are useful as they serve as an additional safety measure to prevent the user from making a change they do not intend to.  
  
 * Delete bookings
     * The delete booking page displays a message to the user relaying the appointment details (service, date, time and stylist) they requested to delete and asks them to confirm or cancel the deletion.
