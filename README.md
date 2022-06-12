@@ -436,6 +436,16 @@ As a site user I want to be able to view my bookings from my account so that I h
 |The user account is set up so users can view all of their past and upcoming bookings, once they log into their account.|Yes | [Bookings](#bookings-page), there is a "View bookings button" in the bookings page which links to the bookings table | Separate out past and upcoming bookings into separate collapsible tables with separate button links, to improve user experience so that users dont have to trail through lists of past bookings before finding an upcoming booking|
 | Booking details include; date, time, service details and stylist details. | Yes | [Bookings](#bookings-page), all of the mentioned details plus the client name is present in the bookings table | Filter out certain information from mobile phone view for better user experience so that users do not have to scroll across many fields to find key appointment details, e.g perhaps remove client name and combine service details with appointments.| 
 
+#### User Story B4 - Edit bookings
+
+As a site user I want to be able to edit my booking from my account so that I can make changes at a time that is convenient for me.
+
+| Acceptance criteria | Acheived | Evidence | Future improvements |
+| --- | --- | --- | --- |
+| Users can change details of an upcoming booking through the click of a "Change" button from their user account profile. | Yes | [Bookings](#bookings-page), the change button appears besides every upcoming appointment in the bookings table | None |
+| Users cannot change details of a past booking | Yes | [Bookings](#bookings-page), past bookings do not have change or cancel buttons next to them, instead they have a message that says "booking cannot be amended". | Have a more realistic time limit of when an appointment cannot be changed from ie. 24 hours from date of appointment, rather than just on past bookings. |
+Users can make changes to all fields; date, time, service and stylist | Yes | [Bookings](#bookings-page), all field entries can be changed | None |
+
 
 
 ### Bugs and issues
