@@ -200,7 +200,20 @@ The main goals of the home page is to attract the users attention and provide a 
     * The services accordion consists of three accordion items each holding information about three separate types of services offered by the salon.
     * The reason an accordion was selected as a means to convey service details is because it keeps the site looking minimalistic and adds elegance and a level of user interactivity.
     * Each service type accordian item contains service names and prices.
-    * If an admin user is logged on, the accordion items will also give options to edit or delete services. Non-admin users do not have the access to see these options from their accounts. This is useful for hairdresser businesses to change or delete service and price options as per supply and demand.
+    * If an admin user is logged on, then below each service price the admin will see links to "edit" or "delete" services. Non-admin will not see these options. This is useful for hairdresser businesses to change or delete service and price options as per supply and demand.
+
+* Edit service  
+    * If the admin user chooses to edit a service - they will be directed to a "Edit service" page.
+    * The "Edit service" form pre-populates with all of the initial service details.
+    * The same incomplete/error/success messages and redirects apply as the "Add service" page.
+    * At the end of the form the user is given the option to confirm or cancel the edit.These options are useful as they serve as an additional safety measure to prevent the admin user from making a change they do not intend to.  
+
+* Delete service
+    * If the admin user chooses to delete a service - they will be directed to a "Delete service" page.
+    * The delete message will ask the user to confirm if they want to delete the service name.
+    * The user will be given the option to go ahead with the deletion (yes) or cancel (no).
+    * If they confirm - the user will be re-directed back to the bookings page, a success message will be displayed at the top of the services page to say that their request was successful and the service will no longer appear in the service accordion table.
+    * If they cancel - they will be re-directed to the services page.
 
 | Image | Description |
 | --- | --- |
@@ -212,7 +225,10 @@ The main goals of the home page is to attract the users attention and provide a 
 | ![Add service incorrect form, price too high](readme_documents/features/add-service-price-too-high.png)| Add service page - incorrect form, price too high |
 | ![Services accordion](readme_documents/features/services-accordion.png) | Services accordion |
 | ![Style accordion item](readme_documents/features/style-accordion-item.png) | Services accordion - style acordion item selected |
-| ![Style accordion item admin](readme_documents/features/style-accordion-item-admin.png) |Services accordion - style accordion item selected - admin view
+| ![Style accordion item admin](readme_documents/features/style-accordion-item-admin.png) |Services accordion - style accordion item selected - admin view |
+| ![Edit service](readme_documents/features/edit-service.png) | Edit service page |
+| ![Delete service](readme_documents/features/delete-service.png) | Delete service page |
+
 
 #### Stylists page
 
