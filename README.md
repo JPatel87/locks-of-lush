@@ -184,8 +184,16 @@ The main goals of the home page is to attract the users attention and provide a 
 #### Services page
 
 * Services summary 
-    * Short summary of what the salon can offer and it has been worded in such a way to promote the salons services and make the read want to find out more.
-    * If an admin user is logged on - they are also given the option to add a service via an "Add service" button link in this overview container. Non admin users will not see this button. This is useful for hairdresser businesses who regularly update their services to keep up to date with the trends. 
+    * Short summary of what the salon can offer.
+    * If an admin user is logged on - a button link is also displayed to "Add service". Non admin users will not see this button. This is useful for hairdresser businesses who regularly update their services to keep up to date with the trends. 
+
+* Add service
+    * By clicking on the "Add service" button the admin user will be directed to a "Add service page"
+    * A form will display with the following fields; Service name, Service type (dropdown list) and price. 
+    * All fields are required - so if any information is left out the form will not submit and the user will be notified to either fill in the field or select an item.
+    * If the admin submits a valid form, they will be re-directed to the bookings page and a message will be displayed at the top of the page informing them that the request was successful.
+    * If the form is completed in full but the information is not valid - then an error message will be displayed at the top of the page informing the admin user that the request was unsuccessful and requesting them to address the errors.
+    * An error message will be displayed if the admin user inputs a price below £15, above £300 or greater than 3 digits before the decimal place (e.g £1000). This is because upon my research of hairdresser prices, it is unlikely that a service is going to be less than £15 or above £300 therefore it is likely that the admin had made a mistake. 
 
 * Services accordion
     * The services accordion was created using the accordion flush template supplied by [Bootstrap 5, accordion](https://getbootstrap.com/docs/5.0/components/accordion/).
@@ -196,6 +204,12 @@ The main goals of the home page is to attract the users attention and provide a 
 
 | Image | Description |
 | --- | --- |
+| ![Services admin view](readme_documents/features/services-admin.png)| Services summary - admin view |
+| ![Add service page](readme_documents/features/add-service.png)| Add service page |
+| ![Add service incomplete form](readme_documents/features/add-service-incomplete.png)| Add service page - incomplete form |
+| ![Add service incorrect form, price low](readme_documents/features/add-service-price-low.png)| Add service page - incorrect form, price too low |
+| ![Add service incorrect form, price high](readme_documents/features/add-service-price-high.png)| Add service page - incorrect form, price high |
+| ![Add service incorrect form, price too high](readme_documents/features/add-service-price-too-high.png)| Add service page - incorrect form, price too high |
 | ![Services accordion](readme_documents/features/services-accordion.png) | Services accordion |
 | ![Style accordion item](readme_documents/features/style-accordion-item.png) | Services accordion - style acordion item selected |
 | ![Style accordion item admin](readme_documents/features/style-accordion-item-admin.png) |Services accordion - style accordion item selected - admin view
