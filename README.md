@@ -456,6 +456,15 @@ As a site user I want to be able to cancel my booking from my account so that I 
 | Users cannot delete a past booking | [Bookings](#bookings-page), past bookings do not have a cancel button next to them, instead they have a message that says "booking cannot be amended". | Have a more realistic time limit of when an appointment cannot be cancelled from ie. 24 hours from date of appointment, rather than just on past bookings. |
 | Users are given the option to confirm a deletion before an appointment is deleted | Yes | [Bookings](#bookings-page), if a user selects the cancel button, they are shown a cancellation message with the details of the appoinment and buttons to confirm if they want to delete (yes) or not (no).| None|
 
+#### User Story C1 - Manage user bookings
+
+As a site admin I want to be able to create, read, update and delete user bookings so that I am aware of the bookings that are being made and can edit/delete them if required.
+
+| Acceptance criteria | Achieved | Evidence | Future improvements |
+| --- | --- | --- | --- |
+| The admin can see all booked appointments from all users | Yes | [Bookings](#bookings-page), the admin can see all user appointments in their bookings table, all appointments detail the user a booking is made by | 1. To separate out past and upcoming bookings into separate collapsible tables, as for an admin account one table to hold all appointments would generate a long list quickly and does not provide a good user experience. 2. Create another two collapsible tables for this weeks' bookings and next weeks' bookings to allow for better planning. |
+| Non admin users cannot see booked appointments from all users | Yes | [Bookings](#bookings-page), the non-admin user only sees the appointments they have booked. | None |
+| The admin account can view, edit or delete user bookings. | Yes | [Bookings](#bookings-page), the admin bookings form includes the user id which is a dropdown list of all users, this allows the admin to make/edit or delete other user's appointments. | To improve the admin user experience, as the dropdown list of users is likely to be vast it would be a good idea to implement typeahead input fields so the admin can easily sift through the user list. |
 
 ### Bugs and issues
 
