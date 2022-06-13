@@ -191,7 +191,7 @@ The main goals of the home page is to attract the users attention and provide a 
     * By clicking on the "Add service" button the admin user will be directed to a "Add service page"
     * A form will display with the following fields; Service name, Service type (dropdown list) and price. 
     * The service name will automatically capitalise upon successful submission of a form, so if the user has entered these in lowercase, it will not matter. 
-    * The service name is required to be unique - so the form should not permit any version of the same name to be submitted - this is to prevent any confusion to the site user if they see two services with the same name. 
+    * The service name is required to be unique - so the form should not permit any iteration of the same service name to be submitted - this is to prevent any confusion to the site user if they see two services with the same name. 
     * All fields are required - so if any information is left out the form will not submit and the user will be notified to either fill in the field or select an item.
     * If the admin submits a valid form, they will be re-directed to the bookings page and a message will be displayed at the top of the page informing them that the request was successful.
     * If the form is completed in full but the information is not valid - then an error message will be displayed at the top of the page informing the admin user that the request was unsuccessful and requesting them to address the errors.
@@ -310,6 +310,8 @@ The bookings page can only be seen if the user is logged on.
 
 ### Features left to implement
 
+Refer to [User story testing](#user-story-testing)
+
 ## Structure 
 
 ### Database model
@@ -374,7 +376,7 @@ Images were compressed using [Tiny png](https://tinypng.com/) in order to improv
 
 ## Testing 
 
-### User story testing
+### User story testing 
 
 Tests were performed to determine whether the user story acceptance criteria were met by the site development. 
 
@@ -472,7 +474,7 @@ As a site admin I want to be able to create, read, update and delete user bookin
 | --- | --- | --- | --- |
 | The admin can see all booked appointments from all users | Yes | [Bookings](#bookings-page), the admin can see all user appointments in their bookings table, all appointments detail the user a booking is made by | 1. To separate out past and upcoming bookings into separate collapsible tables, as for an admin account one table to hold all appointments would generate a long list quickly and does not provide a good user experience. 2. Create another two collapsible tables for this weeks' bookings and next weeks' bookings to allow for better planning. |
 | Non admin users cannot see booked appointments from all users | Yes | [Bookings](#bookings-page), the non-admin user only sees the appointments they have booked. | None |
-| The admin account can view, edit or delete user bookings. | Yes | [Bookings](#bookings-page), the admin bookings form includes the user id which is a dropdown list of all users, this allows the admin to make/edit or delete other user's appointments. | To improve the admin user experience, as the dropdown list of users is likely to be vast it would be a good idea to implement typeahead input fields so the admin can easily sift through the user list. |
+| The admin account can view, edit or delete user bookings. | Yes | [Bookings](#bookings-page), the admin bookings form includes the user id which is a dropdown list of all users, this allows the admin to make/edit or delete other user's appointments. | 1. To improve the admin user experience, as the dropdown list of users is likely to be vast it would be a good idea to implement typeahead input fields so the admin can easily sift through the user list. 2. The current booking system does not take into consideration stylist annual leave for example or circumstances where an appointment cannot be made other that if a slot has already been booked, which is not very realistic therefore an improvement would be to implement another model which feeds into the bookings model with appointment dates |
 
 #### User Story C2 - Manage services
 
@@ -501,6 +503,12 @@ As a site admin I want to be able to create, read, update and delete stylist det
 | There is a stylist database model which contains first name, last name, telephone number, email address, image and background fields. | Yes | Manual check, all of these attributes are contained in the stylist entity. | Make the image field a non-required field and have a salon placeholder image as there will be times when stylists are unable to provide/want to provide an image for the site. |
 | Only the admin has access to add, update, delete stylists from the website. | No | Insufficient time to progress | Carry out CRUD development as per the services app. 
 | Changes made to the stylist details through the admin site login are reflected on the site. | No | Admin site login does not have access to perform CRUD functionality on the stylists model, this can only be done through the django admin account | Carry out CRUD development as per the services app.
+
+### Interactive feature testing 
+
+Manual testing of interactive features was carried out, see tests and results of testing below:
+
+* [Manual testing - buttons, links, dropdowns](readme_documents/testing/manual-testing-buttons-links-dropdowns.pdf)
 
 ### Bugs and issues
 
