@@ -327,7 +327,15 @@ This Entity Relationship Diagram (ERD) has been generated using [Lucidchart](htt
 
 This ERD model contains four entities, which are the booking, stylist, service and user models (note: the user model was created by django allauth). Each entity has various attributes (ie. properties), e.g the service entity has name, service type and price as its attributes. These attributes are further characterised through the django field data type, which specifies how instances of the attributes are to be stored e.g the service entity, name attribute is to be stored as a character field (Charfield).
 
-The stylist, service and user entities act as foreign keys (FK) in the bookings entity, through their the unique ids primary keys (PK). They all have a zero to many relationship with the booking entity ie. a stylist/service/user can either have zero or many bookings. Whereas, the booking entity has a one to one relationship with stylist/service/user entities; ie one booking can only have one stylist, service and user. 
+In this project, all entities in the services, stylist and bookings model have required attributes - so these attributes are all required to be filled out on any related form.
+
+The stylist, service and user entities act as foreign keys (FK) in the bookings entity, through their unique ids primary keys (PK). They all have a zero to many relationship with the booking entity ie. a stylist/service/user can either have zero or many bookings. Whereas, the booking entity has a one to one relationship with stylist/service/user entities; ie one booking can only have one stylist, service and user. 
+
+In this project, four apps have been created; 
+* Home - contains only the home page template
+* Services - contains service model and service home page and add/edit/delete template pages
+* Stylists - contains stylist model and stylist home page template page
+* Bookings - contains booking model and booking home page and add/edit/delete template pages.
 
 * [Locks of Lush - Entity Relationship Diagram](readme_documents/erd/erd-model.png)
 
@@ -543,6 +551,13 @@ To determine how much of the code was tested by automated testing, a django tool
 ### Responsive testing
 
 The site works well on small, medium and larger screens. See below links to the responsive views on different screens. 
+
+The features that respond to different screen sizes include:
+* Navigation links - on smaller screens become a toggle menu
+* Home service images - on smaller screens stack vertically, then as the screen size gets bigger they appear as two on one row and the third on the row below then finally on larger screens all in the same row.
+* Service accordion items - on smaller screens stack vertically, then as the screen size gets bigger they appear as two on one row and the third on the row below then finally on larger screens all in the same row.
+* Stylists images - on smaller screens stack vertically, then as the screen size gets bigger they appear as two on one row and the two on the row.
+* Bookings table - on smaller screens can be scrolled horizontally
 
 * [Home page responsiveness](readme_documents/validation/home-responsive.png) 
 * [Services page responsiveness](readme_documents/validation/services-responsive.png) 
