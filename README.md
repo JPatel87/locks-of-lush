@@ -330,21 +330,19 @@ This Entity Relationship Diagram (ERD) has been generated using [Lucidchart](htt
 
 This ERD model contains four entities, which are the booking, stylist, service and user models (note: the user model was created by django allauth). Each entity has various attributes (ie. properties), e.g the service entity has name, service type and price as its attributes. These attributes are further characterised through the django field data type, which specifies how instances of the attributes are to be stored e.g the service entity, name attribute is to be stored as a character field (Charfield).
 
-### Applications
-
 In this project, all entities in the services, stylist and bookings model have required attributes - so these attributes are all required to be filled out on any related form.
 
 The stylist, service and user entities act as foreign keys (FK) in the bookings entity, through their unique ids primary keys (PK). They all have a zero to many relationship with the booking entity ie. a stylist/service/user can either have zero or many bookings. Whereas, the booking entity has a one to one relationship with stylist/service/user entities; ie one booking can only have one stylist, service and user. 
 
+* [Locks of Lush - Entity Relationship Diagram](readme_documents/erd/erd-model.png)
 
+### Applications
 
-In this project, four apps have been created; 
+In this project, four applications (apps) have been created; 
 * Home - contains only the home page template
 * Services - contains service model and service home page and add/edit/delete template pages
 * Stylists - contains stylist model and stylist home page template page
 * Bookings - contains booking model and booking home page and add/edit/delete template pages.
-
-* [Locks of Lush - Entity Relationship Diagram](readme_documents/erd/erd-model.png)
 
 ## Skeleton
 
@@ -688,6 +686,14 @@ The following sites where used to assist in this project:
 * [Knowledgebase](https://www.youtube.com/watch?v=RhKLpBRMymM) - how to use validation for datefield
 * [WSCubeTech](https://www.youtube.com/watch?v=is2gcN6VLpo) - how to use Bootstrap responsive tables
 * [SharmaCoder](https://www.youtube.com/watch?v=8kBo91L8JTY) - how to use django messages
+
+### Content
+
+The following hair salon sites where used to obtain information about salon services and site styles.
+
+* [Georges Hair Salon](https://www.georgeshairdressing.com/the-team/)
+* [Rush hair salon](https://www.rush.co.uk/?gclid=Cj0KCQjwwJuVBhCAARIsAOPwGAQrAcjZMa-XI8Y9jEmIl9qlAhelL3K_gr1Q2bBeTPtXzXAfKMKdcaIaAtKnEALw_wcB)
+* [Barrie Stephen Hair Salon](https://www.barriestephenhair.co.uk/)
 
 ### Media 
 
