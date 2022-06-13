@@ -284,7 +284,8 @@ The bookings page can only be seen if the user is logged on.
     * Error messages will be displayed if the user selects a date in the past or a combination of date, time and stylist that has already been booked.
 
 * View bookings
-    * The table of bookings displays the following information; client (first name and last name), service name, appointment (date, time, stylist) and buttons to enable appointments to be changed or cancelled for upcoming appointments. For past appointments, an entry is made to say "booking cannot be amended".
+    * The table of bookings is a responsive table which means on small screens such as miobile phone devices, the table itself can be scrolled across rather than the page being scrolled, which calls for better user experience.
+    * The table displays the following information; client (first name and last name), service name, appointment (date, time, stylist) and buttons to enable appointments to be changed or cancelled for upcoming appointments. For past appointments, an entry is made to say "booking cannot be amended".
     * If the change booking button is selected then the edit bookings form is called.
     * If the cancel bookings button is called then the delete bookings form is called.
     * Bookings are displayed in date order - starting with the earliest appointment first.
