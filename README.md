@@ -581,6 +581,22 @@ PEP8 checks, carried out on:
 * Stylists - views.py
 * Stylists - admin.py
 
+Lighthouse testing also carried out to review site performance and useability, the results of these tests can be found below. The lowest performance was with the home page, which gave an 81% peformance - to improve this, the images on the home page could be sized better with width and height dimensions.  
+
+* [Lighthouse test - home page](readme_documents/validation/lighthouse-home.png)
+* [Lighthouse test - services page](readme_documents/validation/lighthouse-services.png)
+* [Lighthouse test - stylists page](readme_documents/validation/lighthouse-stylists.png)
+* [Lighthouse test - login page](readme_documents/validation/lighthouse-login.png)
+* [Lighthouse test - signup page](readme_documents/validation/lighthouse-signup.png)
+* [Lighthouse test - logout page](readme_documents/validation/lighthouse-logout.png)
+* [Lighthouse test - edit service page](readme_documents/validation/lighthouse-edit-service.png)
+* [Lighthouse test - delete service page](readme_documents/validation/lighthouse-delete-service.png)
+* [Lighthouse test - add service page](readme_documents/validation/lighthouse-add-service.png)
+* [Lighthouse test - bookings page](readme_documents/validation/lighthouse-bookings.png)
+* [Lighthouse test - make booking page](readme_documents/validation/lighthouse-make-booking.png)
+* [Lighthouse test - cancel booking page](readme_documents/validation/lighthouse-change-booking.png)
+* [Lighthouse test - cancel booking page](readme_documents/validation/lighthouse-cancel-booking.png)
+
 ## Deployment 
 
 A thorough walkthrough of the deployment steps taken for this project can be viewed in the below document. 
