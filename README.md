@@ -190,6 +190,8 @@ The main goals of the home page is to attract the users attention and provide a 
 * Add service
     * By clicking on the "Add service" button the admin user will be directed to a "Add service page"
     * A form will display with the following fields; Service name, Service type (dropdown list) and price. 
+    * The service name will automatically capitalise upon successful submission of a form, so if the user has entered these in lowercase, it will not matter. 
+    * The service name is required to be unique - so the form should not permit any version of the same name to be submitted - this is to prevent any confusion to the site user if they see two services with the same name. 
     * All fields are required - so if any information is left out the form will not submit and the user will be notified to either fill in the field or select an item.
     * If the admin submits a valid form, they will be re-directed to the bookings page and a message will be displayed at the top of the page informing them that the request was successful.
     * If the form is completed in full but the information is not valid - then an error message will be displayed at the top of the page informing the admin user that the request was unsuccessful and requesting them to address the errors.
@@ -275,6 +277,7 @@ The bookings page can only be seen if the user is logged on.
 * Make booking
     * There are two separate "make booking" forms - one for the admin and one for the user. The only difference between them is that the admin form displays the user field to enable the admin to select a user from a dropdown list to book an appointment for. Whereas the user form does not display the user id field at all - it takes the logged in user's id automatically for the booking they make. This is to stop users from having control over any others users bookings.
     * The "make booking" form contains the following required entries; client first name, client last name, date, time, stylist and service.
+    * The client first and last name capitalise upon successful form submission so if the user has entered these details in lowercase, it will not matter.
     * All fields are required - so if any information is left out the form will not submit and the user will be notified to either fill in the field or select an item.
     * If the user submits a valid form, they will be re-directed to the bookings page and a message will be displayed at the top of the page informing the user that the request was successful.
     * If the form is completed in full but the information is not valid - then an error message will be displayed at the top of the page informing the user that the request was unsuccessful and requesting them to address the errors.
@@ -285,8 +288,6 @@ The bookings page can only be seen if the user is logged on.
     * If the change booking button is selected then the edit bookings form is called.
     * If the cancel bookings button is called then the delete bookings form is called.
     * Bookings are displayed in date order - starting with the earliest appointment first.
-
-[ADD PAST APPOINTMENT IMAGE OF BOOKINGS PAGE to show dat order too]
 
 * Change booking
     * The "change booking" form pre-populates with all the initial appointment details and works in the same way as the "make booking" form in terms of error handling and redirecting.
@@ -304,6 +305,7 @@ The bookings page can only be seen if the user is logged on.
 | ![Bookings user form](readme_documents/features/bookings-user.png) | Make booking user form - for with no user field |
 | ![Bookings success message](readme_documents/features/bookings-success.png) | Bookings page with success message, if booking, change or cancellation was successful |
 | ![Make booking - error message](readme_documents/features/bookings-add-error.png) | Make bookings page, error message at the top due to a past date being chosen |
+| ![View bookings](readme_documents/features/bookings-view.png) | Bookings table
 | ![Delete bookings](readme_documents/features/bookings-delete.png) | Cancel booking page example |
 
 ### Features left to implement
