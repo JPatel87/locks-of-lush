@@ -15,30 +15,30 @@
     {% endfor %}
 </div>
 
-<!-- Bookings summary container, prepared using Bootstrap 5 card template -->
+<!-- Bookings summary container, prepared using Bootstrap 5.0 card template -->
 <div class="container-fluid my-3 border-0">
     <div class="card text-center border-0">
         <div class="card-header page-card-header h2 rounded-0">Bookings</div>
         <div class="card-body page-card-body fs-6 p-0 mb-0 pt-4">
-            {% if user.is_authenticated %}
+            <!-- Welcome user by name to the bookings portal -->
             <p class="lead">Welcome {{ user.username|title }}</p>
             <p>This is your bookings portal.
             <p>From this portal you will be able to make bookings and view existing bookings.
             <p>You will also be able to change and cancel any upcoming bookings.</p>
             <a href="{% url 'add_bookings' %}" class="btn action-btn mb-3 px-4 mx-2">Make booking</a>
             <a href="#collapse-bookings" class="btn action-btn mb-3 px-4 mx-2" data-bs-toggle="collapse"
-                role="button" aria-expanded="false" aria-controls="collapseExample">View bookings
+                role="button" aria-expanded="false" aria-controls="collapse-bookings">View bookings
             </a>
-            {% endif %}
         </div>
     </div>
 </div>  
 
-<!-- bookings table, prepared using Bootstrap 5 responsive table template with collapse toggle -->
+<!-- Bookings table, prepared using Bootstrap 5.0 responsive table template with collapse toggle -->
 <div class="table-responsive container-fluid my-3 border-0 collapse" id="collapse-bookings">
     <table class="table table-hover page-card-body">
         <thead class>
             <tr>
+                <!-- If user is a superuser, they should be able to see user heading -->
                 {% if user.is_superuser %}
                 <th scope="col">User</th>
                 {% endif %}
@@ -49,8 +49,10 @@
             </tr>
         </thead>
         <tbody>
+            <!-- Iterate through bookings and enter each booking into a table -->
             {% for booking in bookings %}
                 <tr>
+                    <!-- If user is a superuser, they should be able to see the user field -->
                     {% if user.is_superuser %}
                     <td class="table-text">{{ booking.user }}</td>
                     {% endif %}
@@ -59,6 +61,10 @@
                     <td class="table-text">{{ booking.date }}, {{ booking.get_time_display }}, {{booking.stylist}}</td>
                     <td> 
                         <div class="cancel-change-btn">
+                            <!-- 
+                                If a booking is not in the past, show the change/cancel buttons,
+                                else show comment to say booking cannot be amended
+                             -->
                             {% if booking.past_date != True %}
                             <a href="edit/{{ booking.id }}" class="btn action-btn">Change</a>
                             <a href="delete/{{ booking.id }}" class="btn action-btn">Cancel</a>

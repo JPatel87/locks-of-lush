@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<!--sign up container-->
+<!-- Sign up container, allauth template modified to suit site style -->
 <div class="container-fluid border-0 py-3 pt-0">
     <div class="card text-center border-0">
         <div class="form-container fs-6 p-0 mb-0 pt-4">
@@ -15,7 +15,7 @@
             <p class="page-card-body">{% blocktrans %}Already signed up? Then please 
               <a href="{{ login_url }}" class="log-in-prompt">log in</a>.{% endblocktrans %}
             </p>
-            <form class="page-card-body" class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+            <form class="page-card-body signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
               {% csrf_token %}
               {{ form.as_p }}
               {% if redirect_field_value %}

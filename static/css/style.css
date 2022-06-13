@@ -44,11 +44,11 @@ footer,
     text-align: center;
 }
 
-.action-btn {
+.action-btn, .edit-delete-link, .book-btn:hover {
     text-decoration: none;
 }
 
-.page-card-header, .slogan {
+.page-card-header, .slogan, .edit-delete-link {
     text-transform: capitalize;  
 }
 
@@ -67,7 +67,6 @@ footer,
 .log-in-prompt:hover,
 .navbar-brand:hover,
 .edit-delete-link:hover,
-.stylist-background,
 .page-card-body,
 .accordion-button,
 .accordion-body {
@@ -86,10 +85,6 @@ footer,
 
 .navbar a {
     border-bottom: 1px solid transparent;
-}
-
-.book-btn:hover {
-    text-decoration: none;
 }
 
 .bi-envelope, .bi-facebook, .bi-instagram, .bi-twitter {
@@ -119,7 +114,7 @@ footer,
     border-radius: 50%;
 }
 
-/* login/signin/logout page styles */
+/* Login/signup/logout page styles */
 
 .sign-up-container {
     width: 95%;;
@@ -139,11 +134,7 @@ footer,
     width: 90%;
 }
 
-/* edit/delete page styles */
-
-.edit-delete-link {
-    text-transform: capitalize;
-}
+/* Edit/delete page styles */
 
 .edit-delete-link:hover {
     font-size: 120%;

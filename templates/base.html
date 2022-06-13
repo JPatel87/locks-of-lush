@@ -1,6 +1,6 @@
 {% load static %}
 
-<!-- App_url links for css active styling -->
+<!-- App_url links for css active styling, inspired by techshinobi.com -->
 {% url 'home' as home_url %}
 {% url 'services' as services_url %}
 {% url 'stylists' as stylists_url %}
@@ -13,13 +13,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hairdresser salon allowing users to make bookings">
+    <meta name="keywords" content="hairdresser, bookings, stylists, salon">
     <title>Locks of Lush</title>
     <!-- Favicon link -->
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <!-- Bootstrap 5.2.0 cdn and Bootstrap icon links -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-    <!-- Google font link -->
+    <!-- Google font links -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Custom css stylesheet -->
@@ -29,7 +31,7 @@
   <!-- Class to keep footer at bottom of page, inspired from radu.link site -->
   <body class="d-flex flex-column min-vh-100">
 
-  <!-- Navigation - prepared using Bootstrap 5, Navbar supported content template -->
+  <!-- Navigation - prepared using Bootstrap 5.0, Navbar supported content template -->
     <div class="container-fluid mt-2">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -48,6 +50,12 @@
               <li class="nav-item {% if request.path == stylists_url %} active {% endif %}">
                 <a class="nav-link px-4" href="{{ stylists_url }}">Stylists</a>
               </li>
+              <!-- 
+                If a user is logged on, bookings will appear in the navigation menu.
+                The user status will also appear which will have a dropdown toggle to the
+                log out page. If the user is not logged on, these three links will be
+                replaced with only the login navigation link.
+               -->
               {% if user.is_authenticated %}
               <li class="nav-item {% if request.path == bookings_url %} active {% endif %}">
                 <a class="nav-link px-4" href="{{ bookings_url }}">Bookings</a>
@@ -75,7 +83,7 @@
     <!-- Content goes here -->
     {% endblock content %}
 
-  <!-- Footer, prepared using Bootstrap 5 card template -->
+  <!-- Footer - contact us, prepared using Bootstrap 5.0 card template -->
     <div class="container-fluid mt-auto">
       <footer>
         <div class="row text-center">
@@ -87,6 +95,11 @@
                       <h6 class="card-text contact">Tel: 020 1904 001</h6><br>
                       <h5 class="card-text contact"><strong>Opening Times</strong></h5>
                       <h6 class="card-text contact">Mon - Sun: 10am - 5pm</h6><br>
+                      <!-- 
+                        If a user is logged on, when the book now button is clicked,
+                        they are directed to add bookings page, if user is not logged on
+                        they will be directed to the login page 
+                      -->
                       {% if user.is_authenticated %}
                       <a href="{% url 'add_bookings' %}" class="btn book-btn"><strong>Book now!</strong></a>
                       {% else %}
@@ -96,6 +109,7 @@
               </div>
           </div>
         </div>
+        <!-- Footer - social -->
         <div class="p-2 text-center">
             <a class="p-4 social" href="mailto:locks_of_lush@mail.com" 
             aria-label="Contact us by email"><i class="bi bi-envelope"></i></a>
@@ -108,10 +122,8 @@
         </div>
       </footer>
     </div>
-
-    <!-- Bootstrap 5 cdn script links -->
+    <!-- Bootstrap 5.0 cdn script links -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-      
   </body>
 </html>

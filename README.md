@@ -542,6 +542,25 @@ To determine how much of the code was tested by automated testing, a django tool
 
 ### Validator testing
 
+W3 HTML Validator checks:
+
+* Home page
+* Services page
+* Add services page
+* Edit services page
+* Delete services page
+* Stylists page
+* Bookings page
+* Make bookings page (named as Add bookings in html template)
+* Change bookings page (named as Edit bookings in html template)
+* Cancel services page (named as Cancel services page in html template)
+* Login
+* Signup
+* Logout 
+
+CSS W3 Validator checks:
+* style.css 
+
 ## Deployment 
 
 A thorough walkthrough of the deployment steps taken for this project can be viewed in the below document. 
@@ -590,6 +609,7 @@ The following sites where used to assist in this project:
 * [Codemy](https://www.youtube.com/watch?v=z8m9MW56hkg) - used to see how to use different forms for different users 
 * [Netninja, django tutorial](https://www.youtube.com/watch?v=n-FTlQ7Djqc) - used to learn the basics of django
 * [Netninja, Bootstrap icons](https://www.youtube.com/watch?v=rhvMRsE_6sY) - how to use bootstrap icons
+* [Techshinobi.com](https://tekshinobi.com/setting-active-navbar-link-in-django-template/)
 * [radu.link](https://radu.link/make-footer-stay-bottom-page-bootstrap/) - how to make footer stick to bottom of the page
 * [Academind](https://www.youtube.com/watch?v=23bpce-5s8I) - how to create a navbar using Bootstrap
 * [System22](https://www.youtube.com/watch?v=LV3w60037EI) - how to improve hover effects on bootstrap nav items.

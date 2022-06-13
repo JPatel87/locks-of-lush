@@ -15,7 +15,7 @@
     {% endfor %}
 </div>
 
-<!-- Services summary container, prepared using Bootstrap 5 card template -->
+<!-- Services summary container, prepared using Bootstrap 5.0 card template -->
 <div class="container-fluid my-3 border-0">
     <div class="card text-center border-0">
         <div class="card-header page-card-header h2 rounded-0">our services</div>
@@ -25,6 +25,7 @@
               we can help get your hair feeling revitalised and looking lock-urious!
             </p>
             <p>Check out our range of services below...</p>
+            <!-- If user is a superuser, show the add services button -->
             {% if user.is_superuser %}
             <a href="{% url 'add_services' %}" class="btn action-btn mb-3 px-4 mx-2">Add service</a>
             {% endif %}
@@ -32,7 +33,7 @@
     </div>
 </div>    
 
-<!-- Services type accordion - prepared using Bootstrap 5, accordion flush template -->
+<!-- Services type accordion - prepared using Bootstrap 5.0, accordion flush template -->
 <div class="accordion accordion-flush mb-3 py-2 px-3" id="service-accordion">
     <div class="container-fluid">
         <div class="row accordion-row">
@@ -44,9 +45,11 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#service-accordion">
                   <div class="accordion-body text-center fs-5">
+                  <!-- Iterate through the cut services list and output service name and price -->
                   {% for service in cut_services %}
                       <p><strong>{{ service.name }}</strong></p>
                       <p>£{{ service.price }}</p>
+                      <!-- If user is a superuser, show edit and delete options for each service -->
                       {% if user.is_superuser %}
                       <a href="edit/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong>Edit | </strong></a>
                       <a href="delete/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong> Delete</strong></a><hr>
@@ -63,9 +66,11 @@
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#service-accordion">
                   <div class="accordion-body text-center fs-5">
+                  <!-- Iterate through the colour services list and output service name and price -->
                   {% for service in colour_services %}
                       <p><strong>{{ service.name }}</strong></p>
                       <p>£{{ service.price }}</p>
+                      <!-- If user is a superuser, show edit and delete options for each service -->
                       {% if user.is_superuser %}
                       <a href="edit/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong>Edit | </strong></a>
                       <a href="delete/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong> Delete</strong></a><hr>
@@ -82,12 +87,14 @@
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#service-accordion">
                   <div class="accordion-body text-center fs-5">
+                  <!-- Iterate through the colour services list and output service name and price -->
                   {% for service in style_services %}
                       <p><strong>{{ service.name }}</strong></p>
                       <p>£{{ service.price }}</p>
+                      <!-- If user is a superuser, show edit and delete options for each service -->
                       {% if user.is_superuser %}
-                      <a href="edit/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong>Edit | </strong></a>
-                      <a href="delete/{{ service.id }}" class="text-decoration-none edit-delete-link"><strong> Delete</strong></a><hr>
+                      <a href="edit/{{ service.id }}" class="edit-delete-link"><strong>Edit | </strong></a>
+                      <a href="delete/{{ service.id }}" class="edit-delete-link"><strong> Delete</strong></a><hr>
                       {% endif %}
                   {% endfor %}
                   </div>
