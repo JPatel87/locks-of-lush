@@ -514,6 +514,27 @@ Manual testing of interactive features was carried out, see tests and results of
 
 * [Manual testing - bookings forms](readme_documents/testing/manual-testing-bookings-forms.pdf)
 
+Automated testing of the services model was also carried out using Django TestCase to test the service views, forms and model. 
+
+The following items were tested: 
+* views.py - Test if the services page opens
+* views.py - Test if a service can be added
+* views.py - Test if the edit services page opens
+* views.py - Test if a service can be edited
+* views.py - Test if the delete services page opens
+* views.py - Test if a service can be deleted
+* models.py - Check if the string method returns the service name
+* forms.py - Check whether specified form fields display
+* forms.py - Check whether the missed service name generates an error
+* forms.py - Check whether the missed service type generates an error
+* forms.py - Check whether the missed service price generates an error
+* forms.py - Check whether a price of £350 generates an error.
+* forms.py - Check whether a price of £10 generates an error.
+
+To determine how much of the code was tested by automated testing, a django tool called [Django coverage](https://pypi.org/project/django-coverage/) was installed, this revealed that 98% of the services app code had been tested, however there was still some missing tests in the views.py file. In order to determine what code was still left to test, coverage enables an interctive HTML report to be created. Upon reviewing this report - it revealed that the error messages in the add and edit services page had not been tested. The tests for these items was covered by manual testing. The results of coverage can be seen from the link below. 
+
+* [Automated testing (Services app) - coverage report](readme_documents/testing/coverage-report-services-app.pdf)
+
 ### Bugs and issues
 
 ### Validator testing

@@ -44,7 +44,7 @@ class TestServiceForm(TestCase):
         self.assertEqual(form.errors['price'][0], 'This field is required.')
 
     def test_service_max_price_value(self):
-        """Function to check whether high price value generates an error."""
+        """Function to check whether a price of £350 generates an error."""
         form = ServiceForm({'price': '350'})
         self.assertFalse(form.is_valid())
         self.assertIn('price', form.errors.keys())
@@ -54,7 +54,7 @@ class TestServiceForm(TestCase):
             )
 
     def test_service_min_price_value(self):
-        """Function to check whether low price value generates an error."""
+        """Function to check whether a price of £10 generates an error."""
         form = ServiceForm({'price': '10'})
         self.assertFalse(form.is_valid())
         self.assertIn('price', form.errors.keys())
