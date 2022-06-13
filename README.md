@@ -538,6 +538,7 @@ To determine how much of the code was tested by automated testing, a django tool
 ### Bugs and issues
 
 * [Issues](readme_documents/issues/issues.pdf) 
+* [Unresolved bugs](readme_documents/issues/bugs.pdf)
 
 ### Validator testing
 
