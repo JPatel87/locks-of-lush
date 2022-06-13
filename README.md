@@ -510,6 +510,10 @@ Manual testing of interactive features was carried out, see tests and results of
 
 * [Manual testing - buttons, links, dropdowns](readme_documents/testing/manual-testing-buttons-links-dropdowns.pdf)
 
+* [Manual testing - services forms](readme_documents/testing/manual-testing-services-forms.pdf)
+
+* [Manual testing - bookings forms](readme_documents/testing/bookings-forms.pdf)
+
 ### Bugs and issues
 
 ### Validator testing
