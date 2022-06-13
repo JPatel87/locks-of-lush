@@ -22,6 +22,6 @@ class ServiceForm(forms.ModelForm):
 
     def clean_name(self):
         """
-        Method to capitalize service names from service form.
+        Method to capitalize service name from service form.
         """
         return self.cleaned_data['name'].capitalize()

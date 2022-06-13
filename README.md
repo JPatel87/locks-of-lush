@@ -542,8 +542,7 @@ To determine how much of the code was tested by automated testing, a django tool
 
 ### Validator testing
 
-W3 HTML Validator checks:
-
+W3 HTML Validator checks, carried out on:
 * Home page
 * Services page
 * Add services page
@@ -558,8 +557,29 @@ W3 HTML Validator checks:
 * Signup
 * Logout 
 
-CSS W3 Validator checks:
-* style.css 
+CSS W3 Validator checks, carried out on:
+* Stylesheet
+
+PEP8 checks, carried out on:
+* Root app (locks_of_lush) - urls.py 
+* Home - views.py
+* Home - urls.py
+* Services - forms.py
+* Services - models.py
+* Services - views.py
+* Services - admin.py
+* Services - urls.py
+* Services - test_forms.py
+* Services - test_models.py
+* Services - test_views.py
+* Bookings - forms.py
+* Bookings - models.py
+* Bookings - views.py
+* Bookings - admin.py
+* Bookings - urls.py
+* Stylists - models.py
+* Stylists - views.py
+* Stylists - admin.py
 
 ## Deployment 
 

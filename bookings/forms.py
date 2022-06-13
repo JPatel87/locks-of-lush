@@ -5,7 +5,7 @@ from .models import Booking
 
 class DateInput(forms.DateInput):
     """
-    Class for date input widget
+    Class for date input widget.
     """
     input_type = 'date'
 
@@ -50,7 +50,7 @@ class BookingFormAdmin(forms.ModelForm):
 
     def clean_last_name(self):
         """
-        Method to capitalize first names from bookings form.
+        Method to capitalize last names from bookings form.
         """
         return self.cleaned_data['last_name'].capitalize()
 
@@ -62,8 +62,8 @@ class BookingForm(forms.ModelForm):
     This form is for a non-admin user.
     It does not allow the user to see
     the user field hence only allowing them
-    to control their own bookings.Inspired
-    from codemy.
+    to control only their own bookings.
+    Inspired from codemy.
     """
 
     class Meta:
@@ -94,6 +94,6 @@ class BookingForm(forms.ModelForm):
 
     def clean_last_name(self):
         """
-        Method to capitalize first names from bookings form.
+        Method to capitalize last names from bookings form.
         """
         return self.cleaned_data['last_name'].capitalize()

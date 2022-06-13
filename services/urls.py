@@ -1,8 +1,8 @@
-"""Imports from django and service views"""
+"""Imports from django and service views."""
 from django.urls import path
 from services import views
 
-
+# Url links to services pages
 urlpatterns = [
     path('', views.services, name='services'),
     path('add/', views.add_services, name='add_services'),

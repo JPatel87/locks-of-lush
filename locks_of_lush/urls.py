@@ -2,6 +2,7 @@
 from django.contrib import admin
 from django.urls import include, path
 
+# Url links to project apps; home, services, stylists, bookings, accounts
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),

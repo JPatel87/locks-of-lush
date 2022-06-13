@@ -1,7 +1,8 @@
+"""Imports from django and home views."""
 from django.urls import path
-from home.views import get_home_page
+from home import views
 
-
+# Url link to the home page
 urlpatterns = [
-    path('', get_home_page, name='home')
+    path('', views.home, name='home')
 ]

@@ -6,12 +6,12 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Service(models.Model):
     """
-    Service model for services database.
+    Service model for service database.
     """
 
     class ServiceType(models.TextChoices):
         """
-        Service type field options
+        Service type field options.
         """
 
         CUT = 'CUT', 'Cut'

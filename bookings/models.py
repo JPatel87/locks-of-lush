@@ -1,4 +1,4 @@
-"""Imports from django."""
+"""Imports from django, user model imported."""
 from datetime import date
 from django.core.exceptions import ValidationError
 from django.db import models
@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 class Booking(models.Model):
     """
-    Booking model for bookings database.
+    Booking model for booking database.
     """
 
     TIMESLOT_LIST = (
@@ -54,15 +54,15 @@ class Booking(models.Model):
 
     class Meta:
         """
-        Class to ensure booking is classified as unique.
-        Unique by date, time and stylist.
+        Class to ensure booking is classified as
+        unique by date, time and stylist.
         """
         unique_together = ('date', 'time', 'stylist')
 
     @property
     def past_date(self):
         """
-        Decorator to check an appointments status
+        Decorator to check if date is in the past.
         """
         today = date.today()
         if self.date < today:

@@ -9,7 +9,7 @@ def services(request):
     """
     Function to view services page.
 
-    Services filtered to service type.
+    Services filtered by service type.
     """
 
     cut_services = Service.objects.filter(
@@ -30,7 +30,10 @@ def add_services(request):
 
     The get request returns the add services form.
     The post request checks the form is valid,
-    displays validity message, returns services page if valid.
+    saves the form if valid,
+    returns services page and displays
+    the success message. If not valid, error message
+    is displayed.
     """
 
     if request.method == "POST":
@@ -64,7 +67,10 @@ def edit_services(request, service_id):
 
     The get request returns the edit services page.
     The post request checks the form is valid,
-    displays validity message, returns services page if valid.
+    saves the form if valid,
+    returns services page and displays
+    the success message. If not valid, error message
+    is displayed.
     """
 
     service = get_object_or_404(Service, id=service_id)
@@ -99,7 +105,8 @@ def delete_services(request, service_id):
 
     The get request returns the delete services page.
     The post request deletes the service,
-    displays the success message, returns service page.
+    returns the services page and displays success
+    message on the services page.
     """
 
     service = get_object_or_404(Service, id=service_id)

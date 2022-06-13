@@ -11,7 +11,7 @@ def bookings(request):
 
     If user is an admin, they see all
     user bookings else all other users will
-    only see their bookings.Both are
+    only see their bookings. Both are
     ordered in date order (earliest first).
     """
 
@@ -35,9 +35,10 @@ def add_bookings(request):
 
     The get request returns the add bookings form.
     Different forms for admin and non-admin users.
-    The post request checks the form is valid,
-    displays validity message, returns bookings page
-    if valid.
+    The post request checks the form is valid, saves
+    if valid and returns bookings page with the success
+    message. If form is invalid, error message is
+    displayed.
     """
     if request.method == 'POST':
         if request.user.is_superuser:
@@ -102,8 +103,10 @@ def edit_bookings(request, booking_id):
 
     The get request returns the edit bookings page.
     Different forms for admin and non-admin users.
-    The post request checks the form is valid,
-    displays validity message, returns bookings page if valid.
+    The post request checks the form is valid, saves
+    if valid and returns bookings page with the success
+    message. If form is invalid, error  message is
+    displayed.
     """
 
     booking = get_object_or_404(Booking, id=booking_id)
@@ -155,7 +158,8 @@ def delete_bookings(request, booking_id):
 
     The get request returns the delete bookings page.
     The post request deletes the booking,
-    displays the success message, returns booking page.
+    returns booking page and
+    displays the success message on the bookings page.
     """
 
     booking = get_object_or_404(Booking, id=booking_id)

@@ -8,7 +8,7 @@ class TestServiceForm(TestCase):
     """
     Tests to check the service form
 
-    Checks on if the services
+    Checks on if the add services
     form displays all specified fields,
     and if the correct error messages
     are displayed.
