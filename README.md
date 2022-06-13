@@ -12,6 +12,7 @@
         * [Features left to implement](#features-left-to-implement)
     * [Structure](#structure)
         * [Database model](#database-model)
+        * [Applications](#applications)
     * [Skeleton](#skeleton)
         * [Wireframes](#wireframes)
     * [Surface](#surface)
@@ -19,7 +20,9 @@
         * [Typography](#typography)
         * [Imagery](#imagery)
 * [Testing](#testing)
-    * [Tests performed](#tests-performed)
+    * [User story testing](#user-story-testing)
+    * [Manual testing](#manual-testing)
+    * [Automated testing](#automated-testing)
     * [Bugs and issues](#bugs-and-issues)
     * [Validator testing](#validator-testing)
 * [Deployment](#deployment)
@@ -327,9 +330,13 @@ This Entity Relationship Diagram (ERD) has been generated using [Lucidchart](htt
 
 This ERD model contains four entities, which are the booking, stylist, service and user models (note: the user model was created by django allauth). Each entity has various attributes (ie. properties), e.g the service entity has name, service type and price as its attributes. These attributes are further characterised through the django field data type, which specifies how instances of the attributes are to be stored e.g the service entity, name attribute is to be stored as a character field (Charfield).
 
+### Applications
+
 In this project, all entities in the services, stylist and bookings model have required attributes - so these attributes are all required to be filled out on any related form.
 
 The stylist, service and user entities act as foreign keys (FK) in the bookings entity, through their unique ids primary keys (PK). They all have a zero to many relationship with the booking entity ie. a stylist/service/user can either have zero or many bookings. Whereas, the booking entity has a one to one relationship with stylist/service/user entities; ie one booking can only have one stylist, service and user. 
+
+
 
 In this project, four apps have been created; 
 * Home - contains only the home page template
@@ -517,7 +524,7 @@ As a site admin I want to be able to create, read, update and delete stylist det
 | Only the admin has access to add, update, delete stylists from the website. | No | Insufficient time to progress | Carry out CRUD development as per the services app. 
 | Changes made to the stylist details through the admin site login are reflected on the site. | No | Admin site login does not have access to perform CRUD functionality on the stylists model, this can only be done through the django admin account | Carry out CRUD development as per the services app.
 
-### Interactive feature testing 
+### Manual testing 
 
 Manual testing of interactive features was carried out, see tests and results of testing below:
 
@@ -526,6 +533,8 @@ Manual testing of interactive features was carried out, see tests and results of
 * [Manual testing - services forms](readme_documents/testing/manual-testing-services-forms.pdf)
 
 * [Manual testing - bookings forms](readme_documents/testing/manual-testing-bookings-forms.pdf)
+
+### Automated testing 
 
 Automated testing of the services model was also carried out using Django TestCase to test the service views, forms and model. 
 
@@ -658,12 +667,11 @@ The frameworks, libraries, databases and programs used for this project are:
 - [Tiny png](https://tinypng.com/) - used to compress images.
 - [Color-hex](https://www.color-hex.com/user/add-palette.php) - used to create a colour palette
 - [PEP8 online](http://pep8online.com/) - used to check the python code
+- [amiresponsive](https://ui.dev/amiresponsive) - used to generate responsive images of the site
 - [W3C Mark up Validation Service](https://validator.w3.org/) - used to validate html templates
 - [W3 CSS Validation Service](https://jigsaw.w3.org/css-validator/) - used to validate CSS stylesheet
 
 ### Resources
-
-### Sites used
 
 The following sites where used to assist in this project:
 
