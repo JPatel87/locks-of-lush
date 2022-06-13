@@ -570,15 +570,32 @@ The frameworks, libraries, databases and programs used for this project are:
 - [Heroku](https://www.heroku.com/) - used as the cloud based deployment platform
 - [Cloudinary](https://cloudinary.com/?utm_source=google&utm_medium=cpc&utm_campaign=Rbrand&utm_content=492438439811&utm_term=%2Bcloudinary&gclid=Cj0KCQjwma6TBhDIARIsAOKuANwhiuq0ZxvF_2j7ANjz39RqGHZUM1DEgNRzc_zb4Yymv18YBGbHrMYaAgMREALw_wcB) - for storage of static and media files
 - [Lucidchart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=9045963&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQjwyYKUBhDJARIsAMj9lkGuAWT49rmauAUKPE1dZc32REnshWbCY-h0UoYogZ4mtAhFjn8IypsaAoYNEALw_wcB) - used to create the Entity Relationship Diagram (ERD)
+- [Favicon.io](https://favicon.io/favicon-generator/) - used to generate favicon
 - [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjw9-KTBhBcEiwAr19igzgSMCAHTuTIsTpGrtk-KZPATPmc7R0M9oo0VUs2jhgbGpmXmCnKSxoCstwQAvD_BwE) - used to create the wireframes
 - [Tiny png](https://tinypng.com/) - used to compress images.
+- [Color-hex](https://www.color-hex.com/user/add-palette.php) - used to create a colour palette
 - [PEP8 online](http://pep8online.com/) - used to check the python code
 - [W3C Mark up Validation Service](https://validator.w3.org/) - used to validate html templates
 - [W3 CSS Validation Service](https://jigsaw.w3.org/css-validator/) - used to validate CSS stylesheet
 
 ### Resources
 
-### Content 
+### Sites used
+
+The following sites where used to assist in this project:
+
+* [Stackoverflow](https://stackoverflow.com/) - used to resolve troubleshooting issues
+* [Codegrepper](https://www.codegrepper.com/) - used to resolve troubleshooting issues
+* [Codeinstitute](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwnZaVBhA6EiwAVVyv9F19a0Iyt9WIs12IIQEoad7khrICogE2M6ZFmKsMf-MpkNxtU55HGxoCE1QQAvD_BwE) - learned how to use django from Hello django to do app and I think therefore I blog walkthrough projects
+* [Codemy](https://www.youtube.com/watch?v=z8m9MW56hkg) - used to see how to use different forms for different users 
+* [Netninja, django tutorial](https://www.youtube.com/watch?v=n-FTlQ7Djqc) - used to learn the basics of django
+* [Netninja, Bootstrap icons](https://www.youtube.com/watch?v=rhvMRsE_6sY) - how to use bootstrap icons
+* [radu.link](https://radu.link/make-footer-stay-bottom-page-bootstrap/) - how to make footer stick to bottom of the page
+* [Academind](https://www.youtube.com/watch?v=23bpce-5s8I) - how to create a navbar using Bootstrap
+* [System22](https://www.youtube.com/watch?v=LV3w60037EI) - how to improve hover effects on bootstrap nav items.
+* [Knowledgebase](https://www.youtube.com/watch?v=RhKLpBRMymM) - how to use validation for datefield
+* [WSCubeTech](https://www.youtube.com/watch?v=is2gcN6VLpo) - how to use Bootstrap responsive tables
+* [SharmaCoder](https://www.youtube.com/watch?v=8kBo91L8JTY) - how to use django messages
 
 ### Media 
 
