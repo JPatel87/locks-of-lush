@@ -1,3 +1,7 @@
+# Locks of Lush 
+
+![Home responsiveness](readme_documents/validation/home-responsive.png) 
+
 ## Table of contents
 * [UX](#ux)
     * [Strategy](#strategy)
@@ -536,6 +540,15 @@ To determine how much of the code was tested by automated testing, a django tool
 
 * [Automated testing (Services app) - coverage report](readme_documents/testing/coverage-report-services-app.pdf)
 
+### Responsive testing
+
+The site works well on small, medium and larger screens. See below links to the responsive views on different screens. 
+
+* [Home page responsiveness](readme_documents/validation/home-responsive.png) 
+* [Services page responsiveness](readme_documents/validation/services-responsive.png) 
+* [Stylists page responsiveness](readme_documents/validation/stylists-responsive.png) 
+* [Login responsiveness](readme_documents/validation/login-responsive.png) 
+
 ### Bugs and issues
 
 * [Issues](readme_documents/issues/issues.pdf) 
@@ -543,7 +556,7 @@ To determine how much of the code was tested by automated testing, a django tool
 
 ### Validator testing
 
-W3 HTML Validator checks, carried out on:
+W3 HTML Validator checks were carried out on the below pages, no errors found:
 * Home page
 * Services page
 * Add services page
@@ -558,10 +571,9 @@ W3 HTML Validator checks, carried out on:
 * Signup
 * Logout 
 
-CSS W3 Validator checks, carried out on:
-* Stylesheet
+CSS W3 Validator checks were carried out on the style.css file - no errors found.
 
-PEP8 checks, carried out on:
+PEP8 checks were carried out on the below files, no errors were found:
 * Root app (locks_of_lush) - urls.py 
 * Home - views.py
 * Home - urls.py
