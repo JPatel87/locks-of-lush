@@ -1,1 +1,0 @@
-web: gunicorn locks_of_lush.wsgi
